@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly">
+
+    <title>Stackly</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<body>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-wrapper">
+
+            <div class="loader-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </div>
+
+            <div class="loader-bottom">
+                <span>LOADING</span>
+                <span id="loaderPercent">0%</span>
+            </div>
+
+            <div class="loader-line">
+                <div class="loader-line-progress" id="loaderProgress"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+  
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid navbar-inner">
+
+                <a href="index.html" class="brand">
+                    <img src="Assets/blacklogo.webp" alt="Stackly">
+                </a>
+
+                <div class="desktop-navigation">
+
+                    <a href="index.html" class="nav-item ">
+                        Home
+                    </a>
+
+                    <a href="about.html" class="nav-item ">
+                        About
+                    </a>
+
+                    <a href="services.html" class="nav-item">
+                        Service
+                    </a>
+
+                    <a href="blog.html" class="nav-item active">
+                        Blog
+                    </a>
+
+                    <a href="contact.html" class="nav-item">
+                        Contact
+                    </a>
+
+                    <a href="login.html" class="login-link">
+                        Login
+                    </a>
+
+                    <a href="register.html" class="register-button">
+                        Register
+                    </a>
+
+                </div>
+
+                <button
+                    class="mobile-menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <aside class="mobile-navigation" id="mobileNavigation">
+
+        <div class="mobile-navigation-header">
+
+            <a href="index.html" class="mobile-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+
+            <button
+                class="mobile-close"
+                id="mobileClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="mobile-links">
+
+            <a href="index.html" class="mobile-nav-link ">
+                Home
+            </a>
+
+            <a href="about.html" class="mobile-nav-link ">
+                About
+            </a>
+
+            <a href="services.html" class="mobile-nav-link">
+                Service
+            </a>
+
+            <a href="blog.html" class="mobile-nav-link active">
+                Blog
+            </a>
+
+            <a href="contact.html" class="mobile-nav-link">
+                Contact
+            </a>
+
+            <a href="login.html" class="mobile-login">
+                Login
+            </a>
+
+            <a href="register.html" class="mobile-register">
+                Register
+            </a>
+
+        </div>
+
+    </aside>
+
+    <main>
+<section class="stackly-blog-hero" id="blog-hero">
+
+    <div class="stackly-blog-hero-container">
+
+        <div class="stackly-blog-hero-grid">
+
+            <div class="stackly-blog-hero-left">
+
+                <span class="blog-hero-eyebrow">
+                    (JOURNAL) — STACKLY
+                </span>
+
+                <h1 class="blog-hero-title">
+                    NOTES FROM
+                    <span>THE TEAM.</span>
+                </h1>
+
+                <p class="blog-hero-description">
+                    Write-ups on architecture, infrastructure, security,
+                    incident response and the engineering calls we've
+                    changed our minds on.
+                </p>
+
+                <div class="blog-hero-meta">
+
+                    <div>
+                        <strong>06</strong>
+                        <span>TOPIC AREAS</span>
+                    </div>
+
+                    <div>
+                        <strong>2026</strong>
+                        <span>LATEST NOTES</span>
+                    </div>
+
+                    <div>
+                        <strong>DIRECT</strong>
+                        <span>FROM ENGINEERS</span>
+                    </div>
+
+                </div>
+
+                <a
+                    href="error.html"
+                    class="blog-hero-scroll"
+                >
+                    EXPLORE THE JOURNAL
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-blog-hero-right">
+
+                <article class="blog-featured-card">
+
+                    <div class="blog-featured-image-wrap">
+
+                        <img
+                            src="Assets/IT15.webp"
+                            alt="Core banking infrastructure"
+                            class="blog-featured-image"
+                        >
+
+                        <div class="blog-featured-image-overlay">
+
+                            <span>FEATURED</span>
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                9 MIN READ
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="blog-featured-content">
+
+                        <div class="blog-featured-category">
+                            CASE STUDY
+                            <span></span>
+                            JUN 2026
+                        </div>
+
+                        <h2>
+                            MIGRATING A CORE BANKING
+                            LEDGER WITH ZERO DOWNTIME
+                        </h2>
+
+                        <p>
+                            A look at the cutover strategy used to move
+                            a core ledger to the cloud without a single
+                            outage window.
+                        </p>
+
+                        <div class="blog-featured-bottom">
+
+                            <a href="error.html">
+                                READ THE CASE STUDY
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                            <span>
+                                #01
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <div class="blog-hero-topic-bar">
+
+            <div class="blog-topic-label">
+                LATEST TOPICS
+            </div>
+
+            <div class="blog-topic-list">
+
+                <a href="error.html">ARCHITECTURE</a>
+                <a href="error.html">SECURITY</a>
+                <a href="error.html">CLOUD</a>
+                <a href="error.html">INCIDENT RESPONSE</a>
+                <a href="error.html">DATA &amp; AI</a>
+                <a href="error.html">OPERATIONS</a>
+
+            </div>
+
+            <div class="blog-topic-status">
+                <span></span>
+                NEW NOTES WEEKLY
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="stackly-recent-posts-section" id="recent-posts">
+
+    <div class="stackly-recent-posts-container">
+
+        <div class="recent-posts-header">
+
+            <div class="recent-posts-heading">
+
+                <span class="recent-posts-eyebrow">
+                    (02) — LATEST
+                </span>
+
+                <h2 class="recent-posts-title">
+                    RECENT
+                    <span>POSTS.</span>
+                </h2>
+
+                <p>
+                    Engineering notes, architecture decisions,
+                    production lessons and practical ideas from the team.
+                </p>
+
+            </div>
+
+            <div class="recent-posts-header-panel">
+
+                <div class="recent-system-status">
+                    <i></i>
+                    KNOWLEDGE SYSTEM ONLINE
+                </div>
+
+                <div class="recent-system-data">
+
+                    <div>
+                        <strong>06</strong>
+                        <span>RECENT NOTES</span>
+                    </div>
+
+                    <div>
+                        <strong>05</strong>
+                        <span>TOPICS</span>
+                    </div>
+
+                    <div>
+                        <strong>09</strong>
+                        <span>MIN AVG READ</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="blog-filter-system">
+
+            <div class="blog-filter-left">
+
+                <span class="blog-filter-label">
+                    EXPLORE BY TOPIC
+                </span>
+
+                <div class="blog-filter-buttons">
+
+                    <button
+                        type="button"
+                        class="blog-filter-btn active"
+                        data-filter="all"
+                    >
+                        <span>ALL</span>
+                        <strong>06</strong>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="blog-filter-btn"
+                        data-filter="reliability"
+                    >
+                        <span>RELIABILITY</span>
+                        <strong>01</strong>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="blog-filter-btn"
+                        data-filter="security"
+                    >
+                        <span>SECURITY</span>
+                        <strong>02</strong>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="blog-filter-btn"
+                        data-filter="case-study"
+                    >
+                        <span>CASE STUDIES</span>
+                        <strong>01</strong>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="blog-filter-btn"
+                        data-filter="engineering"
+                    >
+                        <span>ENGINEERING</span>
+                        <strong>01</strong>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="blog-filter-btn"
+                        data-filter="studio"
+                    >
+                        <span>STUDIO</span>
+                        <strong>01</strong>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="blog-filter-result">
+                <span>SHOWING</span>
+                <strong id="blogFilterResultCount">06</strong>
+                <span>NOTES</span>
+            </div>
+
+        </div>
+
+        <div class="recent-posts-grid" id="recentPostsGrid">
+
+            <article
+                class="recent-post-card"
+                data-category="reliability"
+            >
+
+                <a href="error.html" class="recent-post-image-wrap">
+
+                    <img
+                        src="Assets/IT17.webp"
+                        alt="Infrastructure architecture"
+                        class="recent-post-image"
+                    >
+
+                    <div class="post-image-overlay">
+                        <span>01</span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            8 MIN
+                        </span>
+                    </div>
+
+                    <div class="post-hover-tech">
+                        <span>SYS / 01</span>
+                        <strong>RELIABILITY</strong>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+                <div class="recent-post-content">
+
+                    <div class="recent-post-meta">
+                        <span>RELIABILITY</span>
+                        <span>MAR 2026</span>
+                    </div>
+
+                    <h3>
+                        WHY WE RUN
+                        BLAMELESS POSTMORTEMS
+                    </h3>
+
+                    <p>
+                        Every incident becomes useful when the system,
+                        not the person, becomes the object of investigation.
+                    </p>
+
+                    <a href="error.html" class="recent-post-link">
+                        READ NOTE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article
+                class="recent-post-card"
+                data-category="security"
+            >
+
+                <a href="error.html" class="recent-post-image-wrap">
+
+                    <img
+                        src="Assets/IT6.webp"
+                        alt="Cybersecurity systems"
+                        class="recent-post-image"
+                    >
+
+                    <div class="post-image-overlay">
+                        <span>02</span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            7 MIN
+                        </span>
+                    </div>
+
+                    <div class="post-hover-tech">
+                        <span>SYS / 02</span>
+                        <strong>SECURITY</strong>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+                <div class="recent-post-content">
+
+                    <div class="recent-post-meta">
+                        <span>SECURITY</span>
+                        <span>MAR 2026</span>
+                    </div>
+
+                    <h3>
+                        ZERO-TRUST:
+                        WHAT WE ACTUALLY RECOMMEND
+                    </h3>
+
+                    <p>
+                        Most zero-trust rollouts start with identity,
+                        network policy, visibility and practical boundaries.
+                    </p>
+
+                    <a href="error.html" class="recent-post-link">
+                        READ NOTE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article
+                class="recent-post-card"
+                data-category="studio"
+            >
+
+                <a href="error.html" class="recent-post-image-wrap">
+
+                    <img
+                        src="Assets/IT8.webp"
+                        alt="Engineering team workspace"
+                        class="recent-post-image"
+                    >
+
+                    <div class="post-image-overlay">
+                        <span>03</span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            6 MIN
+                        </span>
+                    </div>
+
+                    <div class="post-hover-tech">
+                        <span>SYS / 03</span>
+                        <strong>STUDIO</strong>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+                <div class="recent-post-content">
+
+                    <div class="recent-post-meta">
+                        <span>STUDIO</span>
+                        <span>MAR 2026</span>
+                    </div>
+
+                    <h3>
+                        STAYING NINE
+                        ENGINEERS ON PURPOSE
+                    </h3>
+
+                    <p>
+                        Why the team stays deliberately small and what
+                        that trade-off changes for the work.
+                    </p>
+
+                    <a href="error.html" class="recent-post-link">
+                        READ NOTE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article
+                class="recent-post-card"
+                data-category="engineering"
+            >
+
+                <a href="error.html" class="recent-post-image-wrap">
+
+                    <img
+                        src="Assets/IT9.webp"
+                        alt="Engineering review workflow"
+                        class="recent-post-image"
+                    >
+
+                    <div class="post-image-overlay">
+                        <span>04</span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            5 MIN
+                        </span>
+                    </div>
+
+                    <div class="post-hover-tech">
+                        <span>SYS / 04</span>
+                        <strong>ENGINEERING</strong>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+                <div class="recent-post-content">
+
+                    <div class="recent-post-meta">
+                        <span>ENGINEERING</span>
+                        <span>FEB 2026</span>
+                    </div>
+
+                    <h3>
+                        OUR TERRAFORM MODULE
+                        REVIEW CHECKLIST
+                    </h3>
+
+                    <p>
+                        The checks we run against every infrastructure
+                        module before it reaches production.
+                    </p>
+
+                    <a href="error.html" class="recent-post-link">
+                        READ NOTE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article
+                class="recent-post-card"
+                data-category="case-study"
+            >
+
+                <a href="error.html" class="recent-post-image-wrap">
+
+                    <img
+                        src="Assets/IT10.webp"
+                        alt="Data analytics dashboard"
+                        class="recent-post-image"
+                    >
+
+                    <div class="post-image-overlay">
+                        <span>05</span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            11 MIN
+                        </span>
+                    </div>
+
+                    <div class="post-hover-tech">
+                        <span>SYS / 05</span>
+                        <strong>CASE STUDY</strong>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+                <div class="recent-post-content">
+
+                    <div class="recent-post-meta">
+                        <span>CASE STUDY</span>
+                        <span>JAN 2026</span>
+                    </div>
+
+                    <h3>
+                        CUTTING NORTHWIND'S
+                        FLEET LATENCY BY 70%
+                    </h3>
+
+                    <p>
+                        Moving from polling to event streams for a logistics
+                        client running hundreds of vehicles.
+                    </p>
+
+                    <a href="error.html" class="recent-post-link">
+                        READ NOTE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article
+                class="recent-post-card"
+                data-category="security"
+            >
+
+                <a href="error.html" class="recent-post-image-wrap">
+
+                    <img
+                        src="Assets/IT7.webp"
+                        alt="Cybersecurity penetration testing"
+                        class="recent-post-image"
+                    >
+
+                    <div class="post-image-overlay">
+                        <span>06</span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            10 MIN
+                        </span>
+                    </div>
+
+                    <div class="post-hover-tech">
+                        <span>SYS / 06</span>
+                        <strong>SECURITY</strong>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+                <div class="recent-post-content">
+
+                    <div class="recent-post-meta">
+                        <span>SECURITY</span>
+                        <span>DEC 2025</span>
+                    </div>
+
+                    <h3>
+                        READING A PENETRATION
+                        TEST REPORT
+                    </h3>
+
+                    <p>
+                        A plain-language guide for non-security teams
+                        who need to understand a penetration test.
+                    </p>
+
+                    <a href="error.html" class="recent-post-link">
+                        READ NOTE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="recent-posts-empty" id="recentPostsEmpty">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <strong>NO NOTES FOUND</strong>
+
+            <p>
+                Try another topic.
+            </p>
+
+            <button type="button" id="recentPostsClear">
+                SHOW ALL NOTES
+            </button>
+
+        </div>
+
+        <div class="recent-posts-footer">
+
+            <div>
+
+                <span>ENGINEERING JOURNAL</span>
+
+                <p>
+                    Practical notes from the systems we build,
+                    operate and learn from.
+                </p>
+
+            </div>
+
+            <a href="error.html">
+                VIEW ALL NOTES
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="stackly-popular-section" id="popular-posts">
+
+    <div class="stackly-popular-container">
+
+        <div class="popular-header">
+
+            <div class="popular-heading">
+
+                <span class="popular-eyebrow">
+                    (03) — MOST READ
+                </span>
+
+                <h2 class="popular-title">
+                    POPULAR
+                    <span>THIS QUARTER.</span>
+                </h2>
+
+                <p>
+                    The notes teams are spending the most time with —
+                    practical ideas covering reliability, security,
+                    architecture and production engineering.
+                </p>
+
+            </div>
+
+            <div class="popular-header-panel">
+
+                <div class="popular-live">
+
+                    <span></span>
+
+                    READING ACTIVITY
+
+                </div>
+
+                <div class="popular-header-data">
+
+                    <div>
+                        <strong>12K+</strong>
+                        <span>TOTAL READS</span>
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        <span>FEATURED NOTES</span>
+                    </div>
+
+                    <div>
+                        <strong>06</strong>
+                        <span>TOPIC AREAS</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="popular-content">
+
+            <div class="popular-list" id="popularList">
+
+
+                <article
+                    class="popular-item active"
+                    data-rank="01"
+                >
+
+                    <div class="popular-rank">
+                        01
+                    </div>
+
+                    <div class="popular-item-main">
+
+                        <div class="popular-item-meta">
+
+                            <span>
+                                CASE STUDY
+                            </span>
+
+                            <span>
+                                JUN 2026
+                            </span>
+
+                            <span>
+                                9 MIN READ
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            MIGRATING A CORE BANKING
+                            LEDGER WITH ZERO DOWNTIME
+                        </h3>
+
+                        <p>
+                            How a staged migration strategy kept a critical
+                            ledger available throughout the transition.
+                        </p>
+
+                        <div class="popular-item-bottom">
+
+                            <div class="popular-topic">
+                                CLOUD
+                            </div>
+
+                            <a href="error.html">
+                                READ NOTE
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="popular-reading">
+
+                        <strong>
+                            12.4K
+                        </strong>
+
+                        <span>
+                            READS
+                        </span>
+
+                        <div class="popular-reading-bar">
+                            <span style="width:100%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="popular-open-icon">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="popular-item"
+                    data-rank="02"
+                >
+
+                    <div class="popular-rank">
+                        02
+                    </div>
+
+                    <div class="popular-item-main">
+
+                        <div class="popular-item-meta">
+
+                            <span>
+                                SECURITY
+                            </span>
+
+                            <span>
+                                MAR 2026
+                            </span>
+
+                            <span>
+                                7 MIN READ
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            ZERO-TRUST:
+                            WHAT WE ACTUALLY RECOMMEND
+                        </h3>
+
+                        <p>
+                            A practical view of identity, segmentation,
+                            visibility and the boundaries that matter.
+                        </p>
+
+                        <div class="popular-item-bottom">
+
+                            <div class="popular-topic">
+                                SECURITY
+                            </div>
+
+                            <a href="error.html">
+                                READ NOTE
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="popular-reading">
+
+                        <strong>
+                            9.8K
+                        </strong>
+
+                        <span>
+                            READS
+                        </span>
+
+                        <div class="popular-reading-bar">
+                            <span style="width:79%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="popular-open-icon">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="popular-item"
+                    data-rank="03"
+                >
+
+                    <div class="popular-rank">
+                        03
+                    </div>
+
+                    <div class="popular-item-main">
+
+                        <div class="popular-item-meta">
+
+                            <span>
+                                RELIABILITY
+                            </span>
+
+                            <span>
+                                MAR 2026
+                            </span>
+
+                            <span>
+                                8 MIN READ
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            WHY WE RUN
+                            BLAMELESS POSTMORTEMS
+                        </h3>
+
+                        <p>
+                            Turning incidents into system-level learning
+                            instead of assigning fault after the fact.
+                        </p>
+
+                        <div class="popular-item-bottom">
+
+                            <div class="popular-topic">
+                                RELIABILITY
+                            </div>
+
+                            <a href="error.html">
+                                READ NOTE
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="popular-reading">
+
+                        <strong>
+                            7.8K
+                        </strong>
+
+                        <span>
+                            READS
+                        </span>
+
+                        <div class="popular-reading-bar">
+                            <span style="width:63%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="popular-open-icon">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="popular-item"
+                    data-rank="04"
+                >
+
+                    <div class="popular-rank">
+                        04
+                    </div>
+
+                    <div class="popular-item-main">
+
+                        <div class="popular-item-meta">
+
+                            <span>
+                                ENGINEERING
+                            </span>
+
+                            <span>
+                                FEB 2026
+                            </span>
+
+                            <span>
+                                5 MIN READ
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            OUR TERRAFORM MODULE
+                            REVIEW CHECKLIST
+                        </h3>
+
+                        <p>
+                            The production checks we use to keep infrastructure
+                            modules predictable, reusable and maintainable.
+                        </p>
+
+                        <div class="popular-item-bottom">
+
+                            <div class="popular-topic">
+                                INFRASTRUCTURE
+                            </div>
+
+                            <a href="error.html">
+                                READ NOTE
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="popular-reading">
+
+                        <strong>
+                            6.2K
+                        </strong>
+
+                        <span>
+                            READS
+                        </span>
+
+                        <div class="popular-reading-bar">
+                            <span style="width:50%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="popular-open-icon">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <aside class="popular-feature">
+
+                <div class="popular-feature-top">
+
+                    <span>
+                        CURRENT READER PICK
+                    </span>
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+
+                <div class="popular-feature-number">
+                    01
+                </div>
+
+
+                <span class="popular-feature-label">
+                    MOST READ NOTE
+                </span>
+
+
+                <h3>
+                    MIGRATING A CORE
+                    <span>BANKING LEDGER.</span>
+                </h3>
+
+
+                <p>
+                    A production migration without an outage window
+                    requires more than a cutover plan. This note covers
+                    the system boundaries, validation steps and rollback
+                    thinking behind the approach.
+                </p>
+
+
+                <div class="popular-feature-stack">
+
+                    <span>CLOUD</span>
+                    <span>DATABASE</span>
+                    <span>RELIABILITY</span>
+
+                </div>
+
+
+                <div class="popular-feature-stats">
+
+                    <div>
+
+                        <strong>
+                            12.4K
+                        </strong>
+
+                        <span>
+                            READS
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            09
+                        </strong>
+
+                        <span>
+                            MINUTES
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            2026
+                        </strong>
+
+                        <span>
+                            PUBLISHED
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="error.html"
+                    class="popular-feature-button"
+                >
+                    READ FEATURED NOTE
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </aside>
+
+        </div>
+
+
+        <div class="popular-insight-strip">
+
+            <div class="popular-insight-title">
+
+                <span>
+                    READER SIGNAL
+                </span>
+
+                <strong>
+                    WHAT PEOPLE
+                    <em>KEEP COMING BACK TO.</em>
+                </strong>
+
+            </div>
+
+
+            <div class="popular-insight-items">
+
+                <div>
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+                        <strong>SECURITY</strong>
+                        <span>THREAT &amp; TRUST</span>
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fa-solid fa-cloud"></i>
+
+                    <div>
+                        <strong>CLOUD</strong>
+                        <span>INFRASTRUCTURE</span>
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fa-solid fa-server"></i>
+
+                    <div>
+                        <strong>RELIABILITY</strong>
+                        <span>PRODUCTION SYSTEMS</span>
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <div>
+                        <strong>ENGINEERING</strong>
+                        <span>DELIVERY PRACTICE</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="popular-footer">
+
+            <div>
+
+                <span>
+                    KEEP READING
+                </span>
+
+                <p>
+                    Explore the engineering notes, case studies and
+                    practical lessons behind the systems we build.
+                </p>
+
+            </div>
+
+            <a href="error.html">
+                EXPLORE RECENT POSTS
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="stackly-blog-topics-section" id="topics">
+
+    <div class="stackly-blog-topics-container">
+
+        <div class="blog-topics-header">
+
+            <div class="blog-topics-heading">
+
+                <span class="blog-topics-eyebrow">
+                    (04) — TOPICS
+                </span>
+
+                <h2 class="blog-topics-title">
+                    WHAT WE
+                    <span>WRITE ABOUT.</span>
+                </h2>
+
+                <p>
+                    The systems, decisions and engineering patterns
+                    behind the work. Pick a topic to explore the journal.
+                </p>
+
+            </div>
+
+            <div class="blog-topics-status-panel">
+
+                <div class="blog-topics-live">
+                    <i></i>
+                    JOURNAL SIGNAL ACTIVE
+                </div>
+
+                <div class="blog-topics-status-grid">
+
+                    <div>
+                        <strong>06</strong>
+                        <span>TOPICS</span>
+                    </div>
+
+                    <div>
+                        <strong>24+</strong>
+                        <span>NOTES</span>
+                    </div>
+
+                    <div>
+                        <strong>01</strong>
+                        <span>TEAM</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="blog-topics-grid">
+
+
+            <a href="error.html" class="blog-topic-card">
+
+                <div class="blog-topic-card-top">
+
+                    <span>01</span>
+
+                    <i class="fa-solid fa-cloud"></i>
+
+                </div>
+
+                <div class="blog-topic-card-content">
+
+                    <span class="blog-topic-label">
+                        INFRASTRUCTURE
+                    </span>
+
+                    <h3>
+                        CLOUD
+                    </h3>
+
+                    <p>
+                        Cloud architecture, deployment systems,
+                        observability and infrastructure decisions.
+                    </p>
+
+                </div>
+
+                <div class="blog-topic-card-bottom">
+
+                    <span>
+                        AWS / GCP / AZURE
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+                <div class="blog-topic-glow"></div>
+
+            </a>
+
+
+            <a href="error.html" class="blog-topic-card">
+
+                <div class="blog-topic-card-top">
+
+                    <span>02</span>
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div class="blog-topic-card-content">
+
+                    <span class="blog-topic-label">
+                        PROTECTION
+                    </span>
+
+                    <h3>
+                        SECURITY
+                    </h3>
+
+                    <p>
+                        Identity, zero trust, incident response,
+                        security reviews and practical risk reduction.
+                    </p>
+
+                </div>
+
+                <div class="blog-topic-card-bottom">
+
+                    <span>
+                        ZERO TRUST / IDENTITY
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+                <div class="blog-topic-glow"></div>
+
+            </a>
+
+
+            <a href="error.html" class="blog-topic-card">
+
+                <div class="blog-topic-card-top">
+
+                    <span>03</span>
+
+                    <i class="fa-solid fa-server"></i>
+
+                </div>
+
+                <div class="blog-topic-card-content">
+
+                    <span class="blog-topic-label">
+                        PRODUCTION
+                    </span>
+
+                    <h3>
+                        RELIABILITY
+                    </h3>
+
+                    <p>
+                        Postmortems, monitoring, failure modes and
+                        the practices that keep systems dependable.
+                    </p>
+
+                </div>
+
+                <div class="blog-topic-card-bottom">
+
+                    <span>
+                        SRE / OPERATIONS
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+                <div class="blog-topic-glow"></div>
+
+            </a>
+
+
+            <a href="error.html" class="blog-topic-card">
+
+                <div class="blog-topic-card-top">
+
+                    <span>04</span>
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <div class="blog-topic-card-content">
+
+                    <span class="blog-topic-label">
+                        DELIVERY
+                    </span>
+
+                    <h3>
+                        ENGINEERING
+                    </h3>
+
+                    <p>
+                        Code review, architecture patterns, tooling,
+                        delivery practices and lessons from the build.
+                    </p>
+
+                </div>
+
+                <div class="blog-topic-card-bottom">
+
+                    <span>
+                        SOFTWARE / DEVOPS
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+                <div class="blog-topic-glow"></div>
+
+            </a>
+
+
+            <a href="error.html" class="blog-topic-card">
+
+                <div class="blog-topic-card-top">
+
+                    <span>05</span>
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <div class="blog-topic-card-content">
+
+                    <span class="blog-topic-label">
+                        INTELLIGENCE
+                    </span>
+
+                    <h3>
+                        DATA &amp; AI
+                    </h3>
+
+                    <p>
+                        Data pipelines, analytics, automation and
+                        practical applications of machine intelligence.
+                    </p>
+
+                </div>
+
+                <div class="blog-topic-card-bottom">
+
+                    <span>
+                        DATA / AUTOMATION
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+                <div class="blog-topic-glow"></div>
+
+            </a>
+
+
+            <a href="error.html" class="blog-topic-card">
+
+                <div class="blog-topic-card-top">
+
+                    <span>06</span>
+
+                    <i class="fa-solid fa-people-group"></i>
+
+                </div>
+
+                <div class="blog-topic-card-content">
+
+                    <span class="blog-topic-label">
+                        THE STUDIO
+                    </span>
+
+                    <h3>
+                        HOW WE WORK
+                    </h3>
+
+                    <p>
+                        Team structure, engineering culture, decisions
+                        and the practices that shape how we collaborate.
+                    </p>
+
+                </div>
+
+                <div class="blog-topic-card-bottom">
+
+                    <span>
+                        TEAM / STUDIO
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+                <div class="blog-topic-glow"></div>
+
+            </a>
+
+        </div>
+
+
+        <div class="blog-topics-explorer">
+
+            <div class="blog-topics-explorer-left">
+
+                <span>
+                    CURRENT FOCUS
+                </span>
+
+                <h3>
+                    SYSTEMS THAT
+                    <strong>HOLD UP.</strong>
+                </h3>
+
+                <p>
+                    We care about what happens after launch just as much
+                    as what happens during the build.
+                </p>
+
+            </div>
+
+
+            <div class="blog-topics-explorer-right">
+
+                <div class="topic-signal">
+
+                    <div class="topic-signal-rings">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <div class="topic-signal-core">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="topic-signal-copy">
+
+                    <span>
+                        ENGINEERING SIGNAL
+                    </span>
+
+                    <p>
+                        BUILD
+                        <strong>→</strong>
+                        OPERATE
+                        <strong>→</strong>
+                        LEARN
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="blog-topics-footer">
+
+            <div>
+
+                <span>
+                    EXPLORE THE JOURNAL
+                </span>
+
+                <p>
+                    Read the ideas behind the systems,
+                    not just the finished result.
+                </p>
+
+            </div>
+
+            <a href="error.html">
+                VIEW RECENT POSTS
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="stackly-blog-cta-section" id="blog-cta">
+
+    <div class="stackly-blog-cta-container">
+
+        <div class="blog-cta-top">
+
+            <span class="blog-cta-eyebrow">
+                (05) — STAY IN THE LOOP
+            </span>
+
+            <div class="blog-cta-status">
+                <span></span>
+                ENGINEERING NOTES / ACTIVE
+            </div>
+
+        </div>
+
+        <div class="blog-cta-main">
+
+            <div class="blog-cta-copy">
+
+                <h2>
+                    KEEP THE
+                    <span>SIGNAL.</span>
+                </h2>
+
+                <p>
+                    Practical notes on cloud infrastructure, software,
+                    security, reliability, data and the engineering
+                    decisions behind systems that need to last.
+                </p>
+
+                <div class="blog-cta-topics">
+
+                    <span>WHAT YOU'LL GET</span>
+
+                    <div class="blog-cta-topic-list">
+
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <span>CLOUD</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <span>SOFTWARE</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>SECURITY</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>DATA &amp; AI</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="blog-cta-form-card">
+
+                <div class="blog-cta-form-header">
+
+                    <div>
+
+                        <span>
+                            ENGINEERING JOURNAL
+                        </span>
+
+                        <strong>
+                            GET NEW NOTES
+                        </strong>
+
+                    </div>
+
+                    <div class="blog-cta-form-number">
+                        01
+                    </div>
+
+                </div>
+
+                <form
+                    class="blog-cta-form"
+                    id="blogNewsletterForm"
+                >
+
+                    <div class="blog-cta-field">
+
+                        <label for="blogNewsletterEmail">
+                            EMAIL ADDRESS
+                        </label>
+
+                        <input
+                            type="email"
+                            id="blogNewsletterEmail"
+                            name="email"
+                            placeholder="you@company.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="blog-cta-submit"
+                    >
+                        SUBSCRIBE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+                <div
+                    class="blog-cta-message"
+                    id="blogNewsletterMessage"
+                    aria-live="polite"
+                ></div>
+
+                <div class="blog-cta-privacy">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <span>
+                        OCCASIONAL NOTES. NO UNNECESSARY NOISE.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="blog-cta-lower">
+
+            <div class="blog-cta-lower-left">
+
+                <span>
+                    HOW OFTEN
+                </span>
+
+                <strong>
+                    WHEN THERE'S SOMETHING WORTH SHARING.
+                </strong>
+
+            </div>
+
+            <div class="blog-cta-lower-center">
+
+                <div class="blog-cta-signal">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <div>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="blog-cta-lower-right">
+
+                <span>
+                    STACKLY / JOURNAL
+                </span>
+
+                <strong>
+                    SALEM · REMOTE · GLOBAL
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="blog-cta-footer">
+
+            <div>
+
+                <span>
+                    STILL HAVE QUESTIONS?
+                </span>
+
+                <p>
+                    Tell us what you're building or what needs to work better.
+                </p>
+
+            </div>
+
+            <a href="contact.html">
+                TALK TO THE TEAM
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="stackly-footer">
+
+    <div class="stackly-footer-top">
+
+        <div class="stackly-footer-brand">
+
+            <a href="index.html" class="stackly-footer-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+
+            <p class="stackly-footer-description">
+                An IT solutions team helping businesses build,
+                secure and scale reliable digital systems.
+            </p>
+
+            <div class="stackly-footer-social">
+                <span class="stackly-footer-social-label">FOLLOW STACKLY</span>
+
+                <div class="stackly-social-icons">
+
+                    <a href="error.html" aria-label="X / Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-footer-links">
+
+            <div class="stackly-footer-column">
+
+                <h4>EXPLORE</h4>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="stackly-footer-column">
+
+                <h4>SERVICES</h4>
+
+                <a href="error.html">Cloud &amp; DevOps</a>
+                <a href="error.html">Custom Software</a>
+                <a href="error.html">Cybersecurity</a>
+                <a href="error.html">IT Consulting</a>
+                <a href="error.html">Managed IT</a>
+                <a href="error.html">Data &amp; AI</a>
+
+            </div>
+
+
+            <div class="stackly-footer-column">
+
+                <h4>ACCOUNT</h4>
+
+                <a href="login.html">Log In</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="error.html">Client Portal</a>
+                <a href="error.html">Support Center</a>
+                <a href="error.html">Status Page</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-footer-contact">
+
+            <span class="stackly-footer-contact-label">
+                START A CONVERSATION
+            </span>
+
+            <h3>
+                HAVE A SYSTEM
+                <span>WORTH BUILDING?</span>
+            </h3>
+
+            <p>
+                Tell us what you're working on.
+                We'll figure out the next step together.
+            </p>
+
+            <a href="contact.html" class="stackly-footer-contact-button">
+                CONTACT STACKLY
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <div class="stackly-footer-contact-info">
+
+                <a href="mailto:hello@stackly.io">
+                    <i class="fa-regular fa-envelope"></i>
+                    support@stackly.com
+                </a>
+
+                <a href="error.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Bengaluru, India
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-footer-services-strip">
+
+        <span>WHAT WE BUILD</span>
+
+        <div class="stackly-footer-service-list">
+
+            <a href="error.html">CLOUD INFRASTRUCTURE</a>
+
+            <span></span>
+
+            <a href="error.html">SOFTWARE SYSTEMS</a>
+
+            <span></span>
+
+            <a href="error.html">CYBERSECURITY</a>
+
+            <span></span>
+
+            <a href="error.html">DATA &amp; AI</a>
+
+            <span></span>
+
+            <a href="error.html">IT CONSULTING</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-footer-bottom">
+
+        <div class="stackly-footer-copyright">
+            <span>&copy; 2026 Stackly Systems.</span>
+            <span>All rights reserved.</span>
+        </div>
+
+        <div class="stackly-footer-legal">
+
+            <a href="error.html">Privacy</a>
+            <a href="error.html">Terms</a>
+            <a href="error.html">Cookies</a>
+
+        </div>
+
+        <div class="stackly-footer-built">
+            BUILT WITH INTENTION, CLARITY AND CARE.
+        </div>
+
+    </div>
+
+</footer>
+
+
+        </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="nav.js"></script>
+<script src="cursor.js"></script>
+<script src="blog.js"></script>
+        </body>
+        </html>

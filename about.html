@@ -1,0 +1,2247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly">
+
+    <title>Stackly</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<body>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-wrapper">
+
+            <div class="loader-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </div>
+
+            <div class="loader-bottom">
+                <span>LOADING</span>
+                <span id="loaderPercent">0%</span>
+            </div>
+
+            <div class="loader-line">
+                <div class="loader-line-progress" id="loaderProgress"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+  
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid navbar-inner">
+
+                <a href="index.html" class="brand">
+                    <img src="Assets/blacklogo.webp" alt="Stackly">
+                </a>
+
+                <div class="desktop-navigation">
+
+                    <a href="index.html" class="nav-item ">
+                        Home
+                    </a>
+
+                    <a href="about.html" class="nav-item active">
+                        About
+                    </a>
+
+                    <a href="services.html" class="nav-item">
+                        Service
+                    </a>
+
+                    <a href="blog.html" class="nav-item">
+                        Blog
+                    </a>
+
+                    <a href="contact.html" class="nav-item">
+                        Contact
+                    </a>
+
+                    <a href="login.html" class="login-link">
+                        Login
+                    </a>
+
+                    <a href="register.html" class="register-button">
+                        Register
+                    </a>
+
+                </div>
+
+                <button
+                    class="mobile-menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <aside class="mobile-navigation" id="mobileNavigation">
+
+        <div class="mobile-navigation-header">
+
+            <a href="index.html" class="mobile-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+
+            <button
+                class="mobile-close"
+                id="mobileClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="mobile-links">
+
+            <a href="index.html" class="mobile-nav-link ">
+                Home
+            </a>
+
+            <a href="about.html" class="mobile-nav-link active">
+                About
+            </a>
+
+            <a href="services.html" class="mobile-nav-link">
+                Service
+            </a>
+
+            <a href="blog.html" class="mobile-nav-link">
+                Blog
+            </a>
+
+            <a href="contact.html" class="mobile-nav-link">
+                Contact
+            </a>
+
+            <a href="login.html" class="mobile-login">
+                Login
+            </a>
+
+            <a href="register.html" class="mobile-register">
+                Register
+            </a>
+
+        </div>
+
+    </aside>
+
+    <main>
+     <section class="about-hero-section">
+
+    <div class="about-hero-inner">
+
+        <div class="about-hero-grid">
+
+            <div class="about-hero-left">
+
+                <span class="about-hero-label">(ABOUT)</span>
+
+                <h1 class="about-hero-title">
+                    <span>SMALL TEAM.</span>
+                    <span>SENIOR ON</span>
+                    <span>EVERY CALL.</span>
+                </h1>
+
+                <div class="about-hero-description">
+                    <p>
+                        Stackly started as a two-person infrastructure consultancy
+                        in 2019 and stayed intentionally small. We turn away more
+                        work than we take.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="about-hero-right">
+
+                <div class="about-signal-panel">
+
+                    <div class="about-signal-top">
+                        <span>ENGINEERING SIGNAL</span>
+                        <span class="about-signal-live">
+                            <i></i>
+                            ACTIVE
+                        </span>
+                    </div>
+
+                    <div class="about-signal-visual">
+
+                        <div class="signal-ring signal-ring-1"></div>
+                        <div class="signal-ring signal-ring-2"></div>
+                        <div class="signal-ring signal-ring-3"></div>
+
+                        <div class="signal-core">
+                            <span>SK</span>
+                        </div>
+
+                        <span class="signal-node signal-node-1"></span>
+                        <span class="signal-node signal-node-2"></span>
+                        <span class="signal-node signal-node-3"></span>
+                        <span class="signal-node signal-node-4"></span>
+
+                        <span class="signal-line signal-line-1"></span>
+                        <span class="signal-line signal-line-2"></span>
+                        <span class="signal-line signal-line-3"></span>
+                        <span class="signal-line signal-line-4"></span>
+
+                    </div>
+
+                    <div class="about-signal-copy">
+                        <p>
+                            SMALL BY DESIGN.
+                        </p>
+
+                        <span>
+                            Senior engineers stay close to the system,
+                            the decisions and the people using it.
+                        </span>
+                    </div>
+
+   <div class="about-signal-stats">
+
+    <div class="about-signal-stat">
+        <strong
+            class="about-counter"
+            data-target="63"
+            data-decimals="0"
+        >0</strong>
+
+        <span>SYSTEMS</span>
+    </div>
+
+    <div class="about-signal-stat">
+        <strong
+            class="about-counter"
+            data-target="14"
+            data-decimals="0"
+        >0</strong>
+
+        <span>INDUSTRIES</span>
+    </div>
+
+    <div class="about-signal-stat">
+        <strong
+            class="about-counter"
+            data-target="99.95"
+            data-decimals="2"
+        >0</strong>
+
+        <span>SLA %</span>
+    </div>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-hero-bottom">
+            <span>STACKLY / ABOUT</span>
+            <span>01 — 2026</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about-history-section">
+
+    <div class="about-history-container">
+
+        <div class="about-history-header">
+
+            <div class="about-history-heading">
+
+                <span class="about-history-label">
+                    (02) — HISTORY
+                </span>
+
+                <h2 class="about-history-title">
+                    HOW WE GOT HERE
+                </h2>
+
+            </div>
+
+            <p class="about-history-intro">
+                Six years, the same two founders, and an account we've kept
+                on purpose more than its scale.
+            </p>
+
+        </div>
+
+
+        <div class="about-history-timeline">
+
+            <article class="about-history-row">
+
+                <div class="about-history-year">
+                    2019
+                </div>
+
+                <div class="about-history-name">
+                    FOUNDED
+                </div>
+
+                <div class="about-history-text">
+                    Two engineers set out to build infrastructure tools for
+                    teams that needed clarity, reliability and less noise.
+                </div>
+
+            </article>
+
+
+            <article class="about-history-row">
+
+                <div class="about-history-year">
+                    2021
+                </div>
+
+                <div class="about-history-name">
+                    FIRST RETAINER
+                </div>
+
+                <div class="about-history-text">
+                    Our first long-term engagement helped shape the way we
+                    work today: stay close to the system and stay accountable.
+                </div>
+
+            </article>
+
+
+            <article class="about-history-row">
+
+                <div class="about-history-year">
+                    2023
+                </div>
+
+                <div class="about-history-name">
+                    SECURITY PRACTICE
+                </div>
+
+                <div class="about-history-text">
+                    Added a dedicated cybersecurity practice after seeing how
+                    often reliability and security had to be solved together.
+                </div>
+
+            </article>
+
+
+            <article class="about-history-row">
+
+                <div class="about-history-year">
+                    2025
+                </div>
+
+                <div class="about-history-name">
+                    99.95% AVERAGE SLA
+                </div>
+
+                <div class="about-history-text">
+                    Current client systems under active management reached an
+                    average uptime SLA across the previous year.
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="about-history-bottom">
+            <span>SMALL TEAM. LONG-TERM THINKING.</span>
+            <span>2019 — 2026</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about-decisions-section" id="how-we-decide">
+
+    <div class="about-decisions-container">
+
+        <div class="about-decisions-header">
+
+            <div class="about-decisions-header-left">
+                <span class="about-decisions-eyebrow">
+                    (03) — PRINCIPLES
+                </span>
+
+                <h2 class="about-decisions-title">
+                    HOW WE
+                    <span>DECIDE.</span>
+                </h2>
+            </div>
+
+            <div class="about-decisions-header-right">
+                <p>
+                    We do not add process for the sake of process.
+                    Every decision starts with the system, the people
+                    operating it and the outcome that actually matters.
+                </p>
+
+                <div class="about-decisions-meta">
+                    <span>ENGINEERING MODEL</span>
+                    <span>01 — 04</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="about-decisions-intro">
+
+            <div class="about-decisions-intro-number">
+                4
+            </div>
+
+            <div class="about-decisions-intro-content">
+
+                <span>
+                    A SIMPLE FILTER FOR COMPLEX WORK
+                </span>
+
+                <h3>
+                    Fewer assumptions.
+                    Better decisions.
+                    Systems that last.
+                </h3>
+
+                <p>
+                    From infrastructure to software and security,
+                    we use the same decision framework before we
+                    build, change or scale anything.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-decisions-grid">
+
+
+            <article class="decision-card active">
+
+                <div class="decision-card-top">
+                    <span class="decision-number">01</span>
+
+                    <span class="decision-status">
+                        START
+                    </span>
+                </div>
+
+                <div class="decision-card-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <h3>
+                    SAY NO OFTEN
+                </h3>
+
+                <p>
+                    We challenge requests before accepting them.
+                    The right solution is sometimes removing scope,
+                    reducing complexity or deciding not to build.
+                </p>
+
+                <div class="decision-card-bottom">
+                    <span>CLARITY FIRST</span>
+                    <a href="error.html">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="decision-card">
+
+                <div class="decision-card-top">
+                    <span class="decision-number">02</span>
+
+                    <span class="decision-status">
+                        FRAME
+                    </span>
+                </div>
+
+                <div class="decision-card-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+
+                <h3>
+                    OWN THE PAPER
+                </h3>
+
+                <p>
+                    We document the architecture, constraints,
+                    trade-offs and expected outcomes before the
+                    first implementation decision is made.
+                </p>
+
+                <div class="decision-card-bottom">
+                    <span>STRUCTURE BEFORE CODE</span>
+                     <a href="error.html">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="decision-card">
+
+                <div class="decision-card-top">
+                    <span class="decision-number">03</span>
+
+                    <span class="decision-status">
+                        BUILD
+                    </span>
+                </div>
+
+                <div class="decision-card-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h3>
+                    WRITE IT DOWN
+                </h3>
+
+                <p>
+                    Systems should be understandable without relying
+                    on tribal knowledge. Decisions, operations and
+                    changes stay visible to the team.
+                </p>
+
+                <div class="decision-card-bottom">
+                    <span>KNOWLEDGE STAYS VISIBLE</span>
+                     <a href="error.html">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="decision-card">
+
+                <div class="decision-card-top">
+                    <span class="decision-number">04</span>
+
+                    <span class="decision-status">
+                        OPERATE
+                    </span>
+                </div>
+
+                <div class="decision-card-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3>
+                    STAY BORING
+                </h3>
+
+                <p>
+                    Production rewards consistency. We prefer clear,
+                    observable and maintainable systems over technology
+                    that adds complexity without improving the outcome.
+                </p>
+
+                <div class="decision-card-bottom">
+                    <span>RELIABILITY OVER HYPE</span>
+                     <a href="error.html">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="about-decisions-footer">
+
+            <div class="decision-footer-line"></div>
+
+            <div class="decision-footer-content">
+
+                <span>
+                    THE STACKLY FILTER
+                </span>
+
+                <p>
+                    Does it make the system clearer, safer,
+                    faster to operate or easier to change?
+                </p>
+
+                <strong>
+                    YES / BUILD
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stackly-leadership-section" id="leadership">
+
+    <div class="stackly-leadership-container">
+
+        <div class="stackly-leadership-header">
+
+            <div class="stackly-leadership-heading">
+
+                <span class="stackly-leadership-eyebrow">
+                    (04) — PEOPLE
+                </span>
+
+                <h2 class="stackly-leadership-title">
+                    LEADERSHIP
+                </h2>
+
+            </div>
+
+            <div class="stackly-leadership-header-copy">
+                <p>
+                    Senior engineers lead from the front. The people
+                    responsible for the work stay close to the systems,
+                    decisions and teams they support.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-leadership-grid">
+
+            <article class="stackly-leader-card">
+
+                <div class="stackly-leader-image-wrap">
+
+                    <img
+                        src="Assets/IT16.webp"
+                        alt="Amara Ridwan"
+                        class="stackly-leader-image"
+                    >
+
+                    <div class="stackly-leader-overlay">
+
+                        <div class="stackly-leader-overlay-top">
+                            <span>CONNECT</span>
+                            <span>01</span>
+                        </div>
+
+                        <div class="stackly-leader-socials">
+
+                            <a href="error.html" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="stackly-leader-info">
+
+                    <div class="stackly-leader-name-row">
+
+                        <h3>Amara Ridwan</h3>
+
+                        <span class="stackly-leader-status">
+                            <i></i>
+                            ACTIVE
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Co-Founder, Infrastructure
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="stackly-leader-card">
+
+                <div class="stackly-leader-image-wrap">
+
+                    <img
+                        src="Assets/IT20.webp"
+                        alt="Farid Alamz"
+                        class="stackly-leader-image"
+                    >
+
+                    <div class="stackly-leader-overlay">
+
+                        <div class="stackly-leader-overlay-top">
+                            <span>CONNECT</span>
+                            <span>02</span>
+                        </div>
+
+                        <div class="stackly-leader-socials">
+
+                            <a href="error.html" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="stackly-leader-info">
+
+                    <div class="stackly-leader-name-row">
+
+                        <h3>Farid Alamz</h3>
+
+                        <span class="stackly-leader-status">
+                            <i></i>
+                            ACTIVE
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Co-Founder, Security
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="stackly-leader-card">
+
+                <div class="stackly-leader-image-wrap">
+
+                    <img
+                        src="Assets/IT21.webp"
+                        alt="Koi Tanaka"
+                        class="stackly-leader-image"
+                    >
+
+                    <div class="stackly-leader-overlay">
+
+                        <div class="stackly-leader-overlay-top">
+                            <span>CONNECT</span>
+                            <span>03</span>
+                        </div>
+
+                        <div class="stackly-leader-socials">
+
+                            <a href="error.html" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="stackly-leader-info">
+
+                    <div class="stackly-leader-name-row">
+
+                        <h3>Koi Tanaka</h3>
+
+                        <span class="stackly-leader-status">
+                            <i></i>
+                            ACTIVE
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Lead, Software
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="stackly-leader-card">
+
+                <div class="stackly-leader-image-wrap">
+
+                    <img
+                        src="Assets/IT18.webp"
+                        alt="Priya Nathan"
+                        class="stackly-leader-image"
+                    >
+
+                    <div class="stackly-leader-overlay">
+
+                        <div class="stackly-leader-overlay-top">
+                            <span>CONNECT</span>
+                            <span>04</span>
+                        </div>
+
+                        <div class="stackly-leader-socials">
+
+                            <a href="error.html" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="stackly-leader-info">
+
+                    <div class="stackly-leader-name-row">
+
+                        <h3>Priya Nathan</h3>
+
+                        <span class="stackly-leader-status">
+                            <i></i>
+                            ACTIVE
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Lead, Data &amp; AI
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="stackly-leadership-stats">
+
+            <div class="stackly-leadership-stat">
+
+                <strong
+                    class="leadership-counter"
+                    data-target="63"
+                >0</strong>
+
+                <span>SYSTEMS UNDER CARE</span>
+
+            </div>
+
+
+            <div class="stackly-leadership-stat">
+
+                <strong
+                    class="leadership-counter"
+                    data-target="14"
+                >0</strong>
+
+                <span>INDUSTRIES SERVED</span>
+
+            </div>
+
+
+            <div class="stackly-leadership-stat">
+
+                <strong
+                    class="leadership-counter"
+                    data-target="99.95"
+                    data-decimals="2"
+                >0</strong>
+
+                <span>AVERAGE SLA %</span>
+
+            </div>
+
+
+            <div class="stackly-leadership-stat">
+
+                <strong
+                    class="leadership-counter"
+                    data-target="9"
+                >0</strong>
+
+                <span>ENGINEERS ON TEAM</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-leadership-bottom">
+
+            <div>
+                <span>DIRECT ACCESS</span>
+
+                <p>
+                    No account managers between the people building
+                    the system and the people responsible for it.
+                </p>
+            </div>
+
+            <a href="contact.html">
+                WORK WITH STACKLY
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stackly-careers-section" id="careers">
+
+    <div class="stackly-careers-container">
+
+        <div class="stackly-careers-header">
+
+            <div class="stackly-careers-heading">
+
+                <span class="stackly-careers-eyebrow">
+                    (05) — CAREERS
+                </span>
+
+                <h2 class="stackly-careers-title">
+                    WE MOVE
+                    <span>KEEP THE</span>
+                    TEAM SMALL.
+                </h2>
+
+            </div>
+
+            <div class="stackly-careers-header-side">
+
+                <div class="stackly-careers-status">
+                    <span class="stackly-status-dot"></span>
+                    CURRENTLY OPEN
+                </div>
+
+                <p>
+                    We hire carefully, work directly with clients and
+                    give experienced engineers real ownership from day one.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-careers-main">
+
+            <div class="stackly-careers-statement">
+
+                <span class="stackly-careers-small-label">
+                    HOW WE WORK
+                </span>
+
+                <h3>
+                    WE SLOWLY.
+                    <strong>KEEP THE TEAM SMALL,</strong>
+                    AND GIVE EVERY ENGINEER
+                    <strong>DIRECT CLIENT CONTACT</strong>
+                    FROM WEEK ONE.
+                </h3>
+
+                <p>
+                    Smaller teams mean fewer layers, faster decisions and
+                    more responsibility. You work with the people making
+                    the decisions, not through layers of hand-offs.
+                </p>
+
+                <a href="contact.html" class="stackly-careers-cta">
+                    TALK TO STACKLY
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-careers-roles">
+
+               <div class="stackly-careers-header-side">
+
+    <div class="careers-live-row">
+        <span class="careers-live-indicator">
+            <i></i>
+            CURRENTLY OPEN
+        </span>
+
+        <span class="careers-location">
+            SALEM / REMOTE
+        </span>
+    </div>
+
+    <div class="careers-side-title">
+        <span>SMALL TEAM.</span>
+        <strong>HIGH OWNERSHIP.</strong>
+    </div>
+
+    <p class="careers-side-description">
+        We hire carefully and keep senior engineers close to the work.
+        Every role comes with direct client exposure, technical ownership
+        and responsibility for the systems you help build.
+    </p>
+
+    <div class="careers-side-metrics">
+
+        <div class="careers-side-metric">
+            <strong>09</strong>
+            <span>ENGINEERS</span>
+        </div>
+
+        <div class="careers-side-metric">
+            <strong>63</strong>
+            <span>SYSTEMS</span>
+        </div>
+
+        <div class="careers-side-metric">
+            <strong>14</strong>
+            <span>INDUSTRIES</span>
+        </div>
+
+    </div>
+
+    <div class="careers-side-bottom">
+
+        <span>REMOTE-FIRST</span>
+
+        <span>DIRECT ACCESS</span>
+
+        <span>SENIOR OWNERSHIP</span>
+
+    </div>
+
+</div>
+
+
+                <article class="stackly-role-card">
+
+                    <div class="stackly-role-index">
+                        01
+                    </div>
+
+                    <div class="stackly-role-content">
+
+                        <span>
+                            INFRASTRUCTURE
+                        </span>
+
+                        <h4>
+                            Senior Cloud Engineer
+                        </h4>
+
+                        <p>
+                            Cloud platforms, automation, observability
+                            and production systems.
+                        </p>
+
+                        <div class="stackly-role-meta">
+                            <span>REMOTE</span>
+                            <span>FULL-TIME</span>
+                        </div>
+
+                    </div>
+
+                    <a href="error.html" class="stackly-role-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+
+                <article class="stackly-role-card">
+
+                    <div class="stackly-role-index">
+                        02
+                    </div>
+
+                    <div class="stackly-role-content">
+
+                        <span>
+                            SECURITY
+                        </span>
+
+                        <h4>
+                            Security Consultant
+                        </h4>
+
+                        <p>
+                            Security architecture, risk reduction and
+                            practical protection for modern systems.
+                        </p>
+
+                        <div class="stackly-role-meta">
+                            <span>REMOTE</span>
+                            <span>FULL-TIME</span>
+                        </div>
+
+                    </div>
+
+                    <a href="error.html" class="stackly-role-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+
+                <article class="stackly-role-card">
+
+                    <div class="stackly-role-index">
+                        03
+                    </div>
+
+                    <div class="stackly-role-content">
+
+                        <span>
+                            SOFTWARE
+                        </span>
+
+                        <h4>
+                            Full-Stack Engineer
+                        </h4>
+
+                        <p>
+                            Build useful products, internal systems and
+                            maintainable services with real ownership.
+                        </p>
+
+                        <div class="stackly-role-meta">
+                            <span>HYBRID</span>
+                            <span>FULL-TIME</span>
+                        </div>
+
+                    </div>
+
+                    <a href="error.html" class="stackly-role-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-careers-values">
+
+            <div class="stackly-careers-value-heading">
+                <span>(05.1)</span>
+                <strong>WHAT YOU GET</strong>
+            </div>
+
+            <div class="stackly-careers-value-grid">
+
+                <div class="stackly-careers-value">
+
+                    <div class="stackly-value-icon">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+
+                    <h4>
+                        DIRECT ACCESS
+                    </h4>
+
+                    <p>
+                        Work directly with founders, senior engineers
+                        and the people making important decisions.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-careers-value">
+
+                    <div class="stackly-value-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h4>
+                        REAL OWNERSHIP
+                    </h4>
+
+                    <p>
+                        Own systems from architecture through production,
+                        support and continuous improvement.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-careers-value">
+
+                    <div class="stackly-value-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h4>
+                        FAST DECISIONS
+                    </h4>
+
+                    <p>
+                        Less process between an idea and implementation,
+                        with clear accountability across the team.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-careers-value">
+
+                    <div class="stackly-value-icon">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+
+                    <h4>
+                        KEEP GROWING
+                    </h4>
+
+                    <p>
+                        Expand your engineering range through real systems,
+                        clients and challenging production problems.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-careers-stats">
+
+            <div class="stackly-career-stat">
+
+                <strong
+                    class="careers-counter"
+                    data-target="9"
+                >
+                    0
+                </strong>
+
+                <span>ENGINEERS</span>
+
+            </div>
+
+            <div class="stackly-career-stat">
+
+                <strong
+                    class="careers-counter"
+                    data-target="14"
+                >
+                    0
+                </strong>
+
+                <span>INDUSTRIES</span>
+
+            </div>
+
+            <div class="stackly-career-stat">
+
+                <strong
+                    class="careers-counter"
+                    data-target="63"
+                >
+                    0
+                </strong>
+
+                <span>SYSTEMS</span>
+
+            </div>
+
+            <div class="stackly-career-stat">
+
+                <strong
+                    class="careers-counter"
+                    data-target="2019"
+                >
+                    0
+                </strong>
+
+                <span>STARTED IN</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-careers-bottom">
+
+            <div>
+                <span>NOT SEEING YOUR ROLE?</span>
+
+                <p>
+                    We occasionally open positions around cloud,
+                    software, security, data and platform engineering.
+                </p>
+            </div>
+
+            <a href="contact.html">
+                SEND A NOTE
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="stackly-locations-section" id="locations">
+
+    <div class="stackly-locations-container">
+
+        <div class="stackly-locations-header">
+
+            <div class="stackly-locations-heading">
+
+                <span class="stackly-locations-eyebrow">
+                    (06) — WHERE WE WORK
+                </span>
+
+                <h2 class="stackly-locations-title">
+                    LOCATIONS
+                </h2>
+
+            </div>
+
+            <div class="stackly-locations-header-copy">
+
+                <p>
+                    Salem is our home base. We work remotely across regions,
+                    with focused engineering support wherever the system lives.
+                </p>
+
+                <div class="stackly-location-live">
+                    <span class="stackly-location-live-dot"></span>
+                    <span>SYSTEMS ONLINE</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-locations-main">
+
+            <div class="stackly-primary-location">
+
+                <div class="stackly-location-card-top">
+
+                    <div>
+                        <span class="stackly-location-code">
+                            SKL / 01
+                        </span>
+
+                        <span class="stackly-location-type">
+                            PRIMARY BASE
+                        </span>
+                    </div>
+
+                    <span class="stackly-location-status">
+                        <i></i>
+                        ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-primary-location-content">
+
+                    <div class="stackly-primary-city">
+                        <span>INDIA</span>
+
+                        <h3>
+                            SALEM
+                        </h3>
+
+                        <p>
+                            Tamil Nadu
+                        </p>
+                    </div>
+
+
+                    <div class="stackly-location-visual">
+
+                        <div class="stackly-location-grid"></div>
+
+                        <div class="stackly-location-orbit orbit-one"></div>
+                        <div class="stackly-location-orbit orbit-two"></div>
+
+                        <div class="stackly-location-pin">
+                            <span></span>
+                        </div>
+
+                        <div class="stackly-location-signal signal-a"></div>
+                        <div class="stackly-location-signal signal-b"></div>
+                        <div class="stackly-location-signal signal-c"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-primary-location-bottom">
+
+                    <div>
+                        <span>WORKING HOURS</span>
+                        <strong>09:00 — 18:00 IST</strong>
+                    </div>
+
+                    <div>
+                        <span>CLIENT ACCESS</span>
+                        <strong>REMOTE + DIRECT</strong>
+                    </div>
+
+                    <div>
+                        <span>MEETINGS</span>
+                        <strong>BY APPOINTMENT</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-secondary-locations">
+
+                <div class="stackly-secondary-header">
+                    <span>TEAM COVERAGE</span>
+                    <span>03 LOCATIONS</span>
+                </div>
+
+
+                <article class="stackly-location-item">
+
+                    <div class="stackly-location-item-number">
+                        01
+                    </div>
+
+                    <div class="stackly-location-item-content">
+
+                        <span>PRIMARY</span>
+
+                        <h3>
+                            SALEM
+                        </h3>
+
+                        <p>
+                            Core engineering team and direct client operations.
+                        </p>
+
+                    </div>
+
+                    <div class="stackly-location-item-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                </article>
+
+
+                <article class="stackly-location-item">
+
+                    <div class="stackly-location-item-number">
+                        02
+                    </div>
+
+                    <div class="stackly-location-item-content">
+
+                        <span>REMOTE HUB</span>
+
+                        <h3>
+                            BENGALURU
+                        </h3>
+
+                        <p>
+                            Remote-first team coverage and client collaboration.
+                        </p>
+
+                    </div>
+
+                    <div class="stackly-location-item-icon">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </article>
+
+
+                <article class="stackly-location-item">
+
+                    <div class="stackly-location-item-number">
+                        03
+                    </div>
+
+                    <div class="stackly-location-item-content">
+
+                        <span>REMOTE</span>
+
+                        <h3>
+                            GLOBAL
+                        </h3>
+
+                        <p>
+                            Engineering support available across time zones.
+                        </p>
+
+                    </div>
+
+                    <div class="stackly-location-item-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-location-capabilities">
+
+            <div class="stackly-location-capability-intro">
+
+                <span>
+                    HOW WE OPERATE
+                </span>
+
+                <h3>
+                    LOCAL PRESENCE.
+                    <strong>GLOBAL DELIVERY.</strong>
+                </h3>
+
+                <p>
+                    Our team works around the system rather than a fixed office.
+                    That means faster collaboration, direct communication and
+                    dependable support without adding unnecessary layers.
+                </p>
+
+            </div>
+
+
+            <div class="stackly-location-capability-grid">
+
+                <div class="stackly-location-capability">
+
+                    <i class="fa-solid fa-tower-broadcast"></i>
+
+                    <div>
+                        <h4>
+                            REMOTE-FIRST
+                        </h4>
+
+                        <p>
+                            Work with the team directly from wherever your
+                            systems and people are located.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-location-capability">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <div>
+                        <h4>
+                            FLEXIBLE WINDOWS
+                        </h4>
+
+                        <p>
+                            Schedule architecture, support and engineering
+                            sessions around practical delivery needs.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-location-capability">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <div>
+                        <h4>
+                            DIRECT ACCESS
+                        </h4>
+
+                        <p>
+                            Senior engineers remain close to projects,
+                            decisions and operational conversations.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-location-capability">
+
+                    <i class="fa-solid fa-arrows-rotate"></i>
+
+                    <div>
+                        <h4>
+                            CONTINUOUS COVERAGE
+                        </h4>
+
+                        <p>
+                            Systems can be supported across regions with
+                            clear ownership and documented handover.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-locations-footer">
+
+            <div class="stackly-locations-footer-left">
+
+                <span>
+                    WANT TO WORK TOGETHER?
+                </span>
+
+                <p>
+                    Tell us where you are and what you're building.
+                </p>
+
+            </div>
+
+            <a href="contact.html" class="stackly-locations-button">
+                START A CONVERSATION
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stackly-optimize-section" id="optimize">
+
+    <div class="stackly-optimize-container">
+
+        <div class="stackly-optimize-header">
+
+            <div class="stackly-optimize-heading">
+
+                <span class="stackly-optimize-eyebrow">
+                    (07) — WHAT MATTERS
+                </span>
+
+                <h2 class="stackly-optimize-title">
+                    WHAT WE
+                    <span>OPTIMIZE FOR.</span>
+                </h2>
+
+            </div>
+
+            <div class="stackly-optimize-header-copy">
+
+                <p>
+                    Good engineering is not measured by how much gets
+                    shipped. It is measured by how well the system behaves
+                    after the launch, during change and under pressure.
+                </p>
+
+                <div class="stackly-optimize-live">
+                    <span></span>
+                    OPERATING PRINCIPLES
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-optimize-feature">
+
+            <div class="stackly-optimize-feature-main">
+
+                <span class="stackly-optimize-feature-label">
+                    THE STACKLY STANDARD
+                </span>
+
+                <h3>
+                    BUILD FOR THE
+                    <strong>NEXT FIVE YEARS,</strong>
+                    NOT THE NEXT FIVE DAYS.
+                </h3>
+
+                <p>
+                    We design systems that remain understandable when the
+                    original developer is no longer in the room. That means
+                    sensible architecture, useful observability, clear
+                    ownership and fewer unnecessary moving parts.
+                </p>
+
+                <a href="services.html" class="stackly-optimize-feature-link">
+                    SEE HOW WE BUILD
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-optimize-signal">
+
+                <div class="stackly-signal-top">
+                    <span>SYSTEM CHECK</span>
+
+                    <span>
+                        <i></i>
+                        LIVE
+                    </span>
+                </div>
+
+                <div class="stackly-signal-body">
+
+                    <div class="signal-main-circle">
+                        <strong>99.95</strong>
+                        <span>AVG SLA %</span>
+                    </div>
+
+                    <div class="signal-orbit signal-orbit-a"></div>
+                    <div class="signal-orbit signal-orbit-b"></div>
+
+                    <span class="signal-point signal-point-a"></span>
+                    <span class="signal-point signal-point-b"></span>
+                    <span class="signal-point signal-point-c"></span>
+
+                </div>
+
+                <div class="stackly-signal-bottom">
+
+                    <span>RELIABILITY</span>
+
+                    <div class="signal-bar">
+                        <span></span>
+                    </div>
+
+                    <strong>STABLE</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-optimize-grid">
+
+            <article class="stackly-optimize-card">
+
+                <div class="stackly-optimize-card-top">
+                    <span>01</span>
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>
+                    RELIABILITY
+                </h3>
+
+                <p>
+                    Systems should behave predictably in production,
+                    recover cleanly and remain observable when something
+                    changes.
+                </p>
+
+                <div class="stackly-optimize-card-footer">
+                    <span>KEEP IT RUNNING</span>
+                </div>
+
+            </article>
+
+
+            <article class="stackly-optimize-card">
+
+                <div class="stackly-optimize-card-top">
+                    <span>02</span>
+                    <i class="fa-solid fa-diagram-project"></i>
+                </div>
+
+                <h3>
+                    CLARITY
+                </h3>
+
+                <p>
+                    Architecture, documentation and ownership should make
+                    decisions easier for the next person, not harder.
+                </p>
+
+                <div class="stackly-optimize-card-footer">
+                    <span>KEEP IT UNDERSTANDABLE</span>
+                </div>
+
+            </article>
+
+
+            <article class="stackly-optimize-card">
+
+                <div class="stackly-optimize-card-top">
+                    <span>03</span>
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>
+                    SPEED
+                </h3>
+
+                <p>
+                    Fast teams remove unnecessary waiting. We reduce handoffs,
+                    shorten feedback loops and keep decisions close to the work.
+                </p>
+
+                <div class="stackly-optimize-card-footer">
+                    <span>KEEP IT MOVING</span>
+                </div>
+
+            </article>
+
+
+            <article class="stackly-optimize-card">
+
+                <div class="stackly-optimize-card-top">
+                    <span>04</span>
+                    <i class="fa-solid fa-code-branch"></i>
+                </div>
+
+                <h3>
+                    CHANGE
+                </h3>
+
+                <p>
+                    A good system can evolve without needing to be rebuilt
+                    every time the business changes direction.
+                </p>
+
+                <div class="stackly-optimize-card-footer">
+                    <span>KEEP IT ADAPTABLE</span>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="stackly-optimize-bottom">
+
+            <div class="stackly-optimize-bottom-left">
+
+                <span>
+                    THE QUESTION WE ASK
+                </span>
+
+                <p>
+                    Will this still make sense when the system is twice
+                    as large, the team has changed and the pressure is higher?
+                </p>
+
+            </div>
+
+            <div class="stackly-optimize-bottom-right">
+
+                <strong>LONG TERM</strong>
+
+                <div class="stackly-optimize-line">
+                    <span></span>
+                </div>
+
+                <span>
+                    THINKING
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="stackly-newsletter-section" id="newsletter">
+
+    <div class="stackly-newsletter-container">
+
+        <div class="stackly-newsletter-top">
+
+            <span class="stackly-newsletter-eyebrow">
+                (08) — STAY CONNECTED
+            </span>
+
+            <span class="stackly-newsletter-status">
+                <i></i>
+                ENGINEERING NOTES
+            </span>
+
+        </div>
+
+
+        <div class="stackly-newsletter-main">
+
+            <div class="stackly-newsletter-heading">
+
+                <h2>
+                    BUILT FOR
+                    <span>WHAT'S NEXT.</span>
+                </h2>
+
+                <p>
+                    Get occasional notes from Stackly on infrastructure,
+                    software, security, data and the systems behind them.
+                    No noise. Just useful ideas and practical engineering.
+                </p>
+
+            </div>
+
+
+            <div class="stackly-newsletter-form-wrap">
+
+                <div class="stackly-newsletter-form-header">
+                    <span>JOIN THE LIST</span>
+                    <span>01 — EMAIL</span>
+                </div>
+
+                <form class="stackly-newsletter-form" id="newsletterForm">
+
+                    <div class="stackly-newsletter-input-wrap">
+
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <span class="stackly-newsletter-input-line"></span>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="stackly-newsletter-submit"
+                    >
+                        <span>SUBSCRIBE</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+                <p class="stackly-newsletter-note">
+                    By subscribing, you agree to receive occasional
+                    Stackly updates. You can unsubscribe anytime.
+                </p>
+
+                <div
+                    class="stackly-newsletter-message"
+                    id="newsletterMessage"
+                    aria-live="polite"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-newsletter-bottom">
+
+            <div class="stackly-newsletter-bottom-item">
+
+                <span>TOPICS</span>
+
+                <div>
+                    <a href="error.html">CLOUD</a>
+                    <a href="error.html">SOFTWARE</a>
+                    <a href="error.html">SECURITY</a>
+                    <a href="error.html">DATA &amp; AI</a>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-newsletter-bottom-item">
+
+                <span>NEED SOMETHING BUILT?</span>
+
+                <a
+                    href="contact.html"
+                    class="stackly-newsletter-contact"
+                >
+                    START A CONVERSATION
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="stackly-footer">
+
+    <div class="stackly-footer-top">
+
+        <div class="stackly-footer-brand">
+
+            <a href="index.html" class="stackly-footer-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+
+            <p class="stackly-footer-description">
+                An IT solutions team helping businesses build,
+                secure and scale reliable digital systems.
+            </p>
+
+            <div class="stackly-footer-social">
+                <span class="stackly-footer-social-label">FOLLOW STACKLY</span>
+
+                <div class="stackly-social-icons">
+
+                    <a href="error.html" aria-label="X / Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-footer-links">
+
+            <div class="stackly-footer-column">
+
+                <h4>EXPLORE</h4>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="stackly-footer-column">
+
+                <h4>SERVICES</h4>
+
+                <a href="error.html">Cloud &amp; DevOps</a>
+                <a href="error.html">Custom Software</a>
+                <a href="error.html">Cybersecurity</a>
+                <a href="error.html">IT Consulting</a>
+                <a href="error.html">Managed IT</a>
+                <a href="error.html">Data &amp; AI</a>
+
+            </div>
+
+
+            <div class="stackly-footer-column">
+
+                <h4>ACCOUNT</h4>
+
+                <a href="login.html">Log In</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="error.html">Client Portal</a>
+                <a href="error.html">Support Center</a>
+                <a href="error.html">Status Page</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-footer-contact">
+
+            <span class="stackly-footer-contact-label">
+                START A CONVERSATION
+            </span>
+
+            <h3>
+                HAVE A SYSTEM
+                <span>WORTH BUILDING?</span>
+            </h3>
+
+            <p>
+                Tell us what you're working on.
+                We'll figure out the next step together.
+            </p>
+
+            <a href="contact.html" class="stackly-footer-contact-button">
+                CONTACT STACKLY
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <div class="stackly-footer-contact-info">
+
+                <a href="mailto:hello@stackly.io">
+                    <i class="fa-regular fa-envelope"></i>
+                    support@stackly.com
+                </a>
+
+                <a href="error.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Bengaluru, India
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-footer-services-strip">
+
+        <span>WHAT WE BUILD</span>
+
+        <div class="stackly-footer-service-list">
+
+            <a href="error.html">CLOUD INFRASTRUCTURE</a>
+
+            <span></span>
+
+            <a href="error.html">SOFTWARE SYSTEMS</a>
+
+            <span></span>
+
+            <a href="error.html">CYBERSECURITY</a>
+
+            <span></span>
+
+            <a href="error.html">DATA &amp; AI</a>
+
+            <span></span>
+
+            <a href="error.html">IT CONSULTING</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-footer-bottom">
+
+        <div class="stackly-footer-copyright">
+            <span>&copy; 2026 Stackly Systems.</span>
+            <span>All rights reserved.</span>
+        </div>
+
+        <div class="stackly-footer-legal">
+
+            <a href="error.html">Privacy</a>
+            <a href="error.html">Terms</a>
+            <a href="error.html">Cookies</a>
+
+        </div>
+
+        <div class="stackly-footer-built">
+            BUILT WITH INTENTION, CLARITY AND CARE.
+        </div>
+
+    </div>
+
+</footer>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="nav.js"></script>
+<script src="cursor.js"></script>
+<script src="about.js"></script>
+
+        </body>
+        </html>

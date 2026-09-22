@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Technology Advisory | Stackly</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="technology-advisory.css"
+    >
+</head>
+
+<body>
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <aside
+        class="consulting-sidebar"
+        id="consultingSidebar"
+    >
+
+        <div class="sidebar-top">
+
+            <div class="sidebar-logo">
+
+                <a href="user-dashboard.html">
+
+                    <img
+                        src="Assets/blacklogo.webp"
+                        alt="Stackly"
+                    >
+
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-profile-icon">
+
+                    <i class="bi bi-person-fill"></i>
+
+                </div>
+
+
+                <div class="sidebar-profile-content">
+
+                    <strong id="sidebarUserEmail">
+                        user@example.com
+                    </strong>
+
+                    <span>
+                        Consulting Client
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-section-title">
+                    WORKSPACE
+                </p>
+
+
+                <a
+                    href="user-dashboard.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="bi bi-grid-fill"></i>
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="user-project.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="bi bi-clipboard2"></i>
+                    </span>
+
+                    <span>
+                        Projects
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="consulting-request.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="bi bi-clipboard-check"></i>
+                    </span>
+
+                    <span>
+                        Consulting Requests
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-section-title">
+                    SERVICES
+                </p>
+
+
+                <a
+                    href="technology-advisory.html"
+                    class="sidebar-link active"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="bi bi-code-slash"></i>
+                    </span>
+
+                    <span>
+                        Technology Advisory
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-section-title">
+                    ACCOUNT
+                </p>
+
+
+                <a
+                    href="myprofile.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="bi bi-person"></i>
+                    </span>
+
+                    <span>
+                        My Profile
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                type="button"
+                class="logout-button"
+                id="logoutButton"
+            >
+
+                <span class="sidebar-link-icon">
+                    <i class="bi bi-box-arrow-right"></i>
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <header class="consulting-header">
+
+        <div class="header-left">
+
+            <button
+                type="button"
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-expanded="false"
+                aria-label="Open navigation"
+            >
+
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
+            <div class="mobile-brand">
+
+                <img
+                    src="Assets/blacklogo.webp"
+                    alt="Stackly"
+                >
+
+            </div>
+
+
+            <div class="header-heading">
+
+                <span>
+                    CLIENT WORKSPACE
+                </span>
+
+                <h1>
+                    Technology Advisory
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <button
+                type="button"
+                class="header-icon-button"
+                data-error-link
+            >
+
+                <i class="bi bi-search"></i>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="header-icon-button notification-button"
+                data-error-link
+            >
+
+                <i class="bi bi-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <div class="header-user">
+
+                <div class="header-user-icon">
+
+                    <i class="bi bi-person-fill"></i>
+
+                </div>
+
+
+                <div class="header-user-text">
+
+                    <strong id="headerUserName">
+                        User
+                    </strong>
+
+                    <span>
+                        Consulting Client
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="advisory-main">
+
+        <div class="advisory-container">
+
+
+            <section class="advisory-hero">
+
+                <div class="advisory-hero-content">
+
+                    <span class="eyebrow">
+                        TECHNOLOGY ADVISORY
+                    </span>
+
+
+                    <h2>
+                        Make better
+                        <span>technology decisions.</span>
+                    </h2>
+
+
+                    <p>
+                        Strategic technology guidance for architecture,
+                        modernization, cloud platforms, security,
+                        engineering practices, and long-term technical planning.
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="error.html"
+                            class="primary-action"
+                        >
+
+                            <span>
+                                REQUEST ADVISORY
+                            </span>
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="error.html"
+                            class="secondary-action"
+                        >
+
+                            <span>
+                                TALK TO SPECIALIST
+                            </span>
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="advisory-visual">
+
+                    <div class="visual-grid"></div>
+
+
+                    <div class="visual-ring ring-one"></div>
+
+                    <div class="visual-ring ring-two"></div>
+
+                    <div class="visual-ring ring-three"></div>
+
+
+                    <div class="visual-core">
+
+                        <i class="bi bi-cpu"></i>
+
+                        <span>
+                            STRATEGY
+                        </span>
+
+                    </div>
+
+
+                    <span class="visual-node node-one"></span>
+                    <span class="visual-node node-two"></span>
+                    <span class="visual-node node-three"></span>
+                    <span class="visual-node node-four"></span>
+
+                </div>
+
+            </section>
+
+
+            <section class="advisory-metrics">
+
+                <div class="metric-card">
+
+                    <span>
+                        ADVISORY MODEL
+                    </span>
+
+                    <strong>
+                        01:01
+                    </strong>
+
+                    <p>
+                        Senior technical guidance
+                        throughout the engagement.
+                    </p>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        FOCUS AREAS
+                    </span>
+
+                    <strong>
+                        06
+                    </strong>
+
+                    <p>
+                        Core technology domains
+                        covered by the service.
+                    </p>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        ENGAGEMENT
+                    </span>
+
+                    <strong>
+                        FLEXIBLE
+                    </strong>
+
+                    <p>
+                        Advisory can support
+                        a single decision or a roadmap.
+                    </p>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span>
+                        APPROACH
+                    </span>
+
+                    <strong>
+                        SENIOR
+                    </strong>
+
+                    <p>
+                        Practical guidance focused
+                        on measurable outcomes.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="advisory-intro-section">
+
+                <div class="section-label">
+                    (01) — WHAT WE ADVISE
+                </div>
+
+
+                <div class="intro-content">
+
+                    <h3>
+                        From difficult
+                        technology choices
+                        to clear direction.
+                    </h3>
+
+
+                    <p>
+                        Technology decisions become expensive when
+                        architecture, security, infrastructure, and
+                        business priorities are disconnected. Our advisory
+                        work brings those areas together so your team can
+                        move forward with a clear technical direction.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="advisory-capabilities">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span>
+                            ADVISORY CAPABILITIES
+                        </span>
+
+                        <h3>
+                            What we help solve
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="capability-grid">
+
+
+                    <article class="capability-card">
+
+                        <div class="capability-top">
+
+                            <span>
+                                01
+                            </span>
+
+                            <i class="bi bi-diagram-3"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Architecture Strategy
+                        </h4>
+
+
+                        <p>
+                            Review architecture decisions,
+                            identify structural risks and establish
+                            a practical target architecture.
+                        </p>
+
+
+                        <a
+                            href="error.html"
+                            class="capability-link"
+                        >
+                            EXPLORE
+
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="capability-card">
+
+                        <div class="capability-top">
+
+                            <span>
+                                02
+                            </span>
+
+                            <i class="bi bi-cloud-check"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Cloud Strategy
+                        </h4>
+
+
+                        <p>
+                            Plan cloud adoption, migration,
+                            platform choices, workloads,
+                            cost controls and operational models.
+                        </p>
+
+
+                        <a
+                            href="error.html"
+                            class="capability-link"
+                        >
+                            EXPLORE
+
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="capability-card">
+
+                        <div class="capability-top">
+
+                            <span>
+                                03
+                            </span>
+
+                            <i class="bi bi-shield-lock"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Security Advisory
+                        </h4>
+
+
+                        <p>
+                            Evaluate security architecture,
+                            access controls, exposure areas,
+                            policies and protection strategy.
+                        </p>
+
+
+                        <a
+                            href="error.html"
+                            class="capability-link"
+                        >
+                            EXPLORE
+
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="capability-card">
+
+                        <div class="capability-top">
+
+                            <span>
+                                04
+                            </span>
+
+                            <i class="bi bi-arrow-repeat"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Modernization
+                        </h4>
+
+
+                        <p>
+                            Build modernization roadmaps for
+                            legacy systems, platforms, applications
+                            and engineering workflows.
+                        </p>
+
+
+                        <a
+                            href="error.html"
+                            class="capability-link"
+                        >
+                            EXPLORE
+
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="capability-card">
+
+                        <div class="capability-top">
+
+                            <span>
+                                05
+                            </span>
+
+                            <i class="bi bi-code-square"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Engineering Strategy
+                        </h4>
+
+
+                        <p>
+                            Improve development practices,
+                            technical standards, delivery processes
+                            and engineering decision frameworks.
+                        </p>
+
+
+                        <a
+                            href="error.html"
+                            class="capability-link"
+                        >
+                            EXPLORE
+
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="capability-card">
+
+                        <div class="capability-top">
+
+                            <span>
+                                06
+                            </span>
+
+                            <i class="bi bi-bar-chart"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Technology Roadmaps
+                        </h4>
+
+
+                        <p>
+                            Turn business priorities into
+                            sequenced technology initiatives,
+                            investment areas and delivery phases.
+                        </p>
+
+
+                        <a
+                            href="error.html"
+                            class="capability-link"
+                        >
+                            EXPLORE
+
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <section class="advisory-process">
+
+                <div class="section-label">
+                    (02) — OUR PROCESS
+                </div>
+
+
+                <div class="process-header">
+
+                    <h3>
+                        Advisory built around
+                        your actual environment.
+                    </h3>
+
+
+                    <p>
+                        We start with your current state,
+                        identify constraints, evaluate options,
+                        and turn the findings into actionable direction.
+                    </p>
+
+                </div>
+
+
+                <div class="process-grid">
+
+
+                    <div class="process-step">
+
+                        <div class="process-number">
+                            01
+                        </div>
+
+                        <div class="process-line"></div>
+
+                        <h4>
+                            Discover
+                        </h4>
+
+                        <p>
+                            Understand your systems,
+                            goals, constraints, teams,
+                            and current technology decisions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-step">
+
+                        <div class="process-number">
+                            02
+                        </div>
+
+                        <div class="process-line"></div>
+
+                        <h4>
+                            Assess
+                        </h4>
+
+                        <p>
+                            Identify technical risks,
+                            gaps, dependencies and
+                            opportunities for improvement.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-step">
+
+                        <div class="process-number">
+                            03
+                        </div>
+
+                        <div class="process-line"></div>
+
+                        <h4>
+                            Recommend
+                        </h4>
+
+                        <p>
+                            Compare practical options
+                            and define the direction
+                            best aligned to your requirements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-step">
+
+                        <div class="process-number">
+                            04
+                        </div>
+
+                        <div class="process-line"></div>
+
+                        <h4>
+                            Roadmap
+                        </h4>
+
+                        <p>
+                            Convert recommendations
+                            into an achievable sequence
+                            of technical initiatives.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="decision-section">
+
+                <div class="decision-card">
+
+                    <div class="decision-copy">
+
+                        <span>
+                            DECISION FRAMEWORK
+                        </span>
+
+
+                        <h3>
+                            Clarity before
+                            implementation.
+                        </h3>
+
+
+                        <p>
+                            Before committing engineering time
+                            or infrastructure budget, use advisory
+                            to understand the available paths,
+                            technical trade-offs, risks and dependencies.
+                        </p>
+
+
+                        <a
+                            href="error.html"
+                            class="decision-button"
+                        >
+                            START A CONVERSATION
+
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="decision-points">
+
+                        <div class="decision-point">
+
+                            <span>
+                                A
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Current State
+                                </strong>
+
+                                <p>
+                                    Understand what exists today.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="decision-point">
+
+                            <span>
+                                B
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Options
+                                </strong>
+
+                                <p>
+                                    Evaluate practical technology paths.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="decision-point">
+
+                            <span>
+                                C
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Trade-offs
+                                </strong>
+
+                                <p>
+                                    Make constraints and risks visible.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="decision-point">
+
+                            <span>
+                                D
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Direction
+                                </strong>
+
+                                <p>
+                                    Establish a clear technical roadmap.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="advisory-faq">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span>
+                            COMMON QUESTIONS
+                        </span>
+
+                        <h3>
+                            Technology Advisory FAQ
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-list">
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            When should we use technology advisory?
+                            <i class="bi bi-plus"></i>
+                        </summary>
+
+                        <p>
+                            Advisory is useful when you are evaluating
+                            a major technology decision, planning
+                            modernization, reviewing architecture,
+                            or defining a technical roadmap.
+                        </p>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Can advisory support an existing project?
+                            <i class="bi bi-plus"></i>
+                        </summary>
+
+                        <p>
+                            Yes. Advisory can be used alongside
+                            an active project to review architecture,
+                            technical direction, risks, and delivery choices.
+                        </p>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Do we need to prepare technical documents?
+                            <i class="bi bi-plus"></i>
+                        </summary>
+
+                        <p>
+                            Existing architecture diagrams,
+                            documentation, requirements and
+                            infrastructure information can help,
+                            but the engagement can also begin
+                            with a discovery discussion.
+                        </p>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Can the engagement be short term?
+                            <i class="bi bi-plus"></i>
+                        </summary>
+
+                        <p>
+                            The advisory model can support focused
+                            decision-making as well as broader
+                            technology planning engagements.
+                        </p>
+
+                    </details>
+
+
+                </div>
+
+            </section>
+
+
+            <section class="advisory-cta">
+
+                <div class="cta-top">
+
+                    <span>
+                        READY TO MAKE THE NEXT DECISION?
+                    </span>
+
+                    <span>
+                        STACKLY / ADVISORY
+                    </span>
+
+                </div>
+
+
+                <div class="cta-content">
+
+                    <h3>
+                        Bring us the difficult
+                        technology question.
+                    </h3>
+
+
+                    <p>
+                        We will help turn it into
+                        a clear technical direction.
+                    </p>
+
+
+                    <a
+                        href="error.html"
+                        class="cta-button"
+                    >
+                        REQUEST TECHNOLOGY ADVISORY
+
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <footer class="advisory-footer">
+
+                <span>
+                    STACKLY / CLIENT WORKSPACE
+                </span>
+
+                <span>
+                    CLOUD · SOFTWARE · SECURITY · DATA & AI
+                </span>
+
+                <span>
+                    2026
+                </span>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
+    ></script>
+
+    <script src="technology-advisory.js"></script>
+
+</body>
+</html>

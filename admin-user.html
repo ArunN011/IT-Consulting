@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Stackly | Users</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="admin-users.css">
+</head>
+
+<body>
+
+    <div class="dashboard-shell">
+
+        <aside
+            class="consulting-sidebar"
+            id="consultingSidebar"
+            aria-label="Admin navigation"
+        >
+
+            <div class="sidebar-brand">
+
+                <a href="admin-dashboard.html">
+
+                    <img
+                        src="Assets/blacklogo.webp"
+                        alt="Stackly"
+                    >
+
+                </a>
+
+            </div>
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-profile-avatar">
+                    <i class="bi bi-shield-lock-fill"></i>
+                </div>
+
+                <div class="sidebar-profile-info">
+
+                    <strong id="sidebarAdminName">
+                        Admin
+                    </strong>
+
+                    <span>
+                        Administrator
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="sidebar-group">
+
+                <span class="sidebar-group-title">
+                    ADMIN
+                </span>
+
+                <nav>
+
+                    <a
+                        href="admin-dashboard.html"
+                        class="sidebar-link"
+                    >
+
+                        <i class="bi bi-grid-1x2-fill"></i>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+                    <a
+                        href="admin-users.html"
+                        class="sidebar-link active"
+                        aria-current="page"
+                    >
+
+                        <i class="bi bi-people-fill"></i>
+
+                        <span>
+                            Users
+                        </span>
+
+                    </a>
+
+                    <a
+                        href="admin-request.html"
+                        class="sidebar-link"
+                    >
+
+                        <i class="bi bi-clipboard-check-fill"></i>
+
+                        <span>
+                            Requests
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <button
+                    type="button"
+                    class="sidebar-link logout-link"
+                    id="logoutButton"
+                >
+
+                    <i class="bi bi-box-arrow-right"></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+        <div
+            class="sidebar-overlay"
+            id="sidebarOverlay"
+            aria-hidden="true"
+        ></div>
+
+        <main class="consulting-main">
+
+            <header class="consulting-header">
+
+                <div class="header-left">
+
+                    <button
+                        type="button"
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false"
+                        aria-controls="consultingSidebar"
+                    >
+
+                        <i class="bi bi-list"></i>
+
+                    </button>
+
+                    <a
+                        href="admin-dashboard.html"
+                        class="mobile-brand"
+                    >
+
+                        <img
+                            src="Assets/blacklogo.webp"
+                            alt="Stackly"
+                        >
+
+                    </a>
+
+                    <div class="page-heading">
+
+                        <span>
+                            ADMIN CONTROL CENTER
+                        </span>
+
+                        <h1>
+                            USER MANAGEMENT
+                        </h1>
+
+                    </div>
+
+                </div>
+
+                <div class="header-right">
+
+                    <a
+                        href="error.html"
+                        class="header-icon-button"
+                        data-error-link
+                        aria-label="Search"
+                    >
+
+                        <i class="bi bi-search"></i>
+
+                    </a>
+
+                    <a
+                        href="error.html"
+                        class="header-icon-button notification-button"
+                        data-error-link
+                        aria-label="Notifications"
+                    >
+
+                        <i class="bi bi-bell"></i>
+
+                        <span></span>
+
+                    </a>
+
+                    <a
+                        href="error.html"
+                        class="header-user"
+                    >
+
+                        <div class="header-user-avatar">
+
+                            <i class="bi bi-shield-lock-fill"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong id="headerAdminName">
+                                Admin
+                            </strong>
+
+                            <small>
+                                Administrator
+                            </small>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+            <div class="users-content">
+
+                <section class="users-hero">
+
+                    <div class="users-hero-copy">
+
+                        <span class="hero-label">
+                            ADMIN / USERS
+                        </span>
+
+                        <div class="hero-status">
+                            <span></span>
+                            USER DIRECTORY ONLINE
+                        </div>
+
+                        <h2>
+                            MANAGE
+                            <strong>
+                                USERS
+                            </strong>
+                        </h2>
+
+                        <p>
+                            Manage workspace accounts, review activity,
+                            update user status and monitor active clients
+                            from one central admin workspace.
+                        </p>
+
+                        <div class="hero-actions">
+
+                            <button
+                                type="button"
+                                class="primary-button"
+                                id="addUserButton"
+                            >
+
+                                ADD NEW USER
+
+                                <i class="bi bi-plus-lg"></i>
+
+                            </button>
+
+                            <a
+                                href="error.html"
+                                class="secondary-button"
+                                
+                            >
+
+                                EXPORT USERS
+
+                                <i class="bi bi-download"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="users-hero-visual">
+
+                        <div class="visual-ring ring-one"></div>
+
+                        <div class="visual-ring ring-two"></div>
+
+                        <div class="visual-ring ring-three"></div>
+
+                        <div class="visual-center">
+
+                            <i class="bi bi-people"></i>
+
+                            <strong>
+                                248
+                            </strong>
+
+                            <span>
+                                USERS
+                            </span>
+
+                        </div>
+
+                        <div class="visual-dot dot-one"></div>
+                        <div class="visual-dot dot-two"></div>
+                        <div class="visual-dot dot-three"></div>
+                        <div class="visual-dot dot-four"></div>
+
+                    </div>
+
+                </section>
+
+                <section class="user-stat-grid">
+
+                    <div class="user-stat-card">
+
+                        <div class="stat-icon red">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+
+                        <div class="stat-copy">
+
+                            <span>
+                                TOTAL USERS
+                            </span>
+
+                            <strong>
+                                248
+                            </strong>
+
+                            <small>
+                                Registered accounts
+                            </small>
+
+                        </div>
+
+                        <b>
+                            +12%
+                        </b>
+
+                    </div>
+
+                    <div class="user-stat-card">
+
+                        <div class="stat-icon green">
+                            <i class="bi bi-person-check-fill"></i>
+                        </div>
+
+                        <div class="stat-copy">
+
+                            <span>
+                                ACTIVE USERS
+                            </span>
+
+                            <strong>
+                                214
+                            </strong>
+
+                            <small>
+                                Currently active
+                            </small>
+
+                        </div>
+
+                        <b>
+                            86%
+                        </b>
+
+                    </div>
+
+                    <div class="user-stat-card">
+
+                        <div class="stat-icon orange">
+                            <i class="bi bi-person-dash-fill"></i>
+                        </div>
+
+                        <div class="stat-copy">
+
+                            <span>
+                                INACTIVE
+                            </span>
+
+                            <strong>
+                                27
+                            </strong>
+
+                            <small>
+                                Inactive accounts
+                            </small>
+
+                        </div>
+
+                        <b>
+                            11%
+                        </b>
+
+                    </div>
+
+                    <div class="user-stat-card">
+
+                        <div class="stat-icon blue">
+                            <i class="bi bi-person-plus-fill"></i>
+                        </div>
+
+                        <div class="stat-copy">
+
+                            <span>
+                                NEW THIS MONTH
+                            </span>
+
+                            <strong>
+                                07
+                            </strong>
+
+                            <small>
+                                New registrations
+                            </small>
+
+                        </div>
+
+                        <b>
+                            +07
+                        </b>
+
+                    </div>
+
+                </section>
+
+                <section class="users-tools">
+
+                    <div class="tools-heading">
+
+                        <div>
+
+                            <span>
+                                DIRECTORY
+                            </span>
+
+                            <h3>
+                                USER DIRECTORY
+                            </h3>
+
+                        </div>
+
+                        <span class="user-count-label">
+                            248 ACCOUNTS
+                        </span>
+
+                    </div>
+
+                    <div class="tools-bar">
+
+                        <div class="search-box">
+
+                            <i class="bi bi-search"></i>
+
+                            <input
+                                type="search"
+                                id="userSearch"
+                                placeholder="Search users..."
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                        <div class="filter-group">
+
+                            <select
+                                id="statusFilter"
+                                aria-label="Filter by status"
+                            >
+
+                                <option value="all">
+                                    All Status
+                                </option>
+
+                                <option value="active">
+                                    Active
+                                </option>
+
+                                <option value="review">
+                                    Review
+                                </option>
+
+                                <option value="inactive">
+                                    Inactive
+                                </option>
+
+                            </select>
+
+                            <select
+                                id="projectFilter"
+                                aria-label="Filter by project"
+                            >
+
+                                <option value="all">
+                                    All Projects
+                                </option>
+
+                                <option value="cloud">
+                                    Cloud
+                                </option>
+
+                                <option value="security">
+                                    Security
+                                </option>
+
+                                <option value="technology">
+                                    Technology
+                                </option>
+
+                                <option value="digital">
+                                    Digital
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="users-table-card">
+
+                    <div class="table-top">
+
+                        <div>
+
+                            <span>
+                                ACCOUNT LIST
+                            </span>
+
+                            <h3>
+                                ALL USERS
+                            </h3>
+
+                        </div>
+
+                        <div class="table-summary">
+
+                            <span id="visibleUserCount">
+                                6 USERS
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="responsive-table">
+
+                        <table
+                            class="users-table"
+                            id="usersTable"
+                        >
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        USER
+                                    </th>
+
+                                    <th>
+                                        EMAIL
+                                    </th>
+
+                                    <th>
+                                        PROJECT
+                                    </th>
+
+                                    <th>
+                                        ROLE
+                                    </th>
+
+                                    <th>
+                                        STATUS
+                                    </th>
+
+                                    <th>
+                                        JOINED
+                                    </th>
+
+                                    <th>
+                                        ACTION
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr
+                                    data-status="active"
+                                    data-project="technology"
+                                >
+
+                                    <td>
+
+                                        <div class="user-cell">
+
+                                            <div class="user-avatar">
+                                                <i class="bi bi-person-fill"></i>
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Arun Kumar
+                                                </strong>
+
+                                                <span>
+                                                    Client
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        arun@example.com
+                                    </td>
+
+                                    <td>
+                                        Technology Modernization
+                                    </td>
+
+                                    <td>
+                                        Client
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Sep 18, 2026
+                                    </td>
+
+                                    <td>
+
+                                        <div class="row-actions">
+
+                                            <button
+                                                type="button"
+                                                data-view-user
+                                                aria-label="View user"
+                                            >
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                data-edit-user
+                                                aria-label="Edit user"
+                                            >
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr
+                                    data-status="active"
+                                    data-project="security"
+                                >
+
+                                    <td>
+
+                                        <div class="user-cell">
+
+                                            <div class="user-avatar">
+                                                <i class="bi bi-person-fill"></i>
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Priya Sharma
+                                                </strong>
+
+                                                <span>
+                                                    Client
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        priya@example.com
+                                    </td>
+
+                                    <td>
+                                        Security Advisory
+                                    </td>
+
+                                    <td>
+                                        Client
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Sep 17, 2026
+                                    </td>
+
+                                    <td>
+
+                                        <div class="row-actions">
+
+                                            <button
+                                                type="button"
+                                                data-view-user
+                                                aria-label="View user"
+                                            >
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                data-edit-user
+                                                aria-label="Edit user"
+                                            >
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr
+                                    data-status="review"
+                                    data-project="cloud"
+                                >
+
+                                    <td>
+
+                                        <div class="user-cell">
+
+                                            <div class="user-avatar">
+                                                <i class="bi bi-person-fill"></i>
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Vikram Singh
+                                                </strong>
+
+                                                <span>
+                                                    Client
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        vikram@example.com
+                                    </td>
+
+                                    <td>
+                                        Cloud Readiness
+                                    </td>
+
+                                    <td>
+                                        Client
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge review">
+                                            Review
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Sep 16, 2026
+                                    </td>
+
+                                    <td>
+
+                                        <div class="row-actions">
+
+                                            <button
+                                                type="button"
+                                                data-view-user
+                                                aria-label="View user"
+                                            >
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                data-edit-user
+                                                aria-label="Edit user"
+                                            >
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr
+                                    data-status="active"
+                                    data-project="digital"
+                                >
+
+                                    <td>
+
+                                        <div class="user-cell">
+
+                                            <div class="user-avatar">
+                                                <i class="bi bi-person-fill"></i>
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Neha Reddy
+                                                </strong>
+
+                                                <span>
+                                                    Client
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        neha@example.com
+                                    </td>
+
+                                    <td>
+                                        Digital Transformation
+                                    </td>
+
+                                    <td>
+                                        Client
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Sep 15, 2026
+                                    </td>
+
+                                    <td>
+
+                                        <div class="row-actions">
+
+                                            <button
+                                                type="button"
+                                                data-view-user
+                                                aria-label="View user"
+                                            >
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                data-edit-user
+                                                aria-label="Edit user"
+                                            >
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr
+                                    data-status="inactive"
+                                    data-project="technology"
+                                >
+
+                                    <td>
+
+                                        <div class="user-cell">
+
+                                            <div class="user-avatar">
+                                                <i class="bi bi-person-fill"></i>
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Karthik Raj
+                                                </strong>
+
+                                                <span>
+                                                    Client
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        karthik@example.com
+                                    </td>
+
+                                    <td>
+                                        Technology Upgrade
+                                    </td>
+
+                                    <td>
+                                        Client
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge inactive">
+                                            Inactive
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Sep 12, 2026
+                                    </td>
+
+                                    <td>
+
+                                        <div class="row-actions">
+
+                                            <button
+                                                type="button"
+                                                data-view-user
+                                                aria-label="View user"
+                                            >
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                data-edit-user
+                                                aria-label="Edit user"
+                                            >
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr
+                                    data-status="active"
+                                    data-project="cloud"
+                                >
+
+                                    <td>
+
+                                        <div class="user-cell">
+
+                                            <div class="user-avatar">
+                                                <i class="bi bi-person-fill"></i>
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Sanjay Kumar
+                                                </strong>
+
+                                                <span>
+                                                    Client
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        sanjay@example.com
+                                    </td>
+
+                                    <td>
+                                        Cloud Migration
+                                    </td>
+
+                                    <td>
+                                        Client
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Sep 10, 2026
+                                    </td>
+
+                                    <td>
+
+                                        <div class="row-actions">
+
+                                            <button
+                                                type="button"
+                                                data-view-user
+                                                aria-label="View user"
+                                            >
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                data-edit-user
+                                                aria-label="Edit user"
+                                            >
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                        <div
+                            class="empty-state"
+                            id="emptyState"
+                        >
+
+                            <div class="empty-icon">
+                                <i class="bi bi-search"></i>
+                            </div>
+
+                            <strong>
+                                NO USERS FOUND
+                            </strong>
+
+                            <span>
+                                Try a different search or filter.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="activity-grid">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    USER ACTIVITY
+                                </span>
+
+                                <h3>
+                                    REGISTRATION TREND
+                                </h3>
+
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="card-link"
+                                data-error-link
+                            >
+                                FULL REPORT
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="user-chart-wrapper">
+
+                            <canvas id="userRegistrationChart"></canvas>
+
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    ACCOUNT HEALTH
+                                </span>
+
+                                <h3>
+                                    USER STATUS
+                                </h3>
+
+                            </div>
+
+                            <span class="health-label">
+                                UPDATED NOW
+                            </span>
+
+                        </div>
+
+                        <div class="health-content">
+
+                            <div class="health-donut">
+
+                                <canvas id="userStatusChart"></canvas>
+
+                                <div class="health-donut-center">
+
+                                    <strong>
+                                        86%
+                                    </strong>
+
+                                    <span>
+                                        ACTIVE
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="health-list">
+
+                                <div>
+
+                                    <span>
+                                        Active
+                                    </span>
+
+                                    <strong>
+                                        214
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Review
+                                    </span>
+
+                                    <strong>
+                                        07
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Inactive
+                                    </span>
+
+                                    <strong>
+                                        27
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <footer class="users-footer">
+
+                    <div class="footer-brand">
+
+                        <img
+                            src="Assets/blacklogo.webp"
+                            alt="Stackly"
+                        >
+
+                        <span>
+                            Technology consulting & engineering.
+                        </span>
+
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="error.html">
+                            Dashboard
+                        </a>
+
+                        <a href="error.html">
+                            Users
+                        </a>
+
+                        <a href="error.html">
+                            Requests
+                        </a>
+
+                    </div>
+
+                    <span class="footer-copy">
+                        &copy; 2026 Stackly
+                    </span>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <div
+        class="user-modal"
+        id="userModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="user-modal-overlay"
+            id="userModalOverlay"
+        ></div>
+
+        <div class="user-modal-box">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span>
+                        ADMIN
+                    </span>
+
+                    <h3 id="modalTitle">
+                        ADD NEW USER
+                    </h3>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="closeUserModal"
+                    aria-label="Close"
+                >
+
+                    <i class="bi bi-x-lg"></i>
+
+                </button>
+
+            </div>
+
+            <form id="userForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="userName">
+                            FULL NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="userName"
+                            placeholder="Enter full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="userEmail">
+                            EMAIL
+                        </label>
+
+                        <input
+                            type="email"
+                            id="userEmail"
+                            placeholder="Enter email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="userProject">
+                            PROJECT
+                        </label>
+
+                        <select id="userProject">
+
+                            <option value="cloud">
+                                Cloud
+                            </option>
+
+                            <option value="security">
+                                Security
+                            </option>
+
+                            <option value="technology">
+                                Technology
+                            </option>
+
+                            <option value="digital">
+                                Digital
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="userStatus">
+                            STATUS
+                        </label>
+
+                        <select id="userStatus">
+
+                            <option value="active">
+                                Active
+                            </option>
+
+                            <option value="review">
+                                Review
+                            </option>
+
+                            <option value="inactive">
+                                Inactive
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="modal-cancel"
+                        id="cancelUserModal"
+                    >
+                        CANCEL
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="modal-submit"
+                    >
+                        SAVE USER
+                        <i class="bi bi-check-lg"></i>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="admin-users.js"></script>
+
+</body>
+</html>

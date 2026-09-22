@@ -1,0 +1,2482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly">
+
+    <title>Stackly</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<body>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-wrapper">
+
+            <div class="loader-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </div>
+
+            <div class="loader-bottom">
+                <span>LOADING</span>
+                <span id="loaderPercent">0%</span>
+            </div>
+
+            <div class="loader-line">
+                <div class="loader-line-progress" id="loaderProgress"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+  
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid navbar-inner">
+
+                <a href="index.html" class="brand">
+                    <img src="Assets/blacklogo.webp" alt="Stackly">
+                </a>
+
+                <div class="desktop-navigation">
+
+                    <a href="index.html" class="nav-item ">
+                        Home
+                    </a>
+
+                    <a href="about.html" class="nav-item ">
+                        About
+                    </a>
+
+                    <a href="services.html" class="nav-item">
+                        Service
+                    </a>
+
+                    <a href="blog.html" class="nav-item">
+                        Blog
+                    </a>
+
+                    <a href="contact.html" class="nav-item active">
+                        Contact
+                    </a>
+
+                    <a href="login.html" class="login-link">
+                        Login
+                    </a>
+
+                    <a href="register.html" class="register-button">
+                        Register
+                    </a>
+
+                </div>
+
+                <button
+                    class="mobile-menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <aside class="mobile-navigation" id="mobileNavigation">
+
+        <div class="mobile-navigation-header">
+
+            <a href="index.html" class="mobile-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+
+            <button
+                class="mobile-close"
+                id="mobileClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="mobile-links">
+
+            <a href="index.html" class="mobile-nav-link ">
+                Home
+            </a>
+
+            <a href="about.html" class="mobile-nav-link ">
+                About
+            </a>
+
+            <a href="services.html" class="mobile-nav-link">
+                Service
+            </a>
+
+            <a href="blog.html" class="mobile-nav-link">
+                Blog
+            </a>
+
+            <a href="contact.html" class="mobile-nav-link active">
+                Contact
+            </a>
+
+            <a href="login.html" class="mobile-login">
+                Login
+            </a>
+
+            <a href="register.html" class="mobile-register">
+                Register
+            </a>
+
+        </div>
+
+    </aside>
+
+<main>
+    <section class="stackly-contact-hero-section" id="contact-hero">
+
+    <div class="stackly-contact-hero-container">
+
+        <div class="contact-hero-top">
+
+            <span class="contact-hero-eyebrow">
+                (CONTACT)
+            </span>
+
+            <div class="contact-hero-status">
+                <span></span>
+                DIRECT ENGINEERING ACCESS
+            </div>
+
+        </div>
+
+        <div class="contact-hero-grid">
+
+            <div class="contact-hero-left">
+
+                <h1 class="contact-hero-title">
+                    TELL US
+                    <span>WHAT YOU'RE</span>
+                    BUILDING.
+                </h1>
+
+                <p class="contact-hero-description">
+                    Fill in the form or email us directly — we reply within
+                    one business day, and we'll tell you plainly if we're
+                    not the right fit.
+                </p>
+
+                <div class="contact-hero-points">
+
+                    <div>
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>FAST FIRST RESPONSE</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>DIRECT ENGINEER CONTACT</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span>NO LONG SALES PROCESS</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-hero-right">
+
+                <div class="contact-signal-card">
+
+                    <div class="contact-signal-header">
+
+                        <span>
+                            PROJECT INTAKE
+                        </span>
+
+                        <strong>
+                            01 / 01
+                        </strong>
+
+                    </div>
+
+                    <div class="contact-signal-body">
+
+                        <div class="contact-signal-orbit">
+
+                            <span class="contact-orbit orbit-one"></span>
+                            <span class="contact-orbit orbit-two"></span>
+                            <span class="contact-orbit orbit-three"></span>
+
+                            <div class="contact-signal-core">
+                                <span>SK</span>
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+
+                            <span class="contact-signal-node node-one"></span>
+                            <span class="contact-signal-node node-two"></span>
+                            <span class="contact-signal-node node-three"></span>
+                            <span class="contact-signal-node node-four"></span>
+
+                        </div>
+
+                        <div class="contact-signal-content">
+
+                            <span>
+                                START WITH THE PROBLEM
+                            </span>
+
+                            <h2>
+                                BUILD
+                                <strong>THE RIGHT THING.</strong>
+                            </h2>
+
+                            <p>
+                                Cloud infrastructure, software, security,
+                                data systems or something more complicated.
+                                Start with what needs to change.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-signal-bottom">
+
+                        <div>
+                            <span>RESPONSE</span>
+                            <strong>WITHIN 1 DAY</strong>
+                        </div>
+
+                        <div>
+                            <span>LOCATION</span>
+                            <strong>SALEM / REMOTE</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-hero-quick-links">
+
+            <div class="contact-quick-item">
+
+                <span>
+                    EMAIL
+                </span>
+
+                <a href="mailto:hello@stackly.io">
+                    support@stackly.com
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+
+            <div class="contact-quick-item">
+
+                <span>
+                    LOCATION
+                </span>
+
+                <strong>
+                    SALEM, TAMIL NADU
+                </strong>
+
+            </div>
+
+
+            <div class="contact-quick-item">
+
+                <span>
+                    AVAILABILITY
+                </span>
+
+                <strong>
+                    SELECT PROJECTS
+                </strong>
+
+            </div>
+
+
+            <div class="contact-quick-item">
+
+                <span>
+                    RESPONSE
+                </span>
+
+                <strong>
+                    1 BUSINESS DAY
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-hero-bottom">
+
+            <span>
+                STACKLY / CONTACT
+            </span>
+
+            <span>
+                CLOUD · SOFTWARE · SECURITY · DATA
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stackly-contact-form-section" id="contact-form">
+
+    <div class="stackly-contact-form-container">
+
+        <div class="contact-form-heading">
+
+            <div>
+
+                <span class="contact-form-eyebrow">
+                    (02) — PROJECT INTAKE
+                </span>
+
+                <h2>
+                    TELL US
+                    <span>WHAT NEEDS TO</span>
+                    CHANGE.
+                </h2>
+
+            </div>
+
+            <div class="contact-form-heading-copy">
+
+                <p>
+                    Give us enough context to understand the problem,
+                    the system and the outcome you need. Every field is
+                    required so we can make the first conversation useful.
+                </p>
+
+                <div class="contact-form-status">
+                    <span></span>
+                    ALL FIELDS REQUIRED
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-form-layout">
+
+            <div class="contact-form-panel">
+
+                <form id="stacklyContactForm" novalidate>
+
+                    <div class="contact-form-grid">
+
+                        <div class="contact-field">
+
+                            <label for="contactName">
+                                FULL NAME
+                                <span>*</span>
+                            </label>
+
+                            <div class="contact-input-wrap">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+                            <small class="contact-field-error"></small>
+
+                        </div>
+
+
+                        <div class="contact-field">
+
+                            <label for="contactEmail">
+                                WORK EMAIL
+                                <span>*</span>
+                            </label>
+
+                            <div class="contact-input-wrap">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    name="email"
+                                    placeholder="you@company.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                            <small class="contact-field-error"></small>
+
+                        </div>
+
+
+                        <div class="contact-field">
+
+                            <label for="contactCompany">
+                                COMPANY
+                                <span>*</span>
+                            </label>
+
+                            <div class="contact-input-wrap">
+
+                                <i class="fa-regular fa-building"></i>
+
+                                <input
+                                    type="text"
+                                    id="contactCompany"
+                                    name="company"
+                                    placeholder="Company name"
+                                    autocomplete="organization"
+                                    required
+                                >
+
+                            </div>
+
+                            <small class="contact-field-error"></small>
+
+                        </div>
+
+
+                        <div class="contact-field">
+
+                            <label for="contactBudget">
+                                BUDGET RANGE
+                                <span>*</span>
+                            </label>
+
+                            <div class="contact-input-wrap contact-select-wrap">
+
+                                <i class="fa-solid fa-wallet"></i>
+
+                                <select
+                                    id="contactBudget"
+                                    name="budget"
+                                    required
+                                >
+                                    <option value="">
+                                        Select budget range
+                                    </option>
+
+                                    <option value="under-5k">
+                                        Under $5k
+                                    </option>
+
+                                    <option value="5k-10k">
+                                        $5k — $10k
+                                    </option>
+
+                                    <option value="10k-25k">
+                                        $10k — $25k
+                                    </option>
+
+                                    <option value="25k-50k">
+                                        $25k — $50k
+                                    </option>
+
+                                    <option value="50k-plus">
+                                        $50k+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <small class="contact-field-error"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-field contact-field-full">
+
+                        <label for="contactProblem">
+                            WHAT ARE YOU TRYING TO SOLVE?
+                            <span>*</span>
+                        </label>
+
+                        <div class="contact-textarea-wrap">
+
+                            <i class="fa-regular fa-message"></i>
+
+                            <textarea
+                                id="contactProblem"
+                                name="problem"
+                                rows="7"
+                                placeholder="Tell us what you're building, what is not working, the current system, timeline, or anything else that will help us understand the problem."
+                                required
+                            ></textarea>
+
+                            <span class="contact-char-count">
+                                <strong id="contactCharCount">0</strong>
+                                / 1000
+                            </span>
+
+                        </div>
+
+                        <small class="contact-field-error"></small>
+
+                    </div>
+
+
+                    <div class="contact-form-bottom">
+
+                        <div class="contact-form-check">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Your information stays within Stackly
+                                and is used only to respond to your enquiry.
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="contact-submit-button"
+                            id="contactSubmitButton"
+                        >
+
+                            <span>
+                                SEND MESSAGE
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="contact-form-message"
+                        id="contactFormMessage"
+                        aria-live="polite"
+                    ></div>
+
+                </form>
+
+            </div>
+
+
+            <aside class="contact-form-info">
+
+                <div class="contact-info-top">
+
+                    <span>
+                        STACKLY / DIRECT
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-dots"></i>
+
+                </div>
+
+
+                <div class="contact-info-intro">
+
+                    <span>
+                        BEFORE WE START
+                    </span>
+
+                    <h3>
+                        GIVE US THE
+                        <strong>REAL CONTEXT.</strong>
+                    </h3>
+
+                    <p>
+                        The better we understand the problem,
+                        the more useful the first conversation becomes.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-info-list">
+
+                    <div>
+
+                        <span>EMAIL</span>
+
+                        <a href="mailto:hello@stackly.io">
+                            hello@stackly.io
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>RESPONSE TIME</span>
+
+                        <strong>
+                            WITHIN 1 BUSINESS DAY
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>HEADQUARTERS</span>
+
+                        <strong>
+                            SALEM, TAMIL NADU
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>AVAILABILITY</span>
+
+                        <strong class="contact-availability">
+                            <i></i>
+                            ONBOARDING NEW CLIENTS
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-info-process">
+
+                    <span>
+                        WHAT HAPPENS NEXT
+                    </span>
+
+                    <div>
+
+                        <strong>01</strong>
+
+                        <p>
+                            We review your message.
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <strong>02</strong>
+
+                        <p>
+                            We identify the useful first step.
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <strong>03</strong>
+
+                        <p>
+                            We schedule a direct discussion.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <div class="contact-form-footer">
+
+            <span>
+                CLOUD · SOFTWARE · SECURITY · DATA &amp; AI
+            </span>
+
+            <span>
+                STACKLY / SALEM / REMOTE / GLOBAL
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stackly-contact-map-section" id="contact-map">
+
+    <div class="stackly-contact-map-container">
+
+        <div class="contact-map-header">
+
+            <div class="contact-map-heading">
+
+                <span class="contact-map-eyebrow">
+                    (03) — FIND US
+                </span>
+
+                <h2>
+                    STACKLY
+                    <span>SALEM.</span>
+                </h2>
+
+                <p>
+                    Based in Salem, Tamil Nadu and working with teams
+                    remotely across locations. Visit us or start with
+                    a conversation online.
+                </p>
+
+            </div>
+
+            <div class="contact-map-header-info">
+
+                <div class="contact-map-status">
+                    <span></span>
+                    HEADQUARTERS / ACTIVE
+                </div>
+
+                <div class="contact-map-header-grid">
+
+                    <div>
+                        <strong>SALEM</strong>
+                        <span>TAMIL NADU</span>
+                    </div>
+
+                    <div>
+                        <strong>REMOTE</strong>
+                        <span>GLOBAL DELIVERY</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-map-layout">
+
+            <div class="contact-map-frame">
+
+                <div class="contact-map-loading">
+                    <span></span>
+                    LOADING LOCATION
+                </div>
+
+                <iframe
+                    src="https://www.google.com/maps?q=Stackly%20Salem%20Tamil%20Nadu&output=embed"
+                    title="Stackly Salem Location"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                ></iframe>
+
+                <div class="contact-map-overlay-grid"></div>
+
+                <div class="contact-map-corner contact-map-corner-top">
+                    STACKLY / SALEM
+                </div>
+
+                <div class="contact-map-corner contact-map-corner-bottom">
+                    <span></span>
+                    LOCATION SIGNAL
+                </div>
+
+            </div>
+
+
+            <aside class="contact-map-info">
+
+                <div class="contact-map-info-top">
+
+                    <span>
+                        HEADQUARTERS
+                    </span>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+
+                <div class="contact-map-location-icon">
+
+                    <i class="fa-solid fa-location-crosshairs"></i>
+
+                </div>
+
+
+                <span class="contact-map-label">
+                    STACKLY SYSTEMS
+                </span>
+
+                <h3>
+                    SALEM,
+                    <strong>TAMIL NADU.</strong>
+                </h3>
+
+                <p>
+                    Our home base for engineering, infrastructure
+                    and client collaboration.
+                </p>
+
+
+                <div class="contact-map-address">
+
+                    <div>
+
+                        <span>
+                            LOCATION
+                        </span>
+
+                        <strong>
+                            SALEM, TAMIL NADU
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            WORKING MODEL
+                        </span>
+
+                        <strong>
+                            OFFICE + REMOTE
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            AVAILABILITY
+                        </span>
+
+                        <strong class="map-availability">
+                            <i></i>
+                            BY APPOINTMENT
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Stackly+Salem+Tamil+Nadu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-map-direction-button"
+                >
+                    OPEN IN GOOGLE MAPS
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+
+                <div class="contact-map-bottom">
+
+                    <span>
+                        CLOUD · SOFTWARE · SECURITY
+                    </span>
+
+                    <span>
+                        SALEM / REMOTE / GLOBAL
+                    </span>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <div class="contact-map-footer">
+
+            <div>
+
+                <span>
+                    LOCATION SIGNAL
+                </span>
+
+                <p>
+                    Salem is our base. The work is built for wherever
+                    your team operates.
+                </p>
+
+            </div>
+
+            <a href="contact.html">
+                START A CONVERSATION
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stackly-contact-channels-section" id="contact-channels">
+
+    <div class="stackly-contact-channels-container">
+
+        <div class="contact-channels-header">
+
+            <div class="contact-channels-heading">
+
+                <span class="contact-channels-eyebrow">
+                    (04) — RIGHT DOOR
+                </span>
+
+                <h2>
+                    CHOOSE A
+                    <span>CHANNEL.</span>
+                </h2>
+
+                <p>
+                    Send your message to the right inbox and we'll route it
+                    to the people best placed to help.
+                </p>
+
+            </div>
+
+            <div class="contact-channels-header-panel">
+
+                <div class="contact-channels-live">
+                    <span></span>
+                    DIRECT ROUTING ACTIVE
+                </div>
+
+                <div class="contact-channels-header-note">
+
+                    <strong>
+                        ONE MESSAGE.
+                    </strong>
+
+                    <span>
+                        RIGHT TEAM.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-channels-grid">
+
+            <a
+                href="mailto:sales@stackly.io"
+                class="contact-channel-card"
+            >
+
+                <div class="contact-channel-top">
+
+                    <span>
+                        01
+                    </span>
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                </div>
+
+                <div class="contact-channel-content">
+
+                    <span class="contact-channel-label">
+                        NEW BUSINESS
+                    </span>
+
+                    <h3>
+                        SALES
+                    </h3>
+
+                    <p>
+                        Exploring a new project, service or
+                        ongoing engineering partnership?
+                    </p>
+
+                </div>
+
+                <div class="contact-channel-bottom">
+
+                    <span>
+                        sales@stackly.io
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="mailto:support@stackly.io"
+                class="contact-channel-card contact-channel-featured"
+            >
+
+                <div class="contact-channel-top">
+
+                    <span>
+                        02
+                    </span>
+
+                    <i class="fa-solid fa-life-ring"></i>
+
+                </div>
+
+                <div class="contact-channel-content">
+
+                    <span class="contact-channel-label">
+                        EXISTING CLIENTS
+                    </span>
+
+                    <h3>
+                        SUPPORT
+                    </h3>
+
+                    <p>
+                        Active incidents, monitoring alerts or
+                        questions about an existing system.
+                    </p>
+
+                </div>
+
+                <div class="contact-channel-bottom">
+
+                    <span>
+                        support@stackly.io
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+                <span class="contact-channel-badge">
+                    CLIENT PRIORITY
+                </span>
+
+            </a>
+
+
+            <a
+                href="mailto:security@stackly.io"
+                class="contact-channel-card"
+            >
+
+                <div class="contact-channel-top">
+
+                    <span>
+                        03
+                    </span>
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div class="contact-channel-content">
+
+                    <span class="contact-channel-label">
+                        RESPONSIBLE DISCLOSURE
+                    </span>
+
+                    <h3>
+                        SECURITY
+                    </h3>
+
+                    <p>
+                        Report a vulnerability in our systems or
+                        a client-facing product.
+                    </p>
+
+                </div>
+
+                <div class="contact-channel-bottom">
+
+                    <span>
+                        security@stackly.io
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <div class="contact-channel-process">
+
+            <div class="contact-channel-process-heading">
+
+                <span>
+                    WHAT HAPPENS NEXT
+                </span>
+
+                <h3>
+                    SENT TO THE
+                    <strong>RIGHT PEOPLE.</strong>
+                </h3>
+
+                <p>
+                    Every message is reviewed before it reaches the
+                    appropriate team.
+                </p>
+
+            </div>
+
+
+            <div class="contact-channel-steps">
+
+                <div class="contact-channel-step">
+
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <i class="fa-solid fa-inbox"></i>
+
+                        <strong>
+                            MESSAGE RECEIVED
+                        </strong>
+
+                        <p>
+                            Your enquiry enters the Stackly inbox.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-channel-step">
+
+                    <span>
+                        02
+                    </span>
+
+                    <div>
+
+                        <i class="fa-solid fa-route"></i>
+
+                        <strong>
+                            ROUTED
+                        </strong>
+
+                        <p>
+                            It is directed to the relevant team.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-channel-step">
+
+                    <span>
+                        03
+                    </span>
+
+                    <div>
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                        <strong>
+                            REVIEWED
+                        </strong>
+
+                        <p>
+                            A senior person reviews the context.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-channel-step">
+
+                    <span>
+                        04
+                    </span>
+
+                    <div>
+
+                        <i class="fa-solid fa-comments"></i>
+
+                        <strong>
+                            RESPONSE
+                        </strong>
+
+                        <p>
+                            We reply with the useful next step.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-channel-direct">
+
+            <div class="contact-direct-left">
+
+                <span>
+                    NOT SURE WHERE TO START?
+                </span>
+
+                <h3>
+                    JUST TELL US
+                    <strong>WHAT'S GOING ON.</strong>
+                </h3>
+
+                <p>
+                    Use the main contact form and we'll take it
+                    from there.
+                </p>
+
+            </div>
+
+            <a
+                href="#contact-form"
+                class="contact-direct-button"
+            >
+                USE CONTACT FORM
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+
+        </div>
+
+
+        <div class="contact-channels-footer">
+
+            <span>
+                SALES · SUPPORT · SECURITY
+            </span>
+
+            <span>
+                STACKLY / SALEM / REMOTE / GLOBAL
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stackly-contact-faq-section" id="contact-faq">
+
+    <div class="stackly-contact-faq-container">
+
+        <div class="contact-faq-header">
+
+            <div class="contact-faq-heading">
+
+                <span class="contact-faq-eyebrow">
+                    (05) — QUESTIONS
+                </span>
+
+                <h2>
+                    FREQUENTLY
+                    <span>ASKED.</span>
+                </h2>
+
+                <p>
+                    Before you send a message, here are answers to the
+                    questions we hear most often from new and existing clients.
+                </p>
+
+            </div>
+
+            <div class="contact-faq-header-card">
+
+                <div class="contact-faq-status">
+                    <span></span>
+                    QUICK ANSWERS / ONLINE
+                </div>
+
+                <div class="contact-faq-header-data">
+
+                    <div>
+                        <strong>08</strong>
+                        <span>QUESTIONS</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>INCIDENT COVERAGE</span>
+                    </div>
+
+                    <div>
+                        <strong>01</strong>
+                        <span>DIRECT TEAM</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-faq-layout">
+
+            <div class="contact-faq-list">
+
+                <article class="contact-faq-item active">
+
+                    <button
+                        type="button"
+                        class="contact-faq-question"
+                        aria-expanded="true"
+                    >
+
+                        <span class="contact-faq-number">
+                            01
+                        </span>
+
+                        <span class="contact-faq-question-text">
+                            HOW QUICKLY CAN YOU START?
+                        </span>
+
+                        <span class="contact-faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                    </button>
+
+                    <div class="contact-faq-answer">
+
+                        <div>
+
+                            <p>
+                                Most projects begin after an initial
+                                discovery conversation and scope review.
+                                The exact start date depends on the size
+                                and requirements of the engagement.
+                            </p>
+
+                            <span>
+                                PROCESS / START
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="contact-faq-item">
+
+                    <button
+                        type="button"
+                        class="contact-faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span class="contact-faq-number">
+                            02
+                        </span>
+
+                        <span class="contact-faq-question-text">
+                            DO YOU WORK WITH REMOTE TEAMS?
+                        </span>
+
+                        <span class="contact-faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                    </button>
+
+                    <div class="contact-faq-answer">
+
+                        <div>
+
+                            <p>
+                                Yes. Stackly works with distributed teams
+                                and can collaborate remotely across planning,
+                                implementation, deployment and operations.
+                            </p>
+
+                            <span>
+                                DELIVERY / REMOTE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="contact-faq-item">
+
+                    <button
+                        type="button"
+                        class="contact-faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span class="contact-faq-number">
+                            03
+                        </span>
+
+                        <span class="contact-faq-question-text">
+                            CAN YOU WORK WITH OUR EXISTING SYSTEM?
+                        </span>
+
+                        <span class="contact-faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                    </button>
+
+                    <div class="contact-faq-answer">
+
+                        <div>
+
+                            <p>
+                                Yes. We can begin with the system you already
+                                have, review its architecture and identify the
+                                practical improvements or transition work needed.
+                            </p>
+
+                            <span>
+                                ENGINEERING / EXISTING SYSTEM
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="contact-faq-item">
+
+                    <button
+                        type="button"
+                        class="contact-faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span class="contact-faq-number">
+                            04
+                        </span>
+
+                        <span class="contact-faq-question-text">
+                            WHAT SERVICES CAN WE DISCUSS?
+                        </span>
+
+                        <span class="contact-faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                    </button>
+
+                    <div class="contact-faq-answer">
+
+                        <div>
+
+                            <p>
+                                Common areas include cloud and DevOps,
+                                custom software, cybersecurity, IT consulting,
+                                managed IT support, data and AI.
+                            </p>
+
+                            <span>
+                                SERVICES / SCOPE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="contact-faq-item">
+
+                    <button
+                        type="button"
+                        class="contact-faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span class="contact-faq-number">
+                            05
+                        </span>
+
+                        <span class="contact-faq-question-text">
+                            CAN YOU SUPPORT PRODUCTION SYSTEMS?
+                        </span>
+
+                        <span class="contact-faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                    </button>
+
+                    <div class="contact-faq-answer">
+
+                        <div>
+
+                            <p>
+                                Production support can include monitoring,
+                                incident response, reliability reviews,
+                                maintenance and ongoing engineering depending
+                                on the agreed engagement.
+                            </p>
+
+                            <span>
+                                OPERATIONS / SUPPORT
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="contact-faq-item">
+
+                    <button
+                        type="button"
+                        class="contact-faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span class="contact-faq-number">
+                            06
+                        </span>
+
+                        <span class="contact-faq-question-text">
+                            CAN WE START WITH ONE SMALL PROJECT?
+                        </span>
+
+                        <span class="contact-faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                    </button>
+
+                    <div class="contact-faq-answer">
+
+                        <div>
+
+                            <p>
+                                Yes. A focused project can be used as the
+                                first step before expanding into additional
+                                services or ongoing engineering support.
+                            </p>
+
+                            <span>
+                                ENGAGEMENT / FLEXIBLE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="contact-faq-item">
+
+                    <button
+                        type="button"
+                        class="contact-faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span class="contact-faq-number">
+                            07
+                        </span>
+
+                        <span class="contact-faq-question-text">
+                            HOW DOES THE FIRST CONVERSATION WORK?
+                        </span>
+
+                        <span class="contact-faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                    </button>
+
+                    <div class="contact-faq-answer">
+
+                        <div>
+
+                            <p>
+                                We focus on the actual problem, the current
+                                system, constraints, desired outcome and the
+                                smallest useful next step.
+                            </p>
+
+                            <span>
+                                DISCOVERY / FIRST CALL
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="contact-faq-item">
+
+                    <button
+                        type="button"
+                        class="contact-faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span class="contact-faq-number">
+                            08
+                        </span>
+
+                        <span class="contact-faq-question-text">
+                            WHAT IF STACKLY IS NOT THE RIGHT FIT?
+                        </span>
+
+                        <span class="contact-faq-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                    </button>
+
+                    <div class="contact-faq-answer">
+
+                        <div>
+
+                            <p>
+                                We will tell you clearly when another approach
+                                or provider makes more sense for the problem
+                                you are trying to solve.
+                            </p>
+
+                            <span>
+                                FIT / TRANSPARENCY
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <aside class="contact-faq-side">
+
+                <div class="contact-faq-side-top">
+
+                    <span>
+                        NEED A DIRECT ANSWER?
+                    </span>
+
+                    <i class="fa-solid fa-comments"></i>
+
+                </div>
+
+                <div class="contact-faq-side-content">
+
+                    <div class="contact-faq-side-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <span>
+                        TALK TO THE TEAM
+                    </span>
+
+                    <h3>
+                        HAVE A QUESTION
+                        <strong>WE DIDN'T COVER?</strong>
+                    </h3>
+
+                    <p>
+                        Send us the question directly. We'll point you
+                        to the right answer or the right person.
+                    </p>
+
+                    <a
+                        href="#contact-form"
+                        class="contact-faq-side-button"
+                    >
+                        ASK STACKLY
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+                <div class="contact-faq-side-bottom">
+
+                    <div>
+                        <span>EMAIL</span>
+                        <strong>hello@stackly.io</strong>
+                    </div>
+
+                    <div>
+                        <span>RESPONSE</span>
+                        <strong>1 BUSINESS DAY</strong>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <div class="contact-faq-bottom">
+
+            <div class="contact-faq-bottom-item">
+
+                <i class="fa-solid fa-cloud"></i>
+
+                <div>
+                    <strong>CLOUD</strong>
+                    <span>ARCHITECTURE &amp; DEVOPS</span>
+                </div>
+
+            </div>
+
+            <div class="contact-faq-bottom-item">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <div>
+                    <strong>SECURITY</strong>
+                    <span>PROTECTION &amp; RESPONSE</span>
+                </div>
+
+            </div>
+
+            <div class="contact-faq-bottom-item">
+
+                <i class="fa-solid fa-code"></i>
+
+                <div>
+                    <strong>SOFTWARE</strong>
+                    <span>BUILD &amp; DELIVERY</span>
+                </div>
+
+            </div>
+
+            <div class="contact-faq-bottom-item">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <div>
+                    <strong>DATA &amp; AI</strong>
+                    <span>PIPELINES &amp; AUTOMATION</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-faq-footer">
+
+            <div>
+
+                <span>
+                    STILL NOT SURE?
+                </span>
+
+                <p>
+                    Use the contact form and tell us what you are
+                    trying to solve. We'll take it from there.
+                </p>
+
+            </div>
+
+            <a href="#contact-form">
+                START A CONVERSATION
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="stackly-contact-social-section" id="contact-social">
+
+    <div class="stackly-contact-social-container">
+
+        <div class="contact-social-header">
+
+            <div class="contact-social-heading">
+
+                <span class="contact-social-eyebrow">
+                    (06) — STAY CONNECTED
+                </span>
+
+                <h2>
+                    FOLLOW THE
+                    <span>WORK.</span>
+                </h2>
+
+                <p>
+                    Follow Stackly for engineering notes, project updates,
+                    infrastructure ideas and the people behind the work.
+                </p>
+
+            </div>
+
+            <div class="contact-social-header-panel">
+
+                <div class="contact-social-live">
+                    <span></span>
+                    STACKLY / SOCIAL SIGNAL
+                </div>
+
+                <div class="contact-social-header-copy">
+
+                    <strong>
+                        05 CHANNELS.
+                    </strong>
+
+                    <span>
+                        ONE ENGINEERING COMMUNITY.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-social-grid">
+
+            <a
+                href="error.html"
+                class="contact-social-card"
+            >
+
+                <div class="contact-social-card-top">
+
+                    <span>01</span>
+
+                    <div class="contact-social-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+                <div class="contact-social-card-main">
+
+                    <span>
+                        VISUAL UPDATES
+                    </span>
+
+                    <h3>
+                        INSTAGRAM
+                    </h3>
+
+                    <p>
+                        Behind-the-scenes moments, team updates,
+                        culture and visual highlights from Stackly.
+                    </p>
+
+                </div>
+
+                <div class="contact-social-card-bottom">
+
+                    <span>
+                        FOLLOW @STACKLY
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="error.html"
+                class="contact-social-card social-linkedin"
+            >
+
+                <div class="contact-social-card-top">
+
+                    <span>02</span>
+
+                    <div class="contact-social-icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                </div>
+
+                <div class="contact-social-card-main">
+
+                    <span>
+                        PROFESSIONAL NETWORK
+                    </span>
+
+                    <h3>
+                        LINKEDIN
+                    </h3>
+
+                    <p>
+                        Company updates, engineering insights,
+                        career opportunities and new announcements.
+                    </p>
+
+                </div>
+
+                <div class="contact-social-card-bottom">
+
+                    <span>
+                        CONNECT WITH STACKLY
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+                <b>
+                    PROFESSIONAL
+                </b>
+
+            </a>
+
+
+            <a
+                href="error.html"
+                class="contact-social-card"
+            >
+
+                <div class="contact-social-card-top">
+
+                    <span>03</span>
+
+                    <div class="contact-social-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+
+                </div>
+
+                <div class="contact-social-card-main">
+
+                    <span>
+                        OPEN SOURCE
+                    </span>
+
+                    <h3>
+                        GITHUB
+                    </h3>
+
+                    <p>
+                        Code, experiments, tools and engineering
+                        work shared with the wider developer community.
+                    </p>
+
+                </div>
+
+                <div class="contact-social-card-bottom">
+
+                    <span>
+                        VIEW REPOSITORIES
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="error.html"
+                class="contact-social-card"
+            >
+
+                <div class="contact-social-card-top">
+
+                    <span>04</span>
+
+                    <div class="contact-social-icon">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+
+                </div>
+
+                <div class="contact-social-card-main">
+
+                    <span>
+                        SHORT UPDATES
+                    </span>
+
+                    <h3>
+                        X / TWITTER
+                    </h3>
+
+                    <p>
+                        Quick engineering thoughts, technical observations,
+                        releases and conversations from the team.
+                    </p>
+
+                </div>
+
+                <div class="contact-social-card-bottom">
+
+                    <span>
+                        FOLLOW @STACKLY
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="error.html"
+                class="contact-social-card social-youtube"
+            >
+
+                <div class="contact-social-card-top">
+
+                    <span>05</span>
+
+                    <div class="contact-social-icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+
+                </div>
+
+                <div class="contact-social-card-main">
+
+                    <span>
+                        VIDEO &amp; DEMOS
+                    </span>
+
+                    <h3>
+                        YOUTUBE
+                    </h3>
+
+                    <p>
+                        Product demos, engineering walkthroughs,
+                        useful explainers and technical conversations.
+                    </p>
+
+                </div>
+
+                <div class="contact-social-card-bottom">
+
+                    <span>
+                        WATCH STACKLY
+                    </span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+            </a>
+
+
+            <div class="contact-social-card contact-social-direct">
+
+                <div class="contact-social-card-top">
+
+                    <span>06</span>
+
+                    <div class="contact-social-icon">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+
+                </div>
+
+                <div class="contact-social-card-main">
+
+                    <span>
+                        NOT SURE WHERE TO GO?
+                    </span>
+
+                    <h3>
+                        START
+                        <strong>HERE.</strong>
+                    </h3>
+
+                    <p>
+                        Tell us what you're building and we'll point
+                        you toward the right person or channel.
+                    </p>
+
+                </div>
+
+                <div class="contact-social-card-bottom">
+
+                    <a href="#contact-form">
+                        CONTACT STACKLY
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-social-strip">
+
+            <div class="contact-social-strip-title">
+
+                <span>
+                    SOCIAL SIGNAL
+                </span>
+
+                <strong>
+                    FOLLOW.
+                    <em>LEARN.</em>
+                    BUILD.
+                </strong>
+
+            </div>
+
+            <div class="contact-social-strip-items">
+
+                <a href="error.html">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                    <span>
+                        INSTAGRAM
+                    </span>
+
+                </a>
+
+                <a href="error.html">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                    <span>
+                        LINKEDIN
+                    </span>
+
+                </a>
+
+                <a href="error.html">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    <span>
+                        GITHUB
+                    </span>
+
+                </a>
+
+                <a href="error.html">
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                    <span>
+                        X / TWITTER
+                    </span>
+
+                </a>
+
+                <a href="error.html">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                    <span>
+                        YOUTUBE
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-social-footer">
+
+            <div>
+
+                <span>
+                    FOLLOW THE ENGINEERING
+                </span>
+
+                <p>
+                    New ideas, new systems and practical lessons from
+                    the Stackly team.
+                </p>
+
+            </div>
+
+            <a href="#contact-form">
+                TALK TO THE TEAM
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="stackly-footer">
+
+    <div class="stackly-footer-top">
+
+        <div class="stackly-footer-brand">
+
+            <a href="index.html" class="stackly-footer-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+
+            <p class="stackly-footer-description">
+                An IT solutions team helping businesses build,
+                secure and scale reliable digital systems.
+            </p>
+
+            <div class="stackly-footer-social">
+                <span class="stackly-footer-social-label">FOLLOW STACKLY</span>
+
+                <div class="stackly-social-icons">
+
+                    <a href="error.html" aria-label="X / Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-footer-links">
+
+            <div class="stackly-footer-column">
+
+                <h4>EXPLORE</h4>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="stackly-footer-column">
+
+                <h4>SERVICES</h4>
+
+                <a href="error.html">Cloud &amp; DevOps</a>
+                <a href="error.html">Custom Software</a>
+                <a href="error.html">Cybersecurity</a>
+                <a href="error.html">IT Consulting</a>
+                <a href="error.html">Managed IT</a>
+                <a href="error.html">Data &amp; AI</a>
+
+            </div>
+
+
+            <div class="stackly-footer-column">
+
+                <h4>ACCOUNT</h4>
+
+                <a href="login.html">Log In</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="error.html">Client Portal</a>
+                <a href="error.html">Support Center</a>
+                <a href="error.html">Status Page</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-footer-contact">
+
+            <span class="stackly-footer-contact-label">
+                START A CONVERSATION
+            </span>
+
+            <h3>
+                HAVE A SYSTEM
+                <span>WORTH BUILDING?</span>
+            </h3>
+
+            <p>
+                Tell us what you're working on.
+                We'll figure out the next step together.
+            </p>
+
+            <a href="contact.html" class="stackly-footer-contact-button">
+                CONTACT STACKLY
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <div class="stackly-footer-contact-info">
+
+                <a href="mailto:hello@stackly.io">
+                    <i class="fa-regular fa-envelope"></i>
+                    support@stackly.com
+                </a>
+
+                <a href="error.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Bengaluru, India
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-footer-services-strip">
+
+        <span>WHAT WE BUILD</span>
+
+        <div class="stackly-footer-service-list">
+
+            <a href="error.html">CLOUD INFRASTRUCTURE</a>
+
+            <span></span>
+
+            <a href="error.html">SOFTWARE SYSTEMS</a>
+
+            <span></span>
+
+            <a href="error.html">CYBERSECURITY</a>
+
+            <span></span>
+
+            <a href="error.html">DATA &amp; AI</a>
+
+            <span></span>
+
+            <a href="error.html">IT CONSULTING</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-footer-bottom">
+
+        <div class="stackly-footer-copyright">
+            <span>&copy; 2026 Stackly Systems.</span>
+            <span>All rights reserved.</span>
+        </div>
+
+        <div class="stackly-footer-legal">
+
+            <a href="error.html">Privacy</a>
+            <a href="error.html">Terms</a>
+            <a href="error.html">Cookies</a>
+
+        </div>
+
+        <div class="stackly-footer-built">
+            BUILT WITH INTENTION, CLARITY AND CARE.
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+</main>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="nav.js"></script>
+<script src="cursor.js"></script>
+<script src="contact.js"></script>
+
+
+ </body>
+</html>

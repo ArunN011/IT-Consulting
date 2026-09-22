@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly">
+
+    <title>Stackly</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<body>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-wrapper">
+
+            <div class="loader-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </div>
+
+            <div class="loader-bottom">
+                <span>LOADING</span>
+                <span id="loaderPercent">0%</span>
+            </div>
+
+            <div class="loader-line">
+                <div class="loader-line-progress" id="loaderProgress"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+  
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid navbar-inner">
+
+                <a href="index.html" class="brand">
+                    <img src="Assets/blacklogo.webp" alt="Stackly">
+                </a>
+
+                <div class="desktop-navigation">
+
+                    <a href="index.html" class="nav-item ">
+                        Home
+                    </a>
+
+                    <a href="about.html" class="nav-item ">
+                        About
+                    </a>
+
+                    <a href="services.html" class="nav-item">
+                        Service
+                    </a>
+
+                    <a href="blog.html" class="nav-item">
+                        Blog
+                    </a>
+
+                    <a href="contact.html" class="nav-item ">
+                        Contact
+                    </a>
+
+                    <a href="login.html" class="login-link active">
+                        Login
+                    </a>
+
+                    <a href="register.html" class="register-button">
+                        Register
+                    </a>
+
+                </div>
+
+                <button
+                    class="mobile-menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <aside class="mobile-navigation" id="mobileNavigation">
+
+        <div class="mobile-navigation-header">
+
+            <a href="index.html" class="mobile-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+
+            <button
+                class="mobile-close"
+                id="mobileClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="mobile-links">
+
+            <a href="index.html" class="mobile-nav-link ">
+                Home
+            </a>
+
+            <a href="about.html" class="mobile-nav-link ">
+                About
+            </a>
+
+            <a href="services.html" class="mobile-nav-link">
+                Service
+            </a>
+
+            <a href="blog.html" class="mobile-nav-link">
+                Blog
+            </a>
+
+            <a href="contact.html" class="mobile-nav-link ">
+                Contact
+            </a>
+
+            <a href="login.html" class="mobile-login active">
+                Login
+            </a>
+
+            <a href="register.html" class="mobile-register">
+                Register
+            </a>
+
+        </div>
+
+    </aside>
+<section class="stackly-register-section" id="register-section">
+
+    <div class="stackly-register-container">
+
+        <div class="register-heading">
+
+            <span class="register-eyebrow">
+                (01) — CREATE ACCOUNT
+            </span>
+
+            <h1>
+                JOIN
+                <span>STACKLY.</span>
+            </h1>
+
+            <p>
+                Create your workspace account and choose the access
+                level that matches your role.
+            </p>
+
+        </div>
+
+
+        <div class="register-layout">
+
+            <div class="register-form-panel">
+
+                <form id="stacklyRegisterForm" novalidate>
+
+                    <div class="register-role-section">
+
+                        <div class="register-role-heading">
+
+                            <span>
+                                ACCOUNT ROLE
+                            </span>
+
+                            <small>
+                                REQUIRED
+                            </small>
+
+                        </div>
+
+                        <div class="register-role-grid">
+
+                            <button
+                                type="button"
+                                class="register-role active"
+                                data-role="user"
+                            >
+
+                                <span class="register-role-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+
+                                <span class="register-role-copy">
+                                    <strong>USER</strong>
+                                    <small>WORKSPACE ACCESS</small>
+                                </span>
+
+                                <span class="register-role-check">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="register-role"
+                                data-role="admin"
+                            >
+
+                                <span class="register-role-icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </span>
+
+                                <span class="register-role-copy">
+                                    <strong>ADMIN</strong>
+                                    <small>CONTROL CENTER</small>
+                                </span>
+
+                                <span class="register-role-check">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                        <input
+                            type="hidden"
+                            id="registerRole"
+                            name="role"
+                            value="user"
+                        >
+
+                        <small
+                            class="register-error"
+                            id="registerRoleError"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="register-fields-grid">
+
+                        <div class="register-field">
+
+                            <label for="registerFullName">
+                                FULL NAME
+                                <span>*</span>
+                            </label>
+
+                            <div class="register-input-wrap">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="registerFullName"
+                                    name="fullName"
+                                    placeholder="Your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+                            <small class="register-error"></small>
+
+                        </div>
+
+
+                        <div class="register-field">
+
+                            <label for="registerCompany">
+                                COMPANY
+                                <span>*</span>
+                            </label>
+
+                            <div class="register-input-wrap">
+
+                                <i class="fa-regular fa-building"></i>
+
+                                <input
+                                    type="text"
+                                    id="registerCompany"
+                                    name="company"
+                                    placeholder="Company name"
+                                    autocomplete="organization"
+                                    required
+                                >
+
+                            </div>
+
+                            <small class="register-error"></small>
+
+                        </div>
+
+
+                        <div class="register-field register-field-wide">
+
+                            <label for="registerEmail">
+                                WORK EMAIL
+                                <span>*</span>
+                            </label>
+
+                            <div class="register-input-wrap">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="registerEmail"
+                                    name="email"
+                                    placeholder="you@company.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                            <small class="register-error"></small>
+
+                        </div>
+
+
+                        <div class="register-field">
+
+                            <label for="registerPassword">
+                                PASSWORD
+                                <span>*</span>
+                            </label>
+
+                            <div class="register-input-wrap">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="registerPassword"
+                                    name="password"
+                                    placeholder="Create password"
+                                    autocomplete="new-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="register-password-toggle"
+                                    data-target="registerPassword"
+                                    aria-label="Show password"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </div>
+
+                            <small class="register-error"></small>
+
+                        </div>
+
+
+                        <div class="register-field">
+
+                            <label for="registerConfirmPassword">
+                                CONFIRM PASSWORD
+                                <span>*</span>
+                            </label>
+
+                            <div class="register-input-wrap">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="registerConfirmPassword"
+                                    name="confirmPassword"
+                                    placeholder="Confirm password"
+                                    autocomplete="new-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="register-password-toggle"
+                                    data-target="registerConfirmPassword"
+                                    aria-label="Show password"
+                                >
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                            </div>
+
+                            <small class="register-error"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="registerTerms"
+                                required
+                            >
+
+                            <span class="register-custom-check"></span>
+
+                            <span class="register-terms-text">
+                                I agree to Stackly's
+                                <a href="error.html">Terms of Service</a>
+                                and
+                                <a href="error.html">Privacy Policy</a>.
+                            </span>
+
+                        </label>
+
+                        <small
+                            class="register-error"
+                            id="registerTermsError"
+                        ></small>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="register-submit"
+                        id="registerSubmit"
+                    >
+
+                        <span>CREATE ACCOUNT</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <div
+                        class="register-form-message"
+                        id="registerFormMessage"
+                        aria-live="polite"
+                    ></div>
+                    <div class="register-login-link">
+
+    <span>
+        ALREADY HAVE AN ACCOUNT?
+    </span>
+
+    <a href="login.html">
+        LOG IN
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+</div>
+
+                </form>
+
+            </div>
+
+
+            <aside class="register-plan-panel">
+
+                <div class="register-plan-top">
+
+                    <span>
+                        SELECTED PLAN
+                    </span>
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+
+                <div class="register-plan-tabs">
+
+                    <button
+                        type="button"
+                        class="register-plan-tab"
+                        data-plan="starter"
+                    >
+                        STARTER
+                    </button>
+
+                    <button
+                        type="button"
+                        class="register-plan-tab active"
+                        data-plan="growth"
+                    >
+                        GROWTH
+                    </button>
+
+                    <button
+                        type="button"
+                        class="register-plan-tab"
+                        data-plan="enterprise"
+                    >
+                        ENTERPRISE
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="register-plan-content"
+                    data-plan-content="starter"
+                >
+
+                    <span class="register-plan-label">
+                        STARTER
+                    </span>
+
+                    <h2>
+                        $4K<small>/mo</small>
+                    </h2>
+
+                    <p>
+                        One focused workstream for teams
+                        starting with a defined engineering need.
+                    </p>
+
+                    <div class="register-plan-list">
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>One service track</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>Up to 20 hrs/week</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>Async support</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>Monthly reporting</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="register-plan-content active"
+                    data-plan-content="growth"
+                >
+
+                    <span class="register-plan-label">
+                        GROWTH
+                    </span>
+
+                    <h2>
+                        $12K<small>/mo</small>
+                    </h2>
+
+                    <p>
+                        A dedicated pod covering build and operations
+                        with direct engineering support.
+                    </p>
+
+                    <div class="register-plan-list">
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>Up to 3 service tracks</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>Dedicated 2–3 engineer pod</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>24/7 on-call support</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>Weekly syncs + reporting</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="register-plan-content"
+                    data-plan-content="enterprise"
+                >
+
+                    <span class="register-plan-label">
+                        ENTERPRISE
+                    </span>
+
+                    <h2>
+                        CUSTOM
+                    </h2>
+
+                    <p>
+                        Multi-team engagements with dedicated
+                        architecture, support and compliance planning.
+                    </p>
+
+                    <div class="register-plan-list">
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>Unlimited service tracks</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>Dedicated account architect</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>Compliance + audit support</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-minus"></i>
+                            <span>Custom SLA</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="register-plan-footer">
+
+                    <div>
+
+                        <span>
+                            SELECTED
+                        </span>
+
+                        <strong id="selectedPlanName">
+                            GROWTH
+                        </strong>
+
+                    </div>
+
+                    <span>
+                        YOU CAN CHANGE YOUR PLAN
+                        FROM WORKSPACE SETTINGS.
+                    </span>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <div class="register-bottom">
+
+            <span>
+                STACKLY / ACCOUNT
+            </span>
+
+            <span>
+                SECURE ACCESS · 2026
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="nav.js"></script>
+<script src="cursor.js"></script>
+<script src="register.js"></script>
+</body></html>

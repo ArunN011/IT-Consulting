@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | My Profile</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    >
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="myprofile.css">
+</head>
+
+<body>
+
+    <div class="dashboard-shell">
+
+        <aside
+            class="consulting-sidebar"
+            id="consultingSidebar"
+            aria-label="Main navigation"
+        >
+
+            <div class="sidebar-brand">
+                <a href="user-dashboard.html">
+                    <img src="Assets/blacklogo.webp" alt="Stackly">
+                </a>
+            </div>
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-profile-avatar">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+                <div class="sidebar-profile-info">
+                    <strong id="sidebarUserName">User</strong>
+                    <span>Consulting Client</span>
+                </div>
+
+            </div>
+
+            <div class="sidebar-group">
+
+                <span class="sidebar-group-title">
+                    WORKSPACE
+                </span>
+
+                <nav>
+
+                    <a
+                        href="user-dashboard.html"
+                        class="sidebar-link"
+                    >
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a
+                        href="user-project.html"
+                        class="sidebar-link"
+                    >
+                        <i class="bi bi-kanban"></i>
+                        <span>Projects</span>
+                    </a>
+
+                    <a
+                        href="consulting-request.html"
+                        class="sidebar-link"
+                    >
+                        <i class="bi bi-clipboard-check"></i>
+                        <span>Consulting Requests</span>
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <div class="sidebar-group">
+
+                <span class="sidebar-group-title">
+                    SERVICES
+                </span>
+
+                <nav>
+
+                    <a
+                        href="technology-advisory.html"
+                        class="sidebar-link"
+                    >
+                        <i class="bi bi-code-slash"></i>
+                        <span>Technology Advisory</span>
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <div class="sidebar-group">
+
+                <span class="sidebar-group-title">
+                    ACCOUNT
+                </span>
+
+                <nav>
+
+                    <a
+                        href="myprofile.html"
+                        class="sidebar-link active"
+                        aria-current="page"
+                    >
+                        <i class="bi bi-person"></i>
+                        <span>My Profile</span>
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <a
+                    href="login.html"
+                    class="sidebar-link logout-link"
+                    id="logoutButton"
+                >
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+        <div
+            class="sidebar-overlay"
+            id="sidebarOverlay"
+            aria-hidden="true"
+        ></div>
+
+        <main class="consulting-main">
+
+            <header class="consulting-header">
+
+                <div class="header-left">
+
+                    <button
+                        type="button"
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false"
+                        aria-controls="consultingSidebar"
+                    >
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <a
+                        href="user-dashboard.html"
+                        class="mobile-brand"
+                    >
+                        <img
+                            src="Assets/blacklogo.webp"
+                            alt="Stackly"
+                        >
+                    </a>
+
+                    <div class="page-heading">
+                        <span>ACCOUNT</span>
+                        <h1>My Profile</h1>
+                    </div>
+
+                </div>
+
+                <div class="header-right">
+
+                    <a
+                        href="error.html"
+                        class="header-icon-button"
+                        aria-label="Search"
+                    >
+                        <i class="bi bi-search"></i>
+                    </a>
+
+                    <a
+                        href="error.html"
+                        class="header-icon-button notification-button"
+                        aria-label="Notifications"
+                    >
+                        <i class="bi bi-bell"></i>
+                        <span></span>
+                    </a>
+
+                    <a
+                        href="error.html"
+                        class="header-user"
+                    >
+
+                        <div class="header-user-avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div>
+                            <strong id="headerUserName">User</strong>
+                            <small>Client Account</small>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+            <div class="profile-page">
+
+                <section class="profile-hero section-block">
+
+                    <div class="profile-hero-content">
+
+                        <span class="hero-eyebrow">
+                            ACCOUNT / PROFILE
+                        </span>
+
+                        <h1>
+                            Your workspace identity.
+                        </h1>
+
+                        <p>
+                            Review your account information, security
+                            preferences, and workspace access from one place.
+                        </p>
+
+                    </div>
+
+                    <div class="profile-status-card">
+
+                        <div class="status-card-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                        <div class="status-card-copy">
+                            <span>ACCOUNT STATUS</span>
+                            <strong>Active</strong>
+                            <small>Workspace access enabled</small>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section
+                    class="profile-summary section-block"
+                    id="profileSummarySection"
+                >
+
+                    <div class="profile-summary-card">
+
+                        <div class="profile-avatar">
+                            <i class="bi bi-person"></i>
+                        </div>
+
+                        <div class="profile-summary-copy">
+
+                            <span class="summary-label">
+                                STACKLY USER
+                            </span>
+
+                            <h2 id="profileDisplayName">
+                                User
+                            </h2>
+
+                            <p id="profileDisplayEmail">
+                                user@example.com
+                            </p>
+
+                            <div class="summary-badges">
+
+                                <span>
+                                    <i class="bi bi-person-check"></i>
+                                    User
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-check-circle"></i>
+                                    Active Account
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="summary-action">
+
+                            <a
+                                href="error.html"
+                                class="outline-button"
+                            >
+                                Edit Profile
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="profile-section section-block">
+                    <div class="section-heading">
+                        <div>
+                            <span class="section-eyebrow">PROFILE</span>
+                            <h2>Personal information</h2>
+                        </div>
+                        <span class="section-number">01</span>
+                    </div>
+
+                    <div class="profile-details">
+
+                        <div class="detail-card">
+                            <span>FULL NAME</span>
+                            <strong id="detailName">User</strong>
+                        </div>
+
+                        <div class="detail-card">
+                            <span>EMAIL ADDRESS</span>
+                            <strong id="detailEmail">user@example.com</strong>
+                        </div>
+
+                        <div class="detail-card">
+                            <span>ACCOUNT TYPE</span>
+                            <strong>User</strong>
+                        </div>
+
+                        <div class="detail-card">
+                            <span>ACCOUNT STATUS</span>
+                            <strong class="status-text">Active</strong>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="profile-section section-block">
+                    <div class="section-heading">
+                        <div>
+                            <span class="section-eyebrow">SECURITY</span>
+                            <h2>Account security</h2>
+                        </div>
+                        <span class="section-number">02</span>
+                    </div>
+
+                    <div class="security-grid">
+
+                        <div class="security-card">
+                            <div class="security-icon">
+                                <i class="bi bi-shield-lock"></i>
+                            </div>
+
+                            <div>
+                                <span>LOGIN SECURITY</span>
+                                <h3>Password protected</h3>
+                                <p>Your account is protected with secure login credentials.</p>
+                            </div>
+
+                            <a href="error.html" class="outline-button">
+                                Manage
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="security-card">
+                            <div class="security-icon">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+
+                            <div>
+                                <span>SESSION</span>
+                                <h3>Workspace access</h3>
+                                <p>Your current account session is active.</p>
+                            </div>
+
+                            <a href="error.html" class="outline-button">
+                                Details
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="profile-section section-block">
+                    <div class="section-heading">
+                        <div>
+                            <span class="section-eyebrow">PREFERENCES</span>
+                            <h2>Workspace preferences</h2>
+                        </div>
+                        <span class="section-number">03</span>
+                    </div>
+
+                    <div class="preferences-list">
+
+                        <div class="preference-row">
+                            <div class="preference-icon">
+                                <i class="bi bi-bell"></i>
+                            </div>
+
+                            <div class="preference-copy">
+                                <strong>Request notifications</strong>
+                                <span>Get updates when consulting requests change.</span>
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="preference-action"
+                            >
+                                Manage
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="preference-row">
+                            <div class="preference-icon">
+                                <i class="bi bi-bar-chart"></i>
+                            </div>
+
+                            <div class="preference-copy">
+                                <strong>Weekly workspace summary</strong>
+                                <span>Review your workspace activity summary.</span>
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="preference-action"
+                            >
+                                Manage
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="profile-section section-block">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="section-eyebrow">
+                                WORKSPACE
+                            </span>
+                            <h2>Quick access</h2>
+                        </div>
+
+                        <span class="section-number">
+                            04
+                        </span>
+
+                    </div>
+
+                    <div class="quick-grid">
+
+                        <a
+                            href="error.html"
+                            class="quick-card"
+                        >
+                            <div class="quick-top">
+                                <i class="bi bi-grid-1x2"></i>
+                                <span>01</span>
+                            </div>
+
+                            <h3>Dashboard</h3>
+
+                            <p>
+                                View current activity, project status,
+                                and workspace insights.
+                            </p>
+
+                            <i class="bi bi-arrow-up-right quick-arrow"></i>
+                        </a>
+
+                        <a
+                            href="error.html"
+                            class="quick-card"
+                        >
+                            <div class="quick-top">
+                                <i class="bi bi-kanban"></i>
+                                <span>02</span>
+                            </div>
+
+                            <h3>Projects</h3>
+
+                            <p>
+                                Review your active projects and consulting
+                                engagement information.
+                            </p>
+
+                            <i class="bi bi-arrow-up-right quick-arrow"></i>
+                        </a>
+
+                        <a
+                            href="error.html"
+                            class="quick-card"
+                        >
+                            <div class="quick-top">
+                                <i class="bi bi-send"></i>
+                                <span>03</span>
+                            </div>
+
+                            <h3>New Request</h3>
+
+                            <p>
+                                Start a new technology consulting engagement
+                                with the Stackly team.
+                            </p>
+
+                            <i class="bi bi-arrow-up-right quick-arrow"></i>
+                        </a>
+
+                        <a
+                            href="error.html"
+                            class="quick-card"
+                        >
+                            <div class="quick-top">
+                                <i class="bi bi-cpu"></i>
+                                <span>04</span>
+                            </div>
+
+                            <h3>Technology Advisory</h3>
+
+                            <p>
+                                Explore advisory capabilities and technology
+                                decision support.
+                            </p>
+
+                            <i class="bi bi-arrow-up-right quick-arrow"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <section class="profile-section section-block">
+
+                    <div class="support-panel">
+
+                        <div class="support-copy">
+                            <span>NEED SUPPORT?</span>
+
+                            <h2>
+                                Questions about your account?
+                            </h2>
+
+                            <p>
+                                Get help with account access, workspace
+                                requests, or consulting services.
+                            </p>
+                        </div>
+
+                        <a
+                            href="error.html"
+                            class="primary-button"
+                        >
+                            Contact Support
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <footer class="profile-footer">
+
+                    <div class="footer-brand">
+
+                        <img
+                            src="Assets/blacklogo.webp"
+                            alt="Stackly"
+                        >
+
+                        <span>
+                            Technology consulting & engineering.
+                        </span>
+
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="error.html">
+                            Dashboard
+                        </a>
+
+                        <a href="error.html">
+                            Projects
+                        </a>
+
+                        <a href="error.html">
+                            Consulting Request
+                        </a>
+
+                        <a href="error.html">
+                            Privacy
+                        </a>
+
+                        <a href="error.html">
+                            Support
+                        </a>
+
+                    </div>
+
+                    <span class="footer-copy">
+                       &copy;2026 Stackly
+                    </span>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <script src="myprofile.js"></script>
+
+</body>
+
+</html>

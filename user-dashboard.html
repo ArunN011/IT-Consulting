@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | IT Consulting User Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+
+    <div class="dashboard-shell">
+
+        <aside
+            class="consulting-sidebar"
+            id="consultingSidebar"
+        >
+
+            <div class="sidebar-brand">
+
+                <a href="user-dashboard.html">
+
+                    <img
+                        src="Assets/blacklogo.webp"
+                        alt="Stackly"
+                    >
+
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-profile-avatar">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+                <div class="sidebar-profile-info">
+
+                    <strong id="sidebarUserName">
+                        User
+                    </strong>
+
+                    <span>
+                        Consulting Client
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-group">
+
+                <span class="sidebar-group-title">
+                    WORKSPACE
+                </span>
+
+                <nav>
+
+                    <a
+                        href="user-dashboard.html"
+                        class="sidebar-link active"
+                    >
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a
+                        href="user-project.html"
+                        class="sidebar-link"
+                    >
+                        <i class="bi bi-kanban"></i>
+                        <span>Projects</span>
+                    </a>
+
+                    <a
+                        href="consulting-request.html"
+                        class="sidebar-link"
+                    >
+                        <i class="bi bi-clipboard-check"></i>
+                        <span>Consulting Requests</span>
+                    </a>
+
+                   
+
+                </nav>
+
+            </div>
+
+
+            <div class="sidebar-group">
+
+                <span class="sidebar-group-title">
+                    SERVICES
+                </span>
+
+                <nav>
+
+                
+
+                    <a
+                        href="technology-advisory.html"
+                        class="sidebar-link"
+                    >
+                        <i class="bi bi-code-slash"></i>
+                        <span>Technology Advisory</span>
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <div class="sidebar-group">
+
+                <span class="sidebar-group-title">
+                    ACCOUNT
+                </span>
+
+                <nav>
+
+                    <a
+                        href="myprofile.html"
+                        class="sidebar-link"
+                    >
+                        <i class="bi bi-person"></i>
+                        <span>My Profile</span>
+                    </a>
+
+                  
+
+                </nav>
+
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <a
+                    href="login.html"
+                    class="sidebar-link logout-link"
+                    id="logoutButton"
+                >
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <div
+            class="sidebar-overlay"
+            id="sidebarOverlay"
+        ></div>
+
+
+        <main class="consulting-main">
+
+            <header class="consulting-header">
+
+                <div class="header-left">
+
+                    <button
+                        type="button"
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false"
+                    >
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <a
+                        href="user-dashboard.html"
+                        class="mobile-brand"
+                    >
+                        <img
+                            src="Assets/blacklogo.webp"
+                            alt="Stackly"
+                        >
+                    </a>
+
+                    <div class="page-heading">
+
+                        <span>
+                            CLIENT WORKSPACE
+                        </span>
+
+                        <h1>
+                            IT Consulting Dashboard
+                        </h1>
+
+                    </div>
+
+                </div>
+
+
+                <div class="header-right">
+
+                    <a
+                        href="error.html"
+                        class="header-icon-button"
+                        aria-label="Search"
+                    >
+                        <i class="bi bi-search"></i>
+                    </a>
+
+                    <a
+                        href="error.html"
+                        class="header-icon-button notification-button"
+                        aria-label="Notifications"
+                    >
+                        <i class="bi bi-bell"></i>
+                        <span></span>
+                    </a>
+
+                    <a
+                        href="error.html"
+                        class="header-user"
+                    >
+
+                        <div class="header-user-avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <strong id="headerUserName">
+                                User
+                            </strong>
+
+                            <small>
+                                Client Account
+                            </small>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <div class="dashboard-content">
+
+                <section class="consulting-welcome">
+
+                    <div class="welcome-copy">
+
+                        <span
+                            class="welcome-date"
+                            id="currentDate"
+                        >
+                            TODAY
+                        </span>
+
+                        <div class="welcome-status">
+
+                            <span></span>
+
+                            CONSULTING WORKSPACE ACTIVE
+
+                        </div>
+
+                        <h2>
+                            Welcome back,
+                            <span id="welcomeUser">
+                                User
+                            </span>
+                        </h2>
+
+                        <p>
+                            Track your consulting projects, review
+                            recommendations, follow technology roadmaps
+                            and keep every engagement moving from one place.
+                        </p>
+
+                        <div class="welcome-actions">
+
+                            <a
+                                href="error.html"
+                                class="primary-action"
+                            >
+                                View Projects
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                            <a
+                                href="error.html"
+                                class="secondary-action"
+                            >
+                                Book Consultation
+                                <i class="bi bi-calendar3"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="welcome-visual">
+
+                        <div class="visual-orbit orbit-a"></div>
+
+                        <div class="visual-orbit orbit-b"></div>
+
+                        <div class="visual-orbit orbit-c"></div>
+
+                        <div class="visual-core">
+
+                            <i class="bi bi-diagram-3"></i>
+
+                            <span>
+                                IT
+                            </span>
+
+                        </div>
+
+                        <div class="visual-node node-a"></div>
+                        <div class="visual-node node-b"></div>
+                        <div class="visual-node node-c"></div>
+                        <div class="visual-node node-d"></div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="metric-grid">
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <div class="metric-icon purple">
+                                <i class="bi bi-kanban"></i>
+                            </div>
+
+                            <span class="metric-trend">
+                                +2
+                            </span>
+
+                        </div>
+
+                        <span>
+                            ACTIVE PROJECTS
+                        </span>
+
+                        <strong>
+                            06
+                        </strong>
+
+                        <small>
+                            Across consulting services
+                        </small>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <div class="metric-icon blue">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+
+                            <span class="metric-trend neutral">
+                                LIVE
+                            </span>
+
+                        </div>
+
+                        <span>
+                            CONSULTING HOURS
+                        </span>
+
+                        <strong>
+                            42h
+                        </strong>
+
+                        <small>
+                            Logged this month
+                        </small>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <div class="metric-icon green">
+                                <i class="bi bi-check2-circle"></i>
+                            </div>
+
+                            <span class="metric-trend">
+                                94%
+                            </span>
+
+                        </div>
+
+                        <span>
+                            MILESTONES
+                        </span>
+
+                        <strong>
+                            18
+                        </strong>
+
+                        <small>
+                            Completed this quarter
+                        </small>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <div class="metric-icon orange">
+                                <i class="bi bi-headset"></i>
+                            </div>
+
+                            <span class="metric-trend neutral">
+                                01
+                            </span>
+
+                        </div>
+
+                        <span>
+                            OPEN REQUESTS
+                        </span>
+
+                        <strong>
+                            03
+                        </strong>
+
+                        <small>
+                            Awaiting review
+                        </small>
+
+                    </div>
+
+                </section>
+
+
+                <section class="dashboard-grid primary-grid">
+
+                    <div class="dashboard-card project-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    CURRENT ENGAGEMENT
+                                </span>
+
+                                <h3>
+                                    Technology Modernization
+                                </h3>
+
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="card-link"
+                            >
+                                View Project
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="project-meta">
+
+                            <div>
+
+                                <span>CLIENT PROGRAM</span>
+
+                                <strong>
+                                    Digital Transformation
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>LEAD ADVISOR</span>
+
+                                <strong>
+                                    Stackly Consulting Team
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>NEXT REVIEW</span>
+
+                                <strong>
+                                    Sep 24, 2026
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-progress-heading">
+
+                            <div>
+
+                                <span>
+                                    PROJECT PROGRESS
+                                </span>
+
+                                <strong>
+                                    78%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <div class="project-progress">
+
+                            <span
+                                style="width:78%"
+                            ></span>
+
+                        </div>
+
+
+                        <div class="project-stages">
+
+                            <div class="stage complete">
+
+                                <span>
+                                    01
+                                </span>
+
+                                <i class="bi bi-check2"></i>
+
+                                <strong>
+                                    Discovery
+                                </strong>
+
+                            </div>
+
+                            <div class="stage complete">
+
+                                <span>
+                                    02
+                                </span>
+
+                                <i class="bi bi-check2"></i>
+
+                                <strong>
+                                    Architecture
+                                </strong>
+
+                            </div>
+
+                            <div class="stage active">
+
+                                <span>
+                                    03
+                                </span>
+
+                                <i class="bi bi-arrow-right"></i>
+
+                                <strong>
+                                    Modernization
+                                </strong>
+
+                            </div>
+
+                            <div class="stage">
+
+                                <span>
+                                    04
+                                </span>
+
+                                <i class="bi bi-circle"></i>
+
+                                <strong>
+                                    Optimization
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card consultation-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    NEXT SESSION
+                                </span>
+
+                                <h3>
+                                    Advisory Session
+                                </h3>
+
+                            </div>
+
+                            <div class="session-live">
+                                <span></span>
+                                UPCOMING
+                            </div>
+
+                        </div>
+
+
+                        <div class="session-date">
+
+                            <div class="session-calendar">
+
+                                <span>
+                                    SEP
+                                </span>
+
+                                <strong>
+                                    24
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Architecture Review
+                                </strong>
+
+                                <span>
+                                    Thursday · 11:00 AM
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="session-details">
+
+                            <div>
+                                <i class="bi bi-camera-video"></i>
+                                <span>Video Call</span>
+                            </div>
+
+                            <div>
+                                <i class="bi bi-hourglass-split"></i>
+                                <span>60 Minutes</span>
+                            </div>
+
+                            <div>
+                                <i class="bi bi-person-check"></i>
+                                <span>2 Advisors</span>
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="full-action"
+                        >
+                            View Session Details
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <section class="dashboard-grid secondary-grid">
+
+                    <div class="dashboard-card chart-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    CONSULTING ACTIVITY
+                                </span>
+
+                                <h3>
+                                    Delivery Overview
+                                </h3>
+
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="card-link"
+                            >
+                                Detailed Report
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="chart-summary">
+
+                            <div>
+
+                                <strong>
+                                    42h
+                                </strong>
+
+                                <span>
+                                    This month
+                                </span>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    31h
+                                </strong>
+
+                                <span>
+                                    Last month
+                                </span>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    +35%
+                                </strong>
+
+                                <span>
+                                    Growth
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="chart-wrapper">
+
+                            <canvas id="consultingChart"></canvas>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card health-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    TECHNOLOGY HEALTH
+                                </span>
+
+                                <h3>
+                                    Advisory Snapshot
+                                </h3>
+
+                            </div>
+
+                            <span class="health-status">
+                                STABLE
+                            </span>
+
+                        </div>
+
+
+                        <div class="health-score">
+
+                            <div class="health-ring">
+
+                                <svg viewBox="0 0 120 120">
+
+                                    <circle
+                                        cx="60"
+                                        cy="60"
+                                        r="50"
+                                        class="ring-track"
+                                    ></circle>
+
+                                    <circle
+                                        cx="60"
+                                        cy="60"
+                                        r="50"
+                                        class="ring-value"
+                                    ></circle>
+
+                                </svg>
+
+                                <div>
+
+                                    <strong>
+                                        86
+                                    </strong>
+
+                                    <span>
+                                        / 100
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="health-score-copy">
+
+                                <strong>
+                                    Good technology position
+                                </strong>
+
+                                <span>
+                                    Based on current architecture,
+                                    delivery maturity and operational risk.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="health-list">
+
+                            <div>
+
+                                <span>
+                                    Architecture
+                                </span>
+
+                                <strong>
+                                    91%
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Security
+                                </span>
+
+                                <strong>
+                                    84%
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Operations
+                                </span>
+
+                                <strong>
+                                    82%
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Cloud Readiness
+                                </span>
+
+                                <strong>
+                                    87%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="quick-actions-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span>
+                                QUICK ACTIONS
+                            </span>
+
+                            <h3>
+                                Manage Your Consulting Work
+                            </h3>
+
+                        </div>
+
+                        <span class="section-note">
+                            Everything important in one place
+                        </span>
+
+                    </div>
+
+
+                    <div class="quick-actions-grid">
+
+                        <a
+                            href="error.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                <i class="bi bi-plus-square"></i>
+                            </div>
+
+                            <strong>
+                                New Consulting Request
+                            </strong>
+
+                            <span>
+                                Start a new advisory engagement
+                            </span>
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="error.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                <i class="bi bi-file-earmark-bar-graph"></i>
+                            </div>
+
+                            <strong>
+                                View Recommendations
+                            </strong>
+
+                            <span>
+                                Review technology recommendations
+                            </span>
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="error.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                <i class="bi bi-calendar-plus"></i>
+                            </div>
+
+                            <strong>
+                                Schedule Session
+                            </strong>
+
+                            <span>
+                                Book time with your advisor
+                            </span>
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="error.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                <i class="bi bi-cloud-arrow-down"></i>
+                            </div>
+
+                            <strong>
+                                Download Reports
+                            </strong>
+
+                            <span>
+                                Access your latest deliverables
+                            </span>
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <section class="dashboard-grid lower-grid">
+
+                    <div class="dashboard-card activity-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    RECENT ACTIVITY
+                                </span>
+
+                                <h3>
+                                    Consulting Timeline
+                                </h3>
+
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="card-link"
+                            >
+                                View All
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="timeline-list">
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-icon">
+                                    <i class="bi bi-file-earmark-check"></i>
+                                </div>
+
+                                <div class="timeline-content">
+
+                                    <strong>
+                                        Architecture report published
+                                    </strong>
+
+                                    <span>
+                                        Stackly uploaded the latest
+                                        architecture review.
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Today
+                                </small>
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-icon">
+                                    <i class="bi bi-calendar-check"></i>
+                                </div>
+
+                                <div class="timeline-content">
+
+                                    <strong>
+                                        Advisory session confirmed
+                                    </strong>
+
+                                    <span>
+                                        Architecture review scheduled
+                                        for September 24.
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Yesterday
+                                </small>
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-icon">
+                                    <i class="bi bi-check2-square"></i>
+                                </div>
+
+                                <div class="timeline-content">
+
+                                    <strong>
+                                        Discovery milestone completed
+                                    </strong>
+
+                                    <span>
+                                        Initial technology assessment
+                                        has been completed.
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    3 days ago
+                                </small>
+
+                            </div>
+
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-icon">
+                                    <i class="bi bi-chat-square-text"></i>
+                                </div>
+
+                                <div class="timeline-content">
+
+                                    <strong>
+                                        Consulting note added
+                                    </strong>
+
+                                    <span>
+                                        New recommendation added to
+                                        the modernization roadmap.
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    5 days ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card profile-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    ACCOUNT
+                                </span>
+
+                                <h3>
+                                    Client Profile
+                                </h3>
+
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="card-icon-link"
+                            >
+                                <i class="bi bi-pencil"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="profile-main">
+
+                            <div class="profile-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+
+                            <div>
+
+                                <strong id="profileUserName">
+                                    User
+                                </strong>
+
+                                <span id="profileEmail">
+                                    user@example.com
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-data">
+
+                            <div>
+
+                                <span>
+                                    ACCOUNT TYPE
+                                </span>
+
+                                <strong id="profileRole">
+                                    User
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    CLIENT STATUS
+                                </span>
+
+                                <strong>
+                                    Active
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    PRIMARY SERVICE
+                                </span>
+
+                                <strong>
+                                    IT Consulting
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    MEMBER SINCE
+                                </span>
+
+                                <strong>
+                                    September 2026
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="profile-action"
+                        >
+                            Manage Profile
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <section class="consulting-insight">
+
+                    <div class="insight-icon">
+
+                        <i class="bi bi-lightbulb"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            STACKLY ADVISORY NOTE
+                        </span>
+
+                        <strong>
+                            Focus the next release on architecture simplicity,
+                            operational visibility and measurable outcomes.
+                        </strong>
+
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="insight-link"
+                    >
+                        Read Recommendation
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                </section>
+
+
+                <footer class="dashboard-footer">
+
+                    <span>
+                        © 2026 Stackly Systems
+                    </span>
+
+                    <span>
+                        IT CONSULTING · TECHNOLOGY ADVISORY · DIGITAL TRANSFORMATION
+                    </span>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <script src="user.js"></script>
+
+</body>
+</html>

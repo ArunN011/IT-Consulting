@@ -1,0 +1,43 @@
+.cursor-glow {
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(230, 59, 25, 0.16) 0%,
+        rgba(230, 59, 25, 0.08) 30%,
+        rgba(230, 59, 25, 0.03) 55%,
+        transparent 72%
+    );
+    pointer-events: none;
+    z-index: 9990;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    filter: blur(8px);
+    transition: opacity 0.3s ease;
+    will-change: transform;
+}
+
+.cursor-dot {
+    position: fixed;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #e63b19;
+    pointer-events: none;
+    z-index: 9991;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    box-shadow:
+        0 0 8px rgba(230, 59, 25, 0.8),
+        0 0 20px rgba(230, 59, 25, 0.35);
+    will-change: transform;
+}
+
+@media (max-width: 991px) {
+    .cursor-glow,
+    .cursor-dot {
+        display: none;
+    }
+}

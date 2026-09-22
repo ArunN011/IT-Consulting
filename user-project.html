@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Projects | Stackly</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="user-project.css"
+    >
+</head>
+
+<body>
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <aside
+        class="consulting-sidebar"
+        id="consultingSidebar"
+    >
+
+        <div class="sidebar-top">
+
+            <div class="sidebar-logo">
+                <a href="user-dashboard.html">
+                    <img
+                        src="Assets/blacklogo.webp"
+                        alt="Stackly"
+                    >
+                </a>
+            </div>
+
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-profile-icon">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+                <div class="sidebar-profile-content">
+
+                    <strong id="sidebarUserEmail">
+                        arunkumarnk2003@gmail.com
+                    </strong>
+
+                    <span>
+                        Consulting Client
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-section-title">
+                    WORKSPACE
+                </p>
+
+
+                <a
+                    href="user-dashboard.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="bi bi-grid-fill"></i>
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+                </a>
+
+
+                <a
+                    href="user-project.html"
+                    class="sidebar-link active"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="bi bi-clipboard2"></i>
+                    </span>
+
+                    <span>
+                        Projects
+                    </span>
+                </a>
+
+
+                <a
+                    href="consulting-request.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="bi bi-clipboard-check"></i>
+                    </span>
+
+                    <span>
+                        Consulting Requests
+                    </span>
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-section-title">
+                    SERVICES
+                </p>
+
+
+                <a
+                    href="technology-advisory.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="bi bi-code-slash"></i>
+                    </span>
+
+                    <span>
+                        Technology Advisory
+                    </span>
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-section-title">
+                    ACCOUNT
+                </p>
+
+
+                <a
+                    href="myprofile.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="bi bi-person"></i>
+                    </span>
+
+                    <span>
+                        My Profile
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                type="button"
+                class="logout-button"
+                id="logoutButton"
+            >
+                <span class="sidebar-link-icon">
+                    <i class="bi bi-box-arrow-right"></i>
+                </span>
+
+                <span>
+                    Logout
+                </span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <header class="consulting-header">
+
+        <div class="header-left">
+
+            <button
+                type="button"
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open navigation"
+                aria-expanded="false"
+            >
+                <i class="bi bi-list"></i>
+            </button>
+
+
+            <div class="mobile-brand">
+                <img
+                    src="Assets/blacklogo.webp"
+                    alt="Stackly"
+                >
+            </div>
+
+
+            <div class="header-heading">
+
+                <span>
+                    CLIENT WORKSPACE
+                </span>
+
+                <h1>
+                    Projects
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <button
+                type="button"
+                class="header-icon-button"
+                data-error-link
+            >
+                <i class="bi bi-search"></i>
+            </button>
+
+
+            <button
+                type="button"
+                class="header-icon-button notification-button"
+                data-error-link
+            >
+                <i class="bi bi-bell"></i>
+
+                <span class="notification-dot"></span>
+            </button>
+
+
+            <div class="header-user">
+
+                <div class="header-user-icon">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+
+                <div class="header-user-text">
+
+                    <strong id="headerUserName">
+                        User
+                    </strong>
+
+                    <span>
+                        Consulting Client
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="project-main">
+
+        <div class="project-container">
+
+
+            <section class="project-intro">
+
+                <div class="project-intro-content">
+
+                    <span class="eyebrow">
+                        PROJECT PORTFOLIO
+                    </span>
+
+
+                    <h2>
+                        Your technology
+                        <span>engagements.</span>
+                    </h2>
+
+
+                    <p>
+                        Track your active consulting engagements,
+                        project progress, and upcoming delivery
+                        milestones from one workspace.
+                    </p>
+
+                </div>
+
+
+                <div class="intro-actions">
+
+                    <a
+                        href="error.html"
+                        class="primary-action"
+                    >
+                        <span>
+                            START NEW REQUEST
+                        </span>
+
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <section class="project-summary-grid">
+
+                <div class="summary-card">
+
+                    <div class="summary-card-top">
+                        <span>
+                            ACTIVE PROJECTS
+                        </span>
+
+                        <i class="bi bi-layers"></i>
+                    </div>
+
+                    <strong>
+                        03
+                    </strong>
+
+                    <p>
+                        Projects currently in progress
+                    </p>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-card-top">
+                        <span>
+                            COMPLETED
+                        </span>
+
+                        <i class="bi bi-check2-circle"></i>
+                    </div>
+
+                    <strong>
+                        08
+                    </strong>
+
+                    <p>
+                        Successfully delivered engagements
+                    </p>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-card-top">
+                        <span>
+                            AVG. PROGRESS
+                        </span>
+
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+
+                    <strong>
+                        74%
+                    </strong>
+
+                    <p>
+                        Current portfolio completion
+                    </p>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-card-top">
+                        <span>
+                            NEXT DELIVERY
+                        </span>
+
+                        <i class="bi bi-calendar3"></i>
+                    </div>
+
+                    <strong>
+                        12D
+                    </strong>
+
+                    <p>
+                        Until the next major milestone
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="projects-section">
+
+                <div class="section-heading-row">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            CURRENT ENGAGEMENTS
+                        </span>
+
+                        <h3>
+                            Active Projects
+                        </h3>
+
+                    </div>
+
+
+                    <div class="project-filter">
+
+                        <button
+                            type="button"
+                            class="filter-button active"
+                            data-filter="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-filter="active"
+                        >
+                            Active
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-filter="completed"
+                        >
+                            Completed
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="projects-grid"
+                    id="projectsGrid"
+                >
+
+
+                    <article
+                        class="project-card"
+                        data-status="active"
+                    >
+
+                        <div class="project-card-header">
+
+                            <div class="project-status active-status">
+                                IN PROGRESS
+                            </div>
+
+                            <button
+                                type="button"
+                                class="project-menu"
+                                data-error-link
+                            >
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="project-card-icon">
+                            <i class="bi bi-cloud-check"></i>
+                        </div>
+
+
+                        <h4>
+                            Cloud Infrastructure Modernization
+                        </h4>
+
+
+                        <p>
+                            Modernizing infrastructure,
+                            deployment workflows and cloud
+                            architecture for improved scalability.
+                        </p>
+
+
+                        <div class="project-meta">
+
+                            <div>
+                                <span>
+                                    OWNER
+                                </span>
+
+                                <strong>
+                                    Stackly Cloud Team
+                                </strong>
+                            </div>
+
+
+                            <div>
+                                <span>
+                                    DUE DATE
+                                </span>
+
+                                <strong>
+                                    Oct 08, 2026
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-progress">
+
+                            <div class="progress-header">
+
+                                <span>
+                                    PROJECT PROGRESS
+                                </span>
+
+                                <strong>
+                                    78%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+                                <span style="width:78%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-card-footer">
+
+                            <div class="project-team">
+
+                                <span class="team-avatar">
+                                    A
+                                </span>
+
+                                <span class="team-avatar">
+                                    R
+                                </span>
+
+                                <span class="team-avatar">
+                                    S
+                                </span>
+
+                                <span class="team-count">
+                                    +4
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                href="error.html"
+                                class="project-open"
+                            >
+                                VIEW PROJECT
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="project-card"
+                        data-status="active"
+                    >
+
+                        <div class="project-card-header">
+
+                            <div class="project-status active-status">
+                                IN PROGRESS
+                            </div>
+
+                            <button
+                                type="button"
+                                class="project-menu"
+                                data-error-link
+                            >
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="project-card-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+
+
+                        <h4>
+                            Security Architecture Review
+                        </h4>
+
+
+                        <p>
+                            Reviewing application security,
+                            access controls, threat exposure
+                            and infrastructure protection.
+                        </p>
+
+
+                        <div class="project-meta">
+
+                            <div>
+                                <span>
+                                    OWNER
+                                </span>
+
+                                <strong>
+                                    Stackly Security
+                                </strong>
+                            </div>
+
+
+                            <div>
+                                <span>
+                                    DUE DATE
+                                </span>
+
+                                <strong>
+                                    Oct 19, 2026
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-progress">
+
+                            <div class="progress-header">
+
+                                <span>
+                                    PROJECT PROGRESS
+                                </span>
+
+                                <strong>
+                                    62%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+                                <span style="width:62%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-card-footer">
+
+                            <div class="project-team">
+
+                                <span class="team-avatar">
+                                    K
+                                </span>
+
+                                <span class="team-avatar">
+                                    M
+                                </span>
+
+                                <span class="team-avatar">
+                                    V
+                                </span>
+
+                                <span class="team-count">
+                                    +3
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                href="error.html"
+                                class="project-open"
+                            >
+                                VIEW PROJECT
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="project-card"
+                        data-status="active"
+                    >
+
+                        <div class="project-card-header">
+
+                            <div class="project-status active-status">
+                                IN PROGRESS
+                            </div>
+
+                            <button
+                                type="button"
+                                class="project-menu"
+                                data-error-link
+                            >
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="project-card-icon">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+
+
+                        <h4>
+                            Technology Advisory Program
+                        </h4>
+
+
+                        <p>
+                            Ongoing architecture guidance,
+                            technology planning and strategic
+                            engineering advisory.
+                        </p>
+
+
+                        <div class="project-meta">
+
+                            <div>
+                                <span>
+                                    OWNER
+                                </span>
+
+                                <strong>
+                                    Stackly Advisory
+                                </strong>
+                            </div>
+
+
+                            <div>
+                                <span>
+                                    DUE DATE
+                                </span>
+
+                                <strong>
+                                    Nov 02, 2026
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-progress">
+
+                            <div class="progress-header">
+
+                                <span>
+                                    PROJECT PROGRESS
+                                </span>
+
+                                <strong>
+                                    81%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+                                <span style="width:81%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-card-footer">
+
+                            <div class="project-team">
+
+                                <span class="team-avatar">
+                                    P
+                                </span>
+
+                                <span class="team-avatar">
+                                    N
+                                </span>
+
+                                <span class="team-avatar">
+                                    J
+                                </span>
+
+                                <span class="team-count">
+                                    +2
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                href="error.html"
+                                class="project-open"
+                            >
+                                VIEW PROJECT
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="project-card completed-project"
+                        data-status="completed"
+                    >
+
+                        <div class="project-card-header">
+
+                            <div class="project-status completed-status">
+                                COMPLETED
+                            </div>
+
+                            <button
+                                type="button"
+                                class="project-menu"
+                                data-error-link
+                            >
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="project-card-icon">
+                            <i class="bi bi-database-check"></i>
+                        </div>
+
+
+                        <h4>
+                            Data Platform Assessment
+                        </h4>
+
+
+                        <p>
+                            Data architecture assessment
+                            and modernization roadmap completed
+                            for the client environment.
+                        </p>
+
+
+                        <div class="project-meta">
+
+                            <div>
+                                <span>
+                                    OWNER
+                                </span>
+
+                                <strong>
+                                    Stackly Data Team
+                                </strong>
+                            </div>
+
+
+                            <div>
+                                <span>
+                                    COMPLETED
+                                </span>
+
+                                <strong>
+                                    Aug 21, 2026
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-progress">
+
+                            <div class="progress-header">
+
+                                <span>
+                                    PROJECT PROGRESS
+                                </span>
+
+                                <strong>
+                                    100%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+                                <span style="width:100%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-card-footer">
+
+                            <div class="project-team">
+
+                                <span class="team-avatar">
+                                    D
+                                </span>
+
+                                <span class="team-avatar">
+                                    T
+                                </span>
+
+                                <span class="team-count">
+                                    +2
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                href="error.html"
+                                class="project-open"
+                            >
+                                VIEW PROJECT
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <section class="project-bottom-grid">
+
+                <div class="timeline-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="section-kicker">
+                                PROJECT ACTIVITY
+                            </span>
+
+                            <h3>
+                                Recent Updates
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="text-link"
+                        >
+                            VIEW ALL
+
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+                        <div class="activity-item">
+
+                            <div class="activity-marker">
+                                <i class="bi bi-check2"></i>
+                            </div>
+
+
+                            <div class="activity-content">
+
+                                <strong>
+                                    Security review milestone completed
+                                </strong>
+
+                                <span>
+                                    Technology Advisory Program
+                                </span>
+
+                                <small>
+                                    2 hours ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-marker">
+                                <i class="bi bi-file-earmark-text"></i>
+                            </div>
+
+
+                            <div class="activity-content">
+
+                                <strong>
+                                    Architecture report uploaded
+                                </strong>
+
+                                <span>
+                                    Cloud Infrastructure Modernization
+                                </span>
+
+                                <small>
+                                    Yesterday
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-marker">
+                                <i class="bi bi-chat-left-text"></i>
+                            </div>
+
+
+                            <div class="activity-content">
+
+                                <strong>
+                                    Consultant added a project note
+                                </strong>
+
+                                <span>
+                                    Security Architecture Review
+                                </span>
+
+                                <small>
+                                    2 days ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="next-milestone-card">
+
+                    <div class="next-card-top">
+
+                        <span>
+                            NEXT MILESTONE
+                        </span>
+
+
+                        <div class="milestone-icon">
+                            <i class="bi bi-flag"></i>
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        Cloud Architecture Review
+                    </h3>
+
+
+                    <p>
+                        Final architecture review session
+                        with the consulting team.
+                    </p>
+
+
+                    <div class="milestone-date">
+
+                        <i class="bi bi-calendar3"></i>
+
+                        <span>
+                            September 28, 2026
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="error.html"
+                        class="milestone-button"
+                    >
+                        VIEW SESSION
+
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <footer class="project-footer">
+
+                <span>
+                    STACKLY / CLIENT WORKSPACE
+                </span>
+
+                <span>
+                    CLOUD · SOFTWARE · SECURITY · DATA & AI
+                </span>
+
+                <span>
+                    2026
+                </span>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
+    ></script>
+
+    <script src="user-project.js"></script>
+
+</body>
+</html>

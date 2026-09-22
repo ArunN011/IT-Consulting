@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly">
+
+    <title>Stackly</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<body>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-wrapper">
+
+            <div class="loader-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </div>
+
+            <div class="loader-bottom">
+                <span>LOADING</span>
+                <span id="loaderPercent">0%</span>
+            </div>
+
+            <div class="loader-line">
+                <div class="loader-line-progress" id="loaderProgress"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+  
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid navbar-inner">
+
+                <a href="index.html" class="brand">
+                    <img src="Assets/blacklogo.webp" alt="Stackly">
+                </a>
+
+                <div class="desktop-navigation">
+
+                    <a href="index.html" class="nav-item active">
+                        Home
+                    </a>
+
+                    <a href="about.html" class="nav-item">
+                        About
+                    </a>
+
+                    <a href="services.html" class="nav-item">
+                        Service
+                    </a>
+
+                    <a href="blog.html" class="nav-item">
+                        Blog
+                    </a>
+
+                    <a href="contact.html" class="nav-item">
+                        Contact
+                    </a>
+
+                    <a href="login.html" class="login-link">
+                        Login
+                    </a>
+
+                    <a href="register.html" class="register-button">
+                        Register
+                    </a>
+
+                </div>
+
+                <button
+                    class="mobile-menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <aside class="mobile-navigation" id="mobileNavigation">
+
+        <div class="mobile-navigation-header">
+
+            <a href="index.html" class="mobile-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+
+            <button
+                class="mobile-close"
+                id="mobileClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="mobile-links">
+
+            <a href="index.html" class="mobile-nav-link active">
+                Home
+            </a>
+
+            <a href="about.html" class="mobile-nav-link">
+                About
+            </a>
+
+            <a href="services.html" class="mobile-nav-link">
+                Service
+            </a>
+
+            <a href="blog.html" class="mobile-nav-link">
+                Blog
+            </a>
+
+            <a href="contact.html" class="mobile-nav-link">
+                Contact
+            </a>
+
+            <a href="login.html" class="mobile-login">
+                Login
+            </a>
+
+            <a href="register.html" class="mobile-register">
+                Register
+            </a>
+
+        </div>
+
+    </aside>
+
+    <main>
+
+        <section class="stackly-hero">
+
+    <div class="stackly-hero-inner">
+
+        <div class="stackly-hero-left">
+
+           <h1 class="stackly-word">
+                <span>S</span>
+                <span>T</span>
+                <span>A</span>
+                <span>C</span>
+                <span>K</span>
+                <span>L</span>
+                <span>Y</span>
+</h1>
+
+            <p class="stackly-hero-description">
+                We engineer <strong>cloud infrastructure,</strong>
+                <strong>custom software,</strong> and security
+                systems that scale with your business.
+            </p>
+
+        </div>
+
+        <div class="stackly-hero-right">
+
+            <div class="hero-image-wrap">
+                <img
+                    src="Assets/IT1.webp"
+                    alt="Stackly Infrastructure"
+                    class="stackly-hero-image"
+                >
+
+                <div class="hero-image-overlay"></div>
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="hero-stat">
+                    <span class="stat-dot"></span>
+                    <div>
+                        <h3>Onboarding</h3>
+                        <p>New clients — Q1 2027</p>
+                    </div>
+                </div>
+
+                <div class="hero-stat">
+                    <div>
+                        <h3>Based in</h3>
+                        <p>Singapore, remote-first</p>
+                    </div>
+                </div>
+
+                <div class="hero-stat">
+                    <div>
+                        <h3>Uptime SLA</h3>
+                        <p>99.95%</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+  <div class="stackly-marquee">
+
+    <marquee
+        behavior="scroll"
+        direction="left"
+        scrollamount="6"
+        scrolldelay="0"
+        onmouseover="this.stop()"
+        onmouseout="this.start()"
+    >
+
+        <div class="marquee-track">
+
+            <span class="marquee-item">
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">CLOUD &amp; DEVOPS</span>
+            </span>
+
+            <span class="marquee-item">
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">CYBERSECURITY</span>
+            </span>
+
+            <span class="marquee-item">
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">CUSTOM SOFTWARE</span>
+            </span>
+
+            <span class="marquee-item">
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">IT CONSULTING</span>
+            </span>
+
+            <span class="marquee-item">
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">MANAGED IT SUPPORT</span>
+            </span>
+
+            <span class="marquee-item">
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">DATA &amp; AI</span>
+            </span>
+
+            <span class="marquee-item">
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">CLOUD &amp; DEVOPS</span>
+            </span>
+
+            <span class="marquee-item">
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">CYBERSECURITY</span>
+            </span>
+
+            <span class="marquee-item">
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">CUSTOM SOFTWARE</span>
+            </span>
+
+        </div>
+
+    </marquee>
+
+</div>
+
+
+</section>
+<section class="client-strip">
+    <div class="client-strip-inner">
+
+        <a href="error.html" class="client-item">VERTEX BANK</a>
+
+        <a href="error.html" class="client-item">SOLACE HEALTH</a>
+
+        <a href="error.html" class="client-item">NORTHWIND</a>
+
+        <a href="error.html" class="client-item">FERROTECH</a>
+
+        <a href="error.html" class="client-item">COBALT RETAIL</a>
+
+    </div>
+</section>
+
+<section class="deployments-section" id="deployments">
+
+    <div class="deployments-container">
+
+        <div class="deployments-header">
+
+            <div class="deployments-title-area">
+                <p class="deployments-eyebrow">(01) — Case Studies</p>
+                <h2 class="deployments-title">RECENT DEPLOYMENTS</h2>
+            </div>
+
+            <p class="deployments-description">
+                A handful of the systems we've architected, built
+                and kept running for clients across finance, health
+                and logistics.
+            </p>
+
+        </div>
+
+        <div class="deployments-divider"></div>
+
+        <div class="deployments-grid">
+
+            <article class="deployment-card">
+
+                <div class="deployment-image-wrap">
+                    <img
+                        src="Assets/IT2.webp"
+                        alt="Vertex Bank"
+                        class="deployment-image"
+                    >
+
+                    <div class="deployment-gradient"></div>
+
+                    <div class="deployment-card-content">
+                        <div class="deployment-info">
+                            <h3>VERTEX BANK</h3>
+                            <p>Core banking cloud migration · 2026</p>
+                        </div>
+
+                       <a
+                    href="error.html"
+                    class="deployment-arrow"
+                    aria-label="View Northwind"
+                >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="deployment-card">
+
+                <div class="deployment-image-wrap">
+                    <img
+                        src="Assets/IT3.webp"
+                        alt="Solace Health"
+                        class="deployment-image"
+                    >
+
+                    <div class="deployment-gradient"></div>
+
+                    <div class="deployment-card-content">
+                        <div class="deployment-info">
+                            <h3>SOLACE HEALTH</h3>
+                            <p>HIPAA-compliant patient portal · 2025</p>
+                        </div>
+                    <a
+                        href="error.html"
+                        class="deployment-arrow"
+                        aria-label="View Northwind"
+                    >
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="deployment-card">
+
+                <div class="deployment-image-wrap">
+                    <img
+                        src="Assets/IT4.webp"
+                        alt="Northwind"
+                        class="deployment-image"
+                    >
+
+                    <div class="deployment-gradient"></div>
+
+                    <div class="deployment-card-content">
+                        <div class="deployment-info">
+                            <h3>NORTHWIND</h3>
+                            <p>Real-time fleet tracking platform · 2025</p>
+                        </div>
+
+                        <a
+                    href="error.html"
+                    class="deployment-arrow"
+                    aria-label="View Northwind"
+                >
+    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="deployment-card">
+
+                <div class="deployment-image-wrap">
+                    <img
+                        src="Assets/IT5.webp"
+                        alt="Ferrotech"
+                        class="deployment-image"
+                    >
+
+                    <div class="deployment-gradient"></div>
+
+                    <div class="deployment-card-content">
+                        <div class="deployment-info">
+                            <h3>FERROTECH</h3>
+                            <p>Legacy ERP modernization · 2024</p>
+                        </div>
+
+                       <a
+                    href="error.html"
+                    class="deployment-arrow"
+                    aria-label="View Northwind"
+                >
+    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stages-section" id="stages">
+
+    <div class="stages-container">
+
+        <div class="stages-header">
+
+            <div class="stages-title-wrap">
+                <p class="stages-eyebrow">(02) — How We Work</p>
+                <h2 class="stages-title">FOUR STAGES</h2>
+            </div>
+
+            <p class="stages-intro">
+                Every engagement moves through the same four stages,
+                whether it's a two-week security audit or a year-long
+                platform build.
+            </p>
+
+        </div>
+
+        <div class="stages-divider"></div>
+
+        <div class="stages-list">
+
+            <div class="stage-row">
+
+                <div class="stage-number">01</div>
+
+                <div class="stage-name">
+                    ASSESS
+                </div>
+
+                <div class="stage-description">
+                    We audit your current stack, infrastructure and risk
+                    surface before recommending anything — a short
+                    technical review that sets scope and priority.
+                </div>
+
+            </div>
+
+            <div class="stage-row">
+
+                <div class="stage-number">02</div>
+
+                <div class="stage-name">
+                    ARCHITECT
+                </div>
+
+                <div class="stage-description">
+                    We design the system: cloud topology, data flow, and
+                    security boundaries, reviewed with your team before a
+                    line of code is written.
+                </div>
+
+            </div>
+
+            <div class="stage-row">
+
+                <div class="stage-number">03</div>
+
+                <div class="stage-name">
+                    BUILD
+                </div>
+
+                <div class="stage-description">
+                    Development runs in short sprints with staging
+                    environments from day one, so what you review is
+                    close to what ships to production.
+                </div>
+
+            </div>
+
+            <div class="stage-row">
+
+                <div class="stage-number">04</div>
+
+                <div class="stage-name">
+                    SUPPORT
+                </div>
+
+                <div class="stage-description">
+                    Post-launch monitoring, incident response and a
+                    documented runbook — your team can operate it
+                    independently or keep us on retainer.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about-stackly-section" id="about-stackly">
+
+    <div class="about-stackly-container">
+
+        <div class="about-stackly-grid">
+
+            <div class="about-stackly-left">
+
+                <p class="about-stackly-eyebrow">
+                    (03) — About Stackly
+                </p>
+
+                <h2 class="about-stackly-title">
+                    WE TREAT
+                    <span>UPTIME</span>
+                    AS A DESIGN
+                    DECISION — FEWER
+                    MOVING PARTS,
+                    WATCHED CLOSELY,
+                    BEAT A HUNDRED
+                    HEDGED INTEGRATIONS.
+                </h2>
+
+                <div class="about-stackly-stats">
+
+                    <div class="about-stat">
+                        <div
+                            class="about-stat-number"
+                            data-target="63"
+                            data-suffix="">
+                            0
+                        </div>
+
+                        <p>Systems shipped since 2019</p>
+                    </div>
+
+                    <div class="about-stat">
+                        <div
+                            class="about-stat-number"
+                            data-target="14"
+                            data-suffix="">
+                            0
+                        </div>
+
+                        <p>Industries served</p>
+                    </div>
+
+                    <div class="about-stat">
+                        <div
+                            class="about-stat-number"
+                            data-target="99.95"
+                            data-decimal="2"
+                            data-suffix="%">
+                            0%
+                        </div>
+
+                        <p>Average client uptime SLA</p>
+                    </div>
+
+                    <div class="about-stat">
+                        <div
+                            class="about-stat-number"
+                            data-target="9"
+                            data-suffix="">
+                            0
+                        </div>
+
+                        <p>Engineers on the team</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="about-stackly-right">
+
+                <p class="about-stackly-paragraph">
+                    Stackly started as a two-person infrastructure consultancy
+                    and stayed intentionally small. We turn away more work
+                    than we take, so every engagement gets senior engineers
+                    from architecture to on-call.
+                </p>
+
+                <p class="about-stackly-paragraph">
+                    No account managers relaying tickets — you work directly
+                    with the engineers building and monitoring your systems,
+                    from the first audit to the 2am pager.
+                </p>
+
+                <a href="error.html" class="about-stackly-link">
+                    <span>Read our security &amp; reliability principles</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="services-section" id="services">
+
+    <div class="services-container">
+
+        <div class="services-header">
+
+            <div class="services-heading-area">
+                <p class="services-eyebrow">(04) — What We Do</p>
+                <h2 class="services-title">SERVICES</h2>
+            </div>
+
+            <p class="services-intro">
+                Six disciplines, one team — we don't hand your
+                system between departments.
+            </p>
+
+        </div>
+
+        <div class="services-divider"></div>
+
+        <div class="services-grid">
+
+            <article class="service-card">
+
+                <div class="service-image-wrap">
+                    <img
+                        src="Assets/cloud&devops.webp"
+                        alt="Cloud & DevOps"
+                        class="service-image"
+                    >
+                    <div class="service-image-overlay"></div>
+                </div>
+
+                <div class="service-card-content">
+
+                    <span class="service-label">(A)</span>
+
+                    <div class="service-content">
+                        <h3>CLOUD &amp; DEVOPS</h3>
+
+                        <p>
+                            Migration, infrastructure-as-code and CI/CD
+                            pipelines built to scale without babysitting.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-image-wrap">
+                    <img
+                        src="Assets/customsoftware.webp"
+                        alt="Custom Software"
+                        class="service-image"
+                    >
+                    <div class="service-image-overlay"></div>
+                </div>
+
+                <div class="service-card-content">
+
+                    <span class="service-label">(B)</span>
+
+                    <div class="service-content">
+                        <h3>CUSTOM SOFTWARE</h3>
+
+                        <p>
+                            Web apps, internal tools and APIs built for
+                            your workflow, not a generic template.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-image-wrap">
+                    <img
+                        src="Assets/cybersecurity.webp"
+                        alt="Cybersecurity"
+                        class="service-image"
+                    >
+                    <div class="service-image-overlay"></div>
+                </div>
+
+                <div class="service-card-content">
+
+                    <span class="service-label">(C)</span>
+
+                    <div class="service-content">
+                        <h3>CYBERSECURITY</h3>
+
+                        <p>
+                            Audits, penetration testing and zero-trust
+                            architecture that hold up under real attacks.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-image-wrap">
+                    <img
+                        src="Assets/IT&consulting.webp"
+                        alt="IT Consulting"
+                        class="service-image"
+                    >
+                    <div class="service-image-overlay"></div>
+                </div>
+
+                <div class="service-card-content">
+
+                    <span class="service-label">(D)</span>
+
+                    <div class="service-content">
+                        <h3>IT CONSULTING</h3>
+
+                        <p>
+                            Technical due diligence, vendor selection
+                            and roadmaps when you can actually execute.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-image-wrap">
+                    <img
+                        src="Assets/Management&IT.webp"
+                        alt="Managed IT Support"
+                        class="service-image"
+                    >
+                    <div class="service-image-overlay"></div>
+                </div>
+
+                <div class="service-card-content">
+
+                    <span class="service-label">(E)</span>
+
+                    <div class="service-content">
+                        <h3>MANAGED IT SUPPORT</h3>
+
+                        <p>
+                            24/7 monitoring, patching and helpdesk so your
+                            team isn't firefighting infrastructure.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-image-wrap">
+                    <img
+                        src="Assets/data&ai.webp"
+                        alt="Data & AI"
+                        class="service-image"
+                    >
+                    <div class="service-image-overlay"></div>
+                </div>
+
+                <div class="service-card-content">
+
+                    <span class="service-label">(F)</span>
+
+                    <div class="service-content">
+                        <h3>DATA &amp; AI</h3>
+
+                        <p>
+                            Data pipelines, analytics and applied ML built
+                            on infrastructure you already trust.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="stackly-testimonials-section" id="testimonials">
+
+    <div class="stackly-testimonials-container">
+
+        <div class="stackly-testimonials-header">
+
+            <div class="stackly-testimonials-heading">
+                <p class="stackly-testimonials-eyebrow">
+                    (05) — Client Word
+                </p>
+
+                <h2 class="stackly-testimonials-title">
+                    WHAT OUR
+                    <span>CLIENTS</span>
+                    SAY
+                </h2>
+            </div>
+
+            <div class="stackly-testimonials-header-right">
+
+                <p>
+                    Teams work with us when infrastructure, reliability
+                    and execution matter more than having another vendor.
+                </p>
+
+                <div class="stackly-testimonials-scroll-label">
+                    <span></span>
+                    <small>SCROLL TO EXPLORE</small>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="stackly-testimonials-divider"></div>
+
+        <div class="stackly-testimonials-stage" id="testimonialStage">
+
+            <div class="stackly-testimonials-track" id="testimonialTrack">
+
+                <article class="stackly-testimonial-card is-active">
+
+                    <div class="stackly-testimonial-top">
+                        <span class="stackly-testimonial-number">(01)</span>
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <div class="stackly-testimonial-main">
+
+                        <h3>
+                            "THEY SAID NO TO HALF OF OUR FIRST SPEC —
+                            AND THE HALF THAT SURVIVED CUT OUR INCIDENT
+                            COUNT TO ALMOST ZERO."
+                        </h3>
+
+                    </div>
+
+                    <div class="stackly-testimonial-result">
+                        <span>RESULT</span>
+                        <strong>87% LESS DOWNTIME</strong>
+                    </div>
+
+                    <div class="stackly-testimonial-footer">
+
+                        <div class="stackly-testimonial-client">
+
+                            <div class="stackly-testimonial-avatar">
+                                <img
+                                    src="Assets/student1.webp"
+                                    alt="Daniel Tanuwijaya"
+                                >
+                            </div>
+
+                            <div>
+                                <h4>Daniel Tanuwijaya</h4>
+                                <p>VP Engineering · Vertex Bank</p>
+                            </div>
+
+                        </div>
+
+                        <a href="error.html"
+                           class="stackly-testimonial-arrow"
+                           aria-label="Read testimonial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="stackly-testimonial-card">
+
+                    <div class="stackly-testimonial-top">
+                        <span class="stackly-testimonial-number">(02)</span>
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <div class="stackly-testimonial-main">
+
+                        <h3>
+                            "THE TEAM UNDERSTOOD OUR COMPLIANCE CONSTRAINTS
+                            WITHOUT TURNING THE PROJECT INTO A SIX-MONTH
+                            ARCHITECTURE EXERCISE."
+                        </h3>
+
+                    </div>
+
+                    <div class="stackly-testimonial-result">
+                        <span>RESULT</span>
+                        <strong>9 WEEK LAUNCH</strong>
+                    </div>
+
+                    <div class="stackly-testimonial-footer">
+
+                        <div class="stackly-testimonial-client">
+
+                            <div class="stackly-testimonial-avatar">
+                                <img
+                                    src="Assets/student2.webp"
+                                    alt="Maya Chen"
+                                >
+                            </div>
+
+                            <div>
+                                <h4>Maya Chen</h4>
+                                <p>CTO · Solace Health</p>
+                            </div>
+
+                        </div>
+
+                        <a href="error.html"
+                           class="stackly-testimonial-arrow"
+                           aria-label="Read testimonial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="stackly-testimonial-card">
+
+                    <div class="stackly-testimonial-top">
+                        <span class="stackly-testimonial-number">(03)</span>
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <div class="stackly-testimonial-main">
+
+                        <h3>
+                            "WE FINALLY HAVE A FLEET PLATFORM THAT OPERATIONS
+                            CAN TRUST DURING THE MOMENTS WHEN EVERY SECOND
+                            ACTUALLY MATTERS."
+                        </h3>
+
+                    </div>
+
+                    <div class="stackly-testimonial-result">
+                        <span>RESULT</span>
+                        <strong>22 SYSTEMS INTEGRATED</strong>
+                    </div>
+
+                    <div class="stackly-testimonial-footer">
+
+                        <div class="stackly-testimonial-client">
+
+                            <div class="stackly-testimonial-avatar">
+                                <img
+                                    src="Assets/IT21.webp"
+                                    alt="Marcus Lee"
+                                >
+                            </div>
+
+                            <div>
+                                <h4>Marcus Lee</h4>
+                                <p>Head of Operations · Northwind</p>
+                            </div>
+
+                        </div>
+
+                        <a href="error.html"
+                           class="stackly-testimonial-arrow"
+                           aria-label="Read testimonial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="stackly-testimonial-card">
+
+                    <div class="stackly-testimonial-top">
+                        <span class="stackly-testimonial-number">(04)</span>
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <div class="stackly-testimonial-main">
+
+                        <h3>
+                            "THE MIGRATION WAS PLANNED AROUND THE BUSINESS,
+                            NOT THE OTHER WAY AROUND. EVERY RISK HAD AN OWNER
+                            AND EVERY HANDOFF WAS CLEAR."
+                        </h3>
+
+                    </div>
+
+                    <div class="stackly-testimonial-result">
+                        <span>RESULT</span>
+                        <strong>ZERO MAJOR INCIDENTS</strong>
+                    </div>
+
+                    <div class="stackly-testimonial-footer">
+
+                        <div class="stackly-testimonial-client">
+
+                            <div class="stackly-testimonial-avatar">
+                                <img
+                                    src="Assets/student3.webp"
+                                    alt="Elena Rossi"
+                                >
+                            </div>
+
+                            <div>
+                                <h4>Elena Rossi</h4>
+                                <p>Director of Technology · Ferrotech</p>
+                            </div>
+
+                        </div>
+
+                        <a href="error.html"
+                           class="stackly-testimonial-arrow"
+                           aria-label="Read testimonial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="stackly-testimonial-card">
+
+                    <div class="stackly-testimonial-top">
+                        <span class="stackly-testimonial-number">(05)</span>
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <div class="stackly-testimonial-main">
+
+                        <h3>
+                            "THEIR ENGINEERS WORKED DIRECTLY WITH OUR TEAM,
+                            SO DECISIONS HAPPENED QUICKLY AND IMPLEMENTATION
+                            NEVER GOT LOST IN TRANSLATION."
+                        </h3>
+
+                    </div>
+
+                    <div class="stackly-testimonial-result">
+                        <span>RESULT</span>
+                        <strong>42% FASTER DELIVERY</strong>
+                    </div>
+
+                    <div class="stackly-testimonial-footer">
+
+                        <div class="stackly-testimonial-client">
+
+                            <div class="stackly-testimonial-avatar">
+                                <img
+                                    src="Assets/IT16.webp"
+                                    alt="James Carter"
+                                >
+                            </div>
+
+                            <div>
+                                <h4>James Carter</h4>
+                                <p>Platform Lead · Cobalt Retail</p>
+                            </div>
+
+                        </div>
+
+                        <a href="error.html"
+                           class="stackly-testimonial-arrow"
+                           aria-label="Read testimonial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="stackly-testimonial-card">
+
+                    <div class="stackly-testimonial-top">
+                        <span class="stackly-testimonial-number">(06)</span>
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <div class="stackly-testimonial-main">
+
+                        <h3>
+                            "STACKLY GAVE US THE CONFIDENCE TO SIMPLIFY.
+                            FEWER MOVING PARTS, BETTER VISIBILITY AND MUCH
+                            LESS OPERATIONAL NOISE."
+                        </h3>
+
+                    </div>
+
+                    <div class="stackly-testimonial-result">
+                        <span>RESULT</span>
+                        <strong>4 MIN RESPONSE TIME</strong>
+                    </div>
+
+                    <div class="stackly-testimonial-footer">
+
+                        <div class="stackly-testimonial-client">
+
+                            <div class="stackly-testimonial-avatar">
+                                <img
+                                    src="Assets/IT18.webp"
+                                    alt="Avery Morgan"
+                                >
+                            </div>
+
+                            <div>
+                                <h4>Avery Morgan</h4>
+                                <p>Engineering Manager · Horizon Systems</p>
+                            </div>
+
+                        </div>
+
+                        <a href="error.html"
+                           class="stackly-testimonial-arrow"
+                           aria-label="Read testimonial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+        <div class="stackly-testimonials-bottom">
+
+            <div class="stackly-testimonial-progress">
+                <span id="testimonialProgressBar"></span>
+            </div>
+
+            <div class="stackly-testimonial-counter">
+                <strong id="testimonialCurrent">01</strong>
+                <span>/ 06</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="journal-section" id="journal">
+
+    <div class="journal-container">
+
+        <div class="journal-header">
+
+            <div class="journal-heading-wrap">
+
+                <p class="journal-eyebrow">
+                    (06) — Engineering Journal
+                </p>
+
+                <h2 class="journal-title">
+                    NOTES FROM THE TEAM
+                </h2>
+
+            </div>
+
+            <div class="journal-header-content">
+
+                <p>
+                    Short write-ups on architecture, incident response,
+                    and things we've changed our minds about.
+                </p>
+
+                <a href="blog.html" class="journal-view-all">
+                    <span>VIEW ALL NOTES</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="journal-divider"></div>
+
+        <div class="journal-grid">
+
+            <article class="journal-card">
+
+                <div class="journal-card-top">
+                    <span class="journal-category">Reliability</span>
+                    <span class="journal-date">Aug 2026</span>
+                </div>
+
+                <div class="journal-card-number">01</div>
+
+                <div class="journal-card-body">
+
+                    <h3>
+                        WHY WE RUN BLAMELESS POSTMORTEMS
+                    </h3>
+
+                    <p>
+                        Fear-driven incident reviews hide the real failure mode.
+                        Here's the format we've used across sixty-plus incidents.
+                    </p>
+
+                </div>
+
+                <a href="error.html" class="journal-read">
+                    <span>READ NOTE</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="journal-card">
+
+                <div class="journal-card-top">
+                    <span class="journal-category">Case Study</span>
+                    <span class="journal-date">Jun 2026</span>
+                </div>
+
+                <div class="journal-card-number">02</div>
+
+                <div class="journal-card-body">
+
+                    <h3>
+                        MIGRATING A CORE LEDGER WITH ZERO DOWNTIME
+                    </h3>
+
+                    <p>
+                        A look at the phased cutover strategy that moved Vertex
+                        Bank's ledger to the cloud without a single outage window.
+                    </p>
+
+                </div>
+
+                <a href="error.html" class="journal-read">
+                    <span>READ NOTE</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="journal-card">
+
+                <div class="journal-card-top">
+                    <span class="journal-category">Security</span>
+                    <span class="journal-date">Mar 2026</span>
+                </div>
+
+                <div class="journal-card-number">03</div>
+
+                <div class="journal-card-body">
+
+                    <h3>
+                        ZERO-TRUST: WHAT WE ACTUALLY RECOMMEND
+                    </h3>
+
+                    <p>
+                        Most zero-trust rollouts stall on identity, not network
+                        policy. Here's where we tell clients to start instead.
+                    </p>
+
+                </div>
+
+                <a href="error.html" class="journal-read">
+                    <span>READ NOTE</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="journal-card">
+
+                <div class="journal-card-top">
+                    <span class="journal-category">Infrastructure</span>
+                    <span class="journal-date">Jan 2026</span>
+                </div>
+
+                <div class="journal-card-number">04</div>
+
+                <div class="journal-card-body">
+
+                    <h3>
+                        THE CASE FOR SMALLER INFRASTRUCTURE TEAMS
+                    </h3>
+
+                    <p>
+                        Why fewer moving parts and direct ownership can make
+                        large infrastructure decisions dramatically simpler.
+                    </p>
+
+                </div>
+
+                <a href="error.html" class="journal-read">
+                    <span>READ NOTE</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="journal-card">
+
+                <div class="journal-card-top">
+                    <span class="journal-category">Architecture</span>
+                    <span class="journal-date">Nov 2025</span>
+                </div>
+
+                <div class="journal-card-number">05</div>
+
+                <div class="journal-card-body">
+
+                    <h3>
+                        DESIGNING SYSTEMS WE CAN OPERATE AT 2AM
+                    </h3>
+
+                    <p>
+                        Reliability starts before deployment. These are the
+                        checks we use before taking ownership of a system.
+                    </p>
+
+                </div>
+
+                <a href="error.html" class="journal-read">
+                    <span>READ NOTE</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="journal-card">
+
+                <div class="journal-card-top">
+                    <span class="journal-category">AI &amp; Data</span>
+                    <span class="journal-date">Oct 2025</span>
+                </div>
+
+                <div class="journal-card-number">06</div>
+
+                <div class="journal-card-body">
+
+                    <h3>
+                        WHEN APPLIED AI SHOULD NOT BE THE ANSWER
+                    </h3>
+
+                    <p>
+                        A practical framework for deciding when automation,
+                        analytics or machine learning actually creates value.
+                    </p>
+
+                </div>
+
+                <a href="error.html" class="journal-read">
+                    <span>READ NOTE</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+        <div class="journal-footer">
+
+            <div class="journal-footer-line"></div>
+
+            <span>
+                ENGINEERING, RELIABILITY &amp; SYSTEMS
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stackly-cta-v2" id="cta">
+
+    <div class="stackly-cta-v2-inner">
+
+        <div class="stackly-cta-v2-top">
+
+            <p class="stackly-cta-v2-label">
+                (07) — Start a Project
+            </p>
+
+            <span class="stackly-cta-v2-status">
+                AVAILABLE FOR SELECT PROJECTS
+            </span>
+
+        </div>
+
+        <div class="stackly-cta-v2-line"></div>
+
+        <div class="stackly-cta-v2-main">
+
+            <p class="stackly-cta-v2-small">
+                Have a system that needs
+                serious engineering?
+            </p>
+
+            <h2 class="stackly-cta-v2-title">
+                LET'S BUILD
+                <span>SOMETHING</span>
+                THAT LASTS.
+            </h2>
+
+            <a
+                href="contact.html"
+                class="stackly-cta-v2-button"
+            >
+                <span>START A CONVERSATION</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+        <div class="stackly-cta-v2-email-section">
+
+            <span class="stackly-cta-v2-email-label">
+                OR EMAIL US DIRECTLY
+            </span>
+
+            <a
+                href="error.html"
+                class="stackly-cta-v2-email"
+            >
+                support@stackly.com
+            </a>
+
+        </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<footer class="stackly-footer">
+
+    <div class="stackly-footer-top">
+
+        <div class="stackly-footer-brand">
+
+            <a href="index.html" class="stackly-footer-logo">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+
+            <p class="stackly-footer-description">
+                An IT solutions team helping businesses build,
+                secure and scale reliable digital systems.
+            </p>
+
+            <div class="stackly-footer-social">
+                <span class="stackly-footer-social-label">FOLLOW STACKLY</span>
+
+                <div class="stackly-social-icons">
+
+                    <a href="error.html" aria-label="X / Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="error.html" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-footer-links">
+
+            <div class="stackly-footer-column">
+
+                <h4>EXPLORE</h4>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="stackly-footer-column">
+
+                <h4>SERVICES</h4>
+
+                <a href="error.html">Cloud &amp; DevOps</a>
+                <a href="error.html">Custom Software</a>
+                <a href="error.html">Cybersecurity</a>
+                <a href="error.html">IT Consulting</a>
+                <a href="error.html">Managed IT</a>
+                <a href="error.html">Data &amp; AI</a>
+
+            </div>
+
+
+            <div class="stackly-footer-column">
+
+                <h4>ACCOUNT</h4>
+
+                <a href="login.html">Log In</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="error.html">Client Portal</a>
+                <a href="error.html">Support Center</a>
+                <a href="error.html">Status Page</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-footer-contact">
+
+            <span class="stackly-footer-contact-label">
+                START A CONVERSATION
+            </span>
+
+            <h3>
+                HAVE A SYSTEM
+                <span>WORTH BUILDING?</span>
+            </h3>
+
+            <p>
+                Tell us what you're working on.
+                We'll figure out the next step together.
+            </p>
+
+            <a href="contact.html" class="stackly-footer-contact-button">
+                CONTACT STACKLY
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <div class="stackly-footer-contact-info">
+
+                <a href="mailto:hello@stackly.io">
+                    <i class="fa-regular fa-envelope"></i>
+                    support@stackly.com
+                </a>
+
+                <a href="error.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Bengaluru, India
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-footer-services-strip">
+
+        <span>WHAT WE BUILD</span>
+
+        <div class="stackly-footer-service-list">
+
+            <a href="error.html">CLOUD INFRASTRUCTURE</a>
+
+            <span></span>
+
+            <a href="error.html">SOFTWARE SYSTEMS</a>
+
+            <span></span>
+
+            <a href="error.html">CYBERSECURITY</a>
+
+            <span></span>
+
+            <a href="error.html">DATA &amp; AI</a>
+
+            <span></span>
+
+            <a href="error.html">IT CONSULTING</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-footer-bottom">
+
+        <div class="stackly-footer-copyright">
+            <span>&copy; 2026 Stackly Systems.</span>
+            <span>All rights reserved.</span>
+        </div>
+
+        <div class="stackly-footer-legal">
+
+            <a href="error.html">Privacy</a>
+            <a href="error.html">Terms</a>
+            <a href="error.html">Cookies</a>
+
+        </div>
+
+        <div class="stackly-footer-built">
+            BUILT WITH INTENTION, CLARITY AND CARE.
+        </div>
+
+    </div>
+
+</footer>
+        
+
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+<script src="cursor.js"></script>
+
+</body>
+</html>
